@@ -21,9 +21,7 @@
             {% endblocktrans %}
         </p>
         <p>
-            {% blocktrans %}
-                Call for papers will end on March 1<sup>th</sup>, 2011.
-            {% endblocktrans %}
+            {% blocktrans %}Call for papers will end on {{ limit }}.{% endblocktrans %}
         </p>
     </div>
 
@@ -45,25 +43,21 @@
         {% for field in form %}
             {% ifequal field.name 'topic' %}
                 <fieldset>
-                    <legend>{% trans 'Informations about the talk' %}</legend>
+                    <legend>{% trans 'Information about the talk' %}</legend>
             {% endifequal %}
 
             {% ifequal field.name 'speakers' %}
                 </fieldset>
                 <fieldset>
-                    <legend>{% trans 'Informations about the speaker(s)' %}</legend>
+                    <legend>{% trans 'Information about the speaker(s)' %}</legend>
             {% endifequal %}
 
             {% ifequal field.name 'charges' %}
                 </fieldset>
                 <fieldset>
-                    <legend>{% trans 'Informations about the transportation charges' %}</legend>
+                    <legend>{% trans 'Information about the transportation charges' %}</legend>
                     <div class="description">
-                        {% blocktrans %}
-                            RMLL/LSM is a FLOSS event with limited ressources. But (and as usual), for speakers which need it
-                            we can refund their transportations charges. If you are in such case, please fill out the
-                            following fields.
-                        {% endblocktrans %}
+                        {% blocktrans %}RMLL/LSM is a FLOSS event with limited ressources. But (and as usual), for speakers which need it we can refund their transportations charges. If you are in such case, please fill out the following fields.{% endblocktrans %}
                     </div>
             {% endifequal %}
 

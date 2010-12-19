@@ -111,7 +111,7 @@ class TalkForm(forms.ModelForm):
                             min_length=5, widget=forms.TextInput(attrs=_iattrs))
     nature = forms.ChoiceField(label=_(u"Nature"), choices=Talk.NATURES, required=True)
     abstract = forms.CharField(label=_(u"Abstract"), widget=forms.Textarea(attrs=_tattrs),
-        help_text=_(u"A description of what the talk would be about. For french speakers, we would be glad to get an english version of the abstract too. This abstract will be published on the website."),
+        help_text=_(u"A description of what the talk would be about. For french speakers, we would be glad to get an English version of the abstract too. This abstract will be published on the website."),
     )
     language = forms.ModelChoiceField(label=_(u"Language"),
                             queryset=Language.objects.all(), empty_label=None)
@@ -120,7 +120,7 @@ class TalkForm(forms.ModelForm):
     )
     license = forms.ModelChoiceField(label=_(u"License"),
                                 required=False, queryset=License.objects.all(),
-        help_text=_(u"The prefered license for the capture of the talk (contact us if you want us to add another license)."),
+        help_text=_(u"The preferred license for the capture of the talk (contact us if you want us to add another license)."),
     )
     constraints  = forms.CharField(label=_(u"Constraints"),
                         widget=forms.Textarea(attrs=_tattrs), required=False,
@@ -132,7 +132,7 @@ class TalkForm(forms.ModelForm):
     biography = forms.CharField(label=_(u"Biography"), widget=forms.Textarea(attrs=_tattrs),
         help_text=_(u"Add a few words about the speaker(s). Their, work, activities, involvement in free software, etc. It will be publish with the abstract on the event website."),
     )
-    charges = forms.ChoiceField(label=(u"Refund charges"),
+    charges = forms.ChoiceField(label=(_(u"Refund charges")),
                                             choices=Talk.NO_YES, required=False)
     transportation = forms.ModelChoiceField(label=_(u"Transportation"),
         queryset=Transportation.objects.all(), required=False)
