@@ -8,4 +8,5 @@ from cfp.manager.views import *
 urlpatterns = patterns ('',
     url(r'^new$', new, {'tmpl': 'manager/new.html'}),
     url(r'^end$', end, {'tmpl': 'manager/end.html'}),
+    url(r'^closed$', end, {'tmpl': 'manager/closed.html'}),
 )

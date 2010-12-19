@@ -8,9 +8,16 @@ from cfp.utils.decorators import auto_render
 
 from forms import TalkForm
 
+from datetime import datetime
+
 @auto_render
 def new(request, tmpl):
     syserr = None
+
+    limit = datetime.strptime(settings.CFP_LIMIT_DATE, '%Y-%m-%d')
+    if datetime.utcnow() > limit:
+        return HttpResponseRedirect('/talk/closed')
+
     if request.method == 'POST':
         form = TalkForm(request.POST)
         if form.is_valid():
