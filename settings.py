@@ -40,15 +40,16 @@ SITE_ID = 1
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
 USE_I18N = True
-
-# Absolute path to the directory that holds media.
-# Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+USE_L10N = True
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/site_media/'
+
+# Absolute path to the directory that holds media.
+# Example: "/home/media/media.lawrence.com/"
+MEDIA_ROOT = PROJECT_DIR + MEDIA_URL
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -98,15 +99,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
 )
 
-# COMMON
-DOCUMENT_ROOT = PROJECT_DIR + MEDIA_URL
-
 ### SESSIONS / COOKIES ###
+SESSION_COOKIE_NAME = 'cfp'
 SESSION_COOKIE_AGE = 10800
 SESSION_ENGINE = "django.contrib.sessions.backends.file"
 
 # DEVELOPMENT SETTINGS
 if os.environ.has_key('DJANGO_DEVEL'):
+    SESSION_COOKIE_NAME = 'cfp-dev'
     DEBUG = True
     TEMPLATE_DEBUG = DEBUG
 else:
@@ -115,3 +115,4 @@ else:
 
 ### SPECIFICS
 CFP_NOTICE_FROM_EMAIL = 'noreply@rmll.info'
+CFP_LIMIT_DATE = '2011-03-01'
