@@ -1,0 +1,43 @@
+#!/bin/sh
+
+OWNER=manu
+
+status() {
+    if [ $1 = 0 ]; then
+        printf "OK\n"
+    else
+        printf "FAIL\n"
+        exit 1
+    fi
+}
+
+printf 'Force re-compile of Python bytecode...   '
+find -iname '*.py' -exec py_compilefiles -fq {} \;
+status $?
+
+printf 'Fix permissions of Python bytecode files...   '
+find -iname '*.pyc' -exec chown ${OWNER}:${OWNER} {} \;
+status $?
+
+printf 'Fix permissions on directories...   '
+find -type d -exec chmod 755 {} \;
+status $?
+
+printf 'Fix permissions on regular files...   '
+find -type f -exec chmod 644 {} \;
+status $?
+
+for i in manage.py "$0" ; do
+    printf 'Fix permissions on “%s” tool...   ' "$i"
+    chmod a+x "$i"
+    status $?
+done
+
+printf 'Checking web server config...   '
+apache2ctl configtest >/dev/null 2>&1
+status $?
+
+printf 'Reload web server...   '
+apache2ctl graceful >/dev/null 2>&1
+status $?
+
