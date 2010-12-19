@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load markup %}
+
+{% block title %}{% trans 'RMLL/LSM Call for papers' %}{% endblock %}
+
+{% block content %}
+    <h1>
+        <a href="/">
+            {% trans 'RMLL/LSM Call for papers' %}
+        </a>
+    </h1>
+
+    <h2>{% trans 'Submit your talk' %}</h2>
+
+    <div class="description">
+        <p>
+            {% blocktrans %}
+                <span style="color:red; font-weight: bold; font-size: 200%">FIXME</span>
+            {% endblocktrans %}
+        </p>
+        <p>
+            {% blocktrans %}
+                Call for papers will end on March 1<sup>th</sup>, 2011.
+            {% endblocktrans %}
+        </p>
+    </div>
+
+    {% if form.errors or syserr %}
+        <div class="error">
+            {% if syserr %}
+                {% trans "Operation failed (internal error)" %}
+            {% else %}
+                {% trans "Operation failed (field(s) missing or incomplete)" %}
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="mandatory">
+        {% blocktrans with '<span class="required">*</span>' as mark %}Fields prefixed with a {{ mark }} are mandatory.{% endblocktrans %}
+    </div>
+
+    <form method="post" action="">
+        {% for field in form %}
+            {% ifequal field.name 'topic' %}
+                <fieldset>
+                    <legend>{% trans 'Informations about the talk' %}</legend>
+            {% endifequal %}
+
+            {% ifequal field.name 'speakers' %}
+                </fieldset>
+                <fieldset>
+                    <legend>{% trans 'Informations about the speaker(s)' %}</legend>
+            {% endifequal %}
+
+            {% ifequal field.name 'charges' %}
+                </fieldset>
+                <fieldset>
+                    <legend>{% trans 'Informations about the transportation charges' %}</legend>
+                    <div class="description">
+                        {% blocktrans %}
+                            RMLL/LSM is a FLOSS event with limited ressources. But (and as usual), for speakers which need it
+                            we can refund their transportations charges. If you are in such case, please fill out the
+                            following fields.
+                        {% endblocktrans %}
+                    </div>
+            {% endifequal %}
+
+            <div class="field{% if field.errors %} field-error{% endif %}">
+                {% if field.errors %}
+                    <div class="field-errors">
+                        <ul>
+                            {% for err in field.errors %}
+                                <li class="field-error-num-{{ forloop.counter }}">
+                                    {{ err }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
+                <label for="id_{{ field.name }}">
+                    {% if field.field.required %}<span class="required">*</span>{% endif %}{{ field.label }}
+                </label>
+
+                <div class="widget">
+                    {{ field }}
+                </div>
+
+                {% if field.help_text %}
+                    <div class="help">
+                        {{ field.help_text }}
+                        {% ifequal field.name 'speakers' %}
+                            <div class="examples">
+                                <div class="title">
+                                    {% trans 'Examples:' %}
+                                </div>
+                                <ul class="content">
+                                    <li>Albert Einstein [albert.einstein@relativi.ty]</li>
+                                    <li>Erwin Rudolf Josef Alexander Schrödinger [erwin@colorime.try]</li>
+                                </ul>
+                            </div>
+                        {% endifequal %}
+                    </div>
+                {% endif %}
+                <div class="clear"></div>
+            </div>
+        {% endfor %}
+            </fieldset>
+        <div class="sub">
+            <input type="submit" value="{% trans "Submit your talk" %}" />
+        </div>
+    </form>
+{% endblock %}

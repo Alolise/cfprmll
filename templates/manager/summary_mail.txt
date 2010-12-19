@@ -1,0 +1,52 @@
+{% load i18n %}{% autoescape off %}
+
+*** {% trans 'Topic:' %} {{ talk.topic.label }}
+
+*** {% trans 'Title:' %} {{ talk.title }}
+
+*** {% trans 'Nature:' %} {{ talk.get_nature_display }}
+
+*** {% trans 'Abstract:' %}
+
+{{ talk.abstract }}
+
+*** {% trans 'Language:' %} {{ talk.language.label }}
+
+*** {% trans 'Capture:' %} {{ talk.get_capture_display }}
+{% if talk.capture and talk.license %}
+
+*** {% trans 'License:' %} {{ talk.license }}
+{% endif %}
+
+*** {% trans 'Constraints:' %}
+
+{{ talk.constraints }}
+
+*** {% trans 'Speaker(s):' %}
+
+{{ talk.speakers }}
+
+*** {% trans 'Biography:' %}
+
+{{ talk.biography }}
+
+{% if talk.charges %}
+*** {% trans 'Refund charges:' %} {{ talk.get_charges_display }}
+
+*** {% trans 'City:' %} {{ talk.city }}
+
+*** {% trans 'Country:' %} {{ talk.country }}
+{% if talk.transportation %}
+*** {% trans 'Transportation:' %} {{ talk.transportation }}
+{% endif %}{% if talk.cost %}
+*** {% trans 'Estimated cost (euros):' %} {{ talk.cost }}
+{% endif %}
+{% endif %}
+
+{% trans "Regards," %}
+
+-- 
+{% trans "The RMLL/LSM Organization Team" %}
+ url: https://call.rmll.info/ https://appel.rmll.info/
+mail: webmaster@rmll.info
+{% endautoescape %}

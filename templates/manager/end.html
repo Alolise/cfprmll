@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load markup %}
+
+{% block title %}{% trans 'RMLL/LSM Call for papers' %}{% endblock %}
+
+{% block content %}
+    <h1>
+        <a href="/">
+            {% trans 'RMLL/LSM Call for papers' %}
+        </a>
+    </h1>
+
+    <div class="success">
+        {% blocktrans %}
+            Your talk was successfully submited.
+        {% endblocktrans %}
+    </div>
+
+{% endblock %}

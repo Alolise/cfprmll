@@ -1,17 +1,23 @@
+# -*- coding: utf-8 -*-
+from django.conf import settings
 from django.conf.urls.defaults import *
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
+
+from django.views.generic.simple import redirect_to
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^cfp/', include('cfp.foo.urls')),
-
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # (r'^admin/', include(admin.site.urls)),
+    # admin interface
+    (r'^admin/(.*)', admin.site.root),
+    (r'^i18n/', include('django.conf.urls.i18n')),
+    (r'^$', redirect_to, {'url': 'talk/new'}),
+    (r'^talk/', include('cfp.manager.urls')),
 )
+
+if settings.DEBUG:
+    import os.path
+    urlpatterns += patterns('',
+        (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.DOCUMENT_ROOT}),
+    )

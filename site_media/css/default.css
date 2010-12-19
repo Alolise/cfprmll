@@ -1,0 +1,226 @@
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-left: 25px;
+}
+
+#page {
+    text-align:center;
+}
+
+#contact {
+    float:left;
+}
+
+#flags {
+    float: right;
+}
+
+#flags form {
+    display: inline;
+}
+
+#flags input {
+    border: none;
+}
+
+#content {
+    text-align: left;
+    border: 1px solid black;
+    width: 650px;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 1em;
+    -webkit-box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+    -moz-box-shadow: 4px 4px 8px rgba(0,0,0,0.6);
+}
+
+.description {
+    border-left: 2px solid #ececec;
+    margin: 10px 30px;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+form {
+    text-align: left;
+}
+
+fieldset, legend {
+    border: 1px solid #808080;
+    margin-bottom: 15px;
+    padding: 15px 15px;
+    border-radius: 1em;
+    -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    /* -moz-box-shadow: 2px 2px 6px rgba(0,0,0,0.6); */
+}
+
+legend {
+    padding: 5px;
+    background: white;
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+input, textarea {
+    border: 1px solid #808080;
+}
+
+input.text {
+    width: 300px;
+}
+
+textarea {
+    width: 400px;
+    height: 150px;
+}
+
+.field {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 2px solid #ececec;
+}
+
+label, .label {
+    font-weight: bold;
+    color: #404040;
+}
+
+.field label, .field .label {
+    width: 150px;
+    float: left;
+}
+
+.field .widget {
+    float: left;
+    width: 450px;
+}
+
+.field .help {
+    background: url('../images/picto_help.png') no-repeat;
+    margin: 0 20px;
+    padding: 10px 0px 0px 25px;
+    clear: both;
+    font-style: oblique;
+    color: #303030;
+    min-height: 25px;
+}
+
+.field .help .examples {
+    margin-top: 15px;
+    font-style: normal;
+    font-size: 0.9em;
+}
+
+.field .help .examples ul {
+    margin: 0;
+}
+
+.field-error label {
+    color: #dd3232;
+}
+
+.field-errors {
+    color: #dd3232;
+    padding: 0 0 0 150px;
+}
+
+.field-errors ul {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.field-errors li {
+    margin-left: 15px;
+    list-style-position: inside;
+}
+
+.field-errors .field-error-num-1 {
+    margin: 0 0 10px 0;
+    list-style: none;
+}
+
+.field .areatext {
+    margin: 0 0 0 25%;
+}
+
+.mandatory {
+    padding: 10px;
+}
+
+.required {
+    color: red;
+}
+
+.sub {
+    text-align: right;
+}
+
+.speakers_format textarea {
+    font-size:
+    font-size: 0.7em;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 400px;
+    height: 80px;
+}
+
+.warning, .error, .notice, .success {
+    font-size: 1.3em;
+    padding: 10px;
+    text-align: center;
+}
+
+.warning {
+    background: #FFEBCD;
+    border: 2px solid #FFD699;
+    color: #7E4C00;
+}
+
+.error {
+    background: #F5E1E1;
+    border: 2px solid #EBC2C2;
+    color: #653232;
+}
+
+.notice {
+    background: #CDEBEB;
+    border: 2px solid #99D6D6;
+    color: #004C4C !important;
+}
+
+.success {
+    background: #D7EBD7;
+    border: 2px solid #ADD6AD;
+    color: #194C19 !important;
+}
