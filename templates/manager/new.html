@@ -40,11 +40,11 @@
         </div>
     {% endif %}
 
-    <div class="mandatory">
-        {% blocktrans with '<span class="required">*</span>' as mark %}Fields prefixed with a {{ mark }} are mandatory.{% endblocktrans %}
-    </div>
-
     <form method="post" action="">
+        <div class="mandatory">
+            {% blocktrans with '<span class="required">*</span>' as mark %}Fields prefixed with a {{ mark }} are mandatory.{% endblocktrans %}
+        </div>
+
         {% for field in form %}
             {% ifequal field.name 'topic' %}
                 <fieldset>
@@ -80,7 +80,7 @@
                 {% endif %}
 
                 <label for="id_{{ field.name }}">
-                    {% if field.field.required %}<span class="required">*</span>{% endif %}{{ field.label }}
+                    {% if field.field.required %}<span class="required">* </span>{% endif %}{{ field.label }}
                 </label>
 
                 <div class="widget">
