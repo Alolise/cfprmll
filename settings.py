@@ -3,6 +3,16 @@ import os
 
 PROJECT_DIR = os.path.dirname(__file__)
 
+# DEVEL SETTINGS
+DEVEL = os.environ.has_key('DJANGO_DEVEL')
+
+if DEVEL:
+    DEBUG = True
+    TEMPLATE_DEBUG = DEBUG
+else:
+    DEBUG = False
+    TEMPLATE_DEBUG = False
+
 SERVER_EMAIL = 'webmaster@rmll.info'
 # ADMINS needs to be a list (a tuple make mail_admins fails)
 EMAIL_SUBJECT_PREFIX = '[TRACE] '
@@ -30,10 +40,10 @@ TIME_ZONE = 'Europe/Paris'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-US'
 
-LANGUAGES = (
+LANGUAGES = [
     (u'en', u'English'),
     (u'fr', u'Français'),
-)
+]
 
 SITE_ID = 1
 
@@ -60,29 +70,33 @@ ADMIN_MEDIA_PREFIX = '/media/'
 SECRET_KEY = 'o09#3yj)l85md7twpz(13jz3p3g11=)pv!!h!w%_s#_&r!i6gx'
 
 # List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
+TEMPLATE_LOADERS = [
     'django.template.loaders.filesystem.load_template_source',
     'django.template.loaders.app_directories.load_template_source',
 #     'django.template.loaders.eggs.load_template_source',
-)
+]
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE_CLASSES = [
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-)
+]
+if DEVEL:
+    MIDDLEWARE_CLASSES += [
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    ]
 
 ROOT_URLCONF = 'cfp.urls'
 
-TEMPLATE_DIRS = (
+TEMPLATE_DIRS = [
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     PROJECT_DIR + '/templates/',
-)
+]
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -90,28 +104,31 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'django.contrib.sites',
     'cfp.manager',
-)
+]
+if DEVEL:
+    INSTALLED_APPS += [
+        'debug_toolbar',
+    ]
+    INTERNAL_IPS = [
+        '127.0.0.1',
+        #'82.245.96.113',
+    ]
 
 # template processors
-TEMPLATE_CONTEXT_PROCESSORS = (
+TEMPLATE_CONTEXT_PROCESSORS = [
     'django.core.context_processors.auth',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
-)
+]
 
 ### SESSIONS / COOKIES ###
-SESSION_COOKIE_NAME = 'cfp'
+if DEVEL:
+    SESSION_COOKIE_NAME = 'cfp-dev'
+else:
+    SESSION_COOKIE_NAME = 'cfp'
 SESSION_COOKIE_AGE = 10800
 SESSION_ENGINE = "django.contrib.sessions.backends.file"
 
-# DEVELOPMENT SETTINGS
-if os.environ.has_key('DJANGO_DEVEL'):
-    SESSION_COOKIE_NAME = 'cfp-dev'
-    DEBUG = True
-    TEMPLATE_DEBUG = DEBUG
-else:
-    DEBUG = False
-    TEMPLATE_DEBUG = False
 
 ### SPECIFICS
 CFP_NOTICE_FROM_EMAIL = 'noreply@rmll.info'
