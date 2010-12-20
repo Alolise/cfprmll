@@ -135,7 +135,7 @@ class Transportation(models.Model, LabelClass):
 
 class Talk(models.Model):
     YES_NO = ((1,_(u"Yes")),(0,_(u"No")),)
-    NO_YES = ((0,_(u"No")),(1,_(u"Yes")),)
+    NO_YES_MAYBE = ((0,_(u"No")),(1,_(u"Yes")),(2,_(u"I don't know yet")),)
     STATUS = ((1,_(u"Accepted")),(0,_(u"Rejected")),)
     NATURES = (('conference',_(u"Conference")),('workshop',_(u"Workshop")),)
 
@@ -151,7 +151,7 @@ class Talk(models.Model):
     constraints = models.TextField(_(u"Constraints"), blank=True)
     speakers = models.TextField(_(u"Speaker(s)"))
     biography = models.TextField(_(u"Biography"))
-    charges = models.PositiveSmallIntegerField(_(u"Refund charges"), choices=NO_YES, blank=True)
+    charges = models.PositiveSmallIntegerField(_(u"Refund charges"), choices=NO_YES_MAYBE, blank=True)
     city = models.CharField(_(u"City"), max_length=128, blank=True)
     country = models.ForeignKey(Country, null=True, blank=True)
     transportation = models.ForeignKey(Transportation, null=True, blank=True)

@@ -153,7 +153,7 @@ class TalkForm(forms.ModelForm):
         help_text=_(u"Add a few words about the speaker(s). Their, work, activities, involvement in free software, etc. It will be publish with the abstract on the event website."),
     )
     charges = forms.ChoiceField(label=(_(u"Refund charges")),
-                                            choices=Talk.NO_YES, required=False)
+                                    choices=Talk.NO_YES_MAYBE, required=False)
     transportation = forms.ModelChoiceField(label=_(u"Transportation"),
         queryset=Transportation.objects.all(), required=False)
     city = forms.CharField(label=_(u"City"), min_length=3,
@@ -182,7 +182,7 @@ class TalkForm(forms.ModelForm):
             self._errors['license'] = self.error_class([_(u"This field is required.")])
             del cleaned_data['license']
 
-        if charges == '1':
+        if charges != '0':
             if city == '':
                 self._errors['city'] = self.error_class([_(u"This field is required.")])
                 del cleaned_data['city']
