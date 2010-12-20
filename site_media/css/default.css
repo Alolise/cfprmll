@@ -52,7 +52,7 @@ h2 {
 }
 
 #flags input {
-    border: none;
+    font-weight: bold;
 }
 
 #content {
