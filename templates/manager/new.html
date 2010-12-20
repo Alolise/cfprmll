@@ -26,7 +26,7 @@
             {% endblocktrans %}
         </p>
         <p>
-            {% blocktrans %}Call for papers will end on {{ limit }}.{% endblocktrans %}
+            {% blocktrans with 'UTC' as utc %}Call for papers will end on {{ limit }} {{ utc }}.{% endblocktrans %}
         </p>
     </div>
 

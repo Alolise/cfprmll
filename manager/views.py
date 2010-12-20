@@ -14,7 +14,7 @@ from datetime import datetime
 def new(request, tmpl):
     syserr = None
 
-    limit = datetime.strptime(settings.CFP_LIMIT_DATE, '%Y-%m-%d')
+    limit = datetime.strptime(settings.CFP_LIMIT_DATE, '%Y-%m-%d %H:%M:%S')
     if datetime.utcnow() > limit:
         return HttpResponseRedirect('/talk/closed')
 
