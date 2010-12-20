@@ -3,7 +3,12 @@
 {% load i18n %}
 {% load markup %}
 
-{% block title %}{% trans 'RMLL/LSM Call for papers' %}{% endblock %}
+{% block title %}
+    {% if form.errors or syserr %}
+        {% trans 'Form error' %} -
+    {% endif %}
+    {% trans 'RMLL/LSM Call for papers' %}
+{% endblock %}
 
 {% block content %}
     <h1>
