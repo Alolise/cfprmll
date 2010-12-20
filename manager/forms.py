@@ -102,11 +102,31 @@ class TransportationAdminForm(TransportationAdminFormBase):
     class Meta:
         model = Transportation
 
+
+# Ugly hack
+from django.forms import widgets
+from django.utils.encoding import force_unicode
+from itertools import chain
+from operator import itemgetter
+
+class SortedForm(widgets.Select):
+    def render_options(self, choices, selected_choices):
+        # Normalize to strings.
+        selected_choices = set([force_unicode(v) for v in selected_choices])
+        values = []
+        for k,v in chain(self.choices, choices):
+            values.append((k, v))
+        values.sort(key=itemgetter(1))
+        output = []
+        for option_value, option_label in values:
+            output.append(self.render_option(selected_choices, option_value, option_label))
+        return u'\n'.join(output)
+
 _iattrs = { 'class': 'text', 'size': 60}
 _tattrs = { 'cols': '80', 'rows': 12}
 class TalkForm(forms.ModelForm):
     topic = forms.ModelChoiceField(label=_(u"Topic"),
-        queryset=Topic.objects.all(), empty_label=None)
+        queryset=Topic.objects.all(), empty_label=None, widget=SortedForm)
     title = forms.CharField(label=_(u"Title"),
                             min_length=5, widget=forms.TextInput(attrs=_iattrs))
     nature = forms.ChoiceField(label=_(u"Nature"), choices=Talk.NATURES, required=True)
@@ -138,7 +158,7 @@ class TalkForm(forms.ModelForm):
         queryset=Transportation.objects.all(), required=False)
     city = forms.CharField(label=_(u"City"), min_length=3,
                             required=False, widget=forms.TextInput(attrs=_iattrs))
-    country = forms.ModelChoiceField(label=_(u"Country"),
+    country = forms.ModelChoiceField(label=_(u"Country"),  widget=SortedForm,
                                 required=False, queryset=Country.objects.all())
     cost = forms.CharField(label=_(u"Estimated cost (euros)"),
                             required=False, widget=forms.TextInput(attrs=_iattrs),
