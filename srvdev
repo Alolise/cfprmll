@@ -1,0 +1,14 @@
+#!/bin/sh
+
+LISTENTO=0.0.0.0
+PORT=4444
+VERBOSE=2
+
+export DJANGO_DEVEL=1
+
+for i in addons/* ; do
+    export PYTHONPATH="${i}:${PYTHONPATH}"
+done
+
+./manage.py runserver -v "${VERBOSE}" "${LISTENTO}:${PORT}"
+
