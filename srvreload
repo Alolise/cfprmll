@@ -27,7 +27,7 @@ printf 'Fix permissions on regular files...   '
 find -type f -exec chmod 644 {} \;
 status $?
 
-for i in manage.py "$0" ; do
+for i in manage.py srvdev "$0" ; do
     printf 'Fix permissions on “%s” tool...   ' "$i"
     chmod a+x "$i"
     status $?
