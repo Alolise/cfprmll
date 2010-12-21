@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from models import *
 from forms import *
+from actions import export_csv
 
 class TopicAdmin(admin.ModelAdmin):
     form = TopicAdminForm
@@ -37,4 +38,5 @@ class TalkAdmin(admin.ModelAdmin):
     list_filter = ('status', 'nature', 'language', 'charges', 'topic')
     search_fields = ('title', 'speakers', 'abstract', 'constraints', 'biography')
     list_display = ('title', 'date', 'language', 'speakers', 'capture', 'charges', 'city', 'country', 'cost')
+    actions = [export_csv]
 admin.site.register(Talk, TalkAdmin)
