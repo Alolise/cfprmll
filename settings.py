@@ -23,7 +23,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'postgresql_psycopg2' # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'cfp2011'               # Or path to database file if using sqlite3.
+DATABASE_NAME = 'cfp2012'               # Or path to database file if using sqlite3.
 DATABASE_USER = 'cfp'                   # Not used with sqlite3.
 DATABASE_PASSWORD = 'cfp'               # Not used with sqlite3.
 DATABASE_HOST = 'localhost'             # Set to empty string for localhost. Not used with sqlite3.
@@ -67,7 +67,7 @@ MEDIA_ROOT = PROJECT_DIR + MEDIA_URL
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'o09#3yj)l85md7twpz(13jz3p3g11=)pv!!h!w%_s#_&r!i6gx'
+SECRET_KEY = '%UBeRvHRI"]DwbF{i%o;oRbnRLTVrB?$Rwj5+=Dcs3.SkMFbvu'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = [
@@ -132,5 +132,5 @@ SESSION_ENGINE = "django.contrib.sessions.backends.file"
 
 ### SPECIFICS
 CFP_NOTICE_FROM_EMAIL = 'noreply@rmll.info'
-CFP_LIMIT_DATE = '2011-03-01 12:00:00'
+CFP_LIMIT_DATE = '2012-03-31 23:59:59'
 CFP_ACCEPT_DATE = '2012-04-15'
