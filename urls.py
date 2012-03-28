@@ -10,7 +10,7 @@ from django.views.generic.simple import redirect_to
 
 urlpatterns = patterns('',
     # admin interface
-    (r'^admin/(.*)', include(admin.site.urls)),
+    (r'^admin/(.*)', admin.site.root),
     (r'^i18n/', include('django.conf.urls.i18n')),
     (r'^$', redirect_to, {'url': 'talk/new'}),
     (r'^talk/', include('cfp.manager.urls')),
