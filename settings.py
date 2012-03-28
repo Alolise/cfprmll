@@ -133,3 +133,4 @@ SESSION_ENGINE = "django.contrib.sessions.backends.file"
 ### SPECIFICS
 CFP_NOTICE_FROM_EMAIL = 'noreply@rmll.info'
 CFP_LIMIT_DATE = '2011-03-01 12:00:00'
+CFP_ACCEPT_DATE = '2012-04-15'

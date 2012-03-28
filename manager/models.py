@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
+from datetime import datetime
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
@@ -169,8 +170,30 @@ class Talk(models.Model):
     def save(self):
         super(Talk, self).save()
         talk = Talk.objects.get(id=self.id)
-        tmpl = loader.get_template('manager/summary_mail.txt')
-        ctx = {'talk': talk}
+        limit = datetime.strptime(settings.CFP_ACCEPT_DATE, '%Y-%m-%d').strftime('%Y/%m/%d')
+        ctx = {'talk': talk, 'limit': limit}
+
         subject = _(u"[RMLL/LSM] [Topic: %s] New talk") % talk.topic.label()
-        send_mail(subject, tmpl.render(Context(ctx)), settings.CFP_NOTICE_FROM_EMAIL, [talk.topic.email])
-        mail_admins(subject, tmpl.render(Context(ctx)))
+        tmpl = loader.get_template('manager/mail2coordinator.txt')
+        content = tmpl.render(Context(ctx))
+
+        send_mail(subject, content, settings.CFP_NOTICE_FROM_EMAIL, [talk.topic.email])
+
+        subject = _(u"[RMLL/LSM] [Topic: %s] Your proposal") % talk.topic.label()
+        tmpl = loader.get_template('manager/mail2submitter.txt')
+        content = tmpl.render(Context(ctx))
+
+        speaker_re = Talk.speaker_re()
+        for s in talk.speakers.strip().split("\n"):
+            s = s.strip()
+            dest = []
+            matches = speaker_re.match(s)
+            if matches:
+                name = matches.group(1)
+                email = matches.group(2)
+                dest.append('%s <%s>' % (name, email))
+
+            if dest != []:
+                send_mail(subject, content, settings.CFP_NOTICE_FROM_EMAIL, dest)
+                #mail_admins(subject, content)
+
