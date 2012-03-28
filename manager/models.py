@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import re
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
@@ -157,6 +158,13 @@ class Talk(models.Model):
     transportation = models.ForeignKey(Transportation, null=True, blank=True)
     cost = models.CharField(_(u"Estimated cost"), max_length=64, blank=True)
     notes = models.TextField(_(u"Notes"), blank=True)
+
+    @staticmethod
+    def speaker_re():
+        return re.compile(
+            r"^(.{4,})\s+\[(([-!#$%&'*+/=?^_`{}|~0-9A-Z]+(\.[-!#$%&'*+/=?^_`{}|~0-9A-Z]+)*"  # dot-atom
+            r'|^"([\001-\010\013\014\016-\037!#-\[\]-\177]|\\[\001-011\013\014\016-\177])*"' # quoted-string
+            r')@(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?)\]$', re.IGNORECASE)
 
     def save(self):
         super(Talk, self).save()

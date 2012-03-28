@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import re
 
 from django import forms
 from django.forms.util import ErrorList
@@ -194,10 +193,7 @@ class TalkForm(forms.ModelForm):
             if speakers.strip() == '':
                 self._errors['speakers'] = self.error_class([_(u"This field is required.")])
             else:
-                speaker_re = re.compile(
-                    r"^.{4,}\s+\[([-!#$%&'*+/=?^_`{}|~0-9A-Z]+(\.[-!#$%&'*+/=?^_`{}|~0-9A-Z]+)*"  # dot-atom
-                    r'|^"([\001-\010\013\014\016-\037!#-\[\]-\177]|\\[\001-011\013\014\016-\177])*"' # quoted-string
-                    r')@(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?\]$', re.IGNORECASE)
+                speaker_re = Talk.speaker_re()
 
                 speakers = speakers.strip()
                 errors = []
