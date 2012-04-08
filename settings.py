@@ -22,12 +22,16 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'postgresql_psycopg2' # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'cfp2012'               # Or path to database file if using sqlite3.
-DATABASE_USER = 'cfp'                   # Not used with sqlite3.
-DATABASE_PASSWORD = 'cfp'               # Not used with sqlite3.
-DATABASE_HOST = 'localhost'             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''                      # Set to empty string for default. Not used with sqlite3.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'cfp2012',               # Or path to database file if using sqlite3.
+        'USER': 'cfp',                   # Not used with sqlite3.
+        'PASSWORD': 'cfp',               # Not used with sqlite3.
+        'HOST': 'localhost',             # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -71,7 +75,7 @@ SECRET_KEY = '%UBeRvHRI"]DwbF{i%o;oRbnRLTVrB?$Rwj5+=Dcs3.SkMFbvu'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = [
-    'django.template.loaders.filesystem.load_template_source',
+    'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.load_template_source',
 #     'django.template.loaders.eggs.load_template_source',
 ]
@@ -116,7 +120,7 @@ if DEVEL:
 
 # template processors
 TEMPLATE_CONTEXT_PROCESSORS = [
-    'django.core.context_processors.auth',
+    'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
 ]
