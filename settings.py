@@ -86,10 +86,6 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
-#if DEVEL:
-#    MIDDLEWARE_CLASSES += [
-#        'debug_toolbar.middleware.DebugToolbarMiddleware',
-#    ]
 
 ROOT_URLCONF = 'cfp.urls'
 
@@ -109,14 +105,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'cfp.manager',
 ]
-if DEVEL:
-#    INSTALLED_APPS += [
-#        'debug_toolbar',
-#    ]
-    INTERNAL_IPS = [
-        '127.0.0.1',
-        #'82.245.96.113',
-    ]
 
 # template processors
 TEMPLATE_CONTEXT_PROCESSORS = [
