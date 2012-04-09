@@ -37,6 +37,6 @@ class TalkAdmin(admin.ModelAdmin):
     form = TalkAdminForm
     list_filter = ('status', 'nature', 'language', 'charges', 'topic')
     search_fields = ('title', 'speakers', 'abstract', 'constraints', 'biography')
-    list_display = ('title', 'date', 'language', 'speakers', 'capture', 'charges', 'city', 'country', 'cost')
+    list_display = ('title', 'date', 'status', 'language', 'speakers', 'capture', 'charges', 'city', 'country', 'cost')
     actions = [export_csv]
 admin.site.register(Talk, TalkAdmin)
