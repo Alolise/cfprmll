@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-02 01:25+0100\n"
+"POT-Creation-Date: 2012-04-09 21:20+0200\n"
 "PO-Revision-Date: 2012-02-02 01:27+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -204,6 +204,10 @@ msgid "I don't know yet"
 msgstr "Je ne sais pas encore"
 
 #: manager/models.py:141
+msgid "Waiting"
+msgstr "En attente"
+
+#: manager/models.py:141
 msgid "Accepted"
 msgstr "Accepté"
 
@@ -236,7 +240,7 @@ msgstr "Coût estimé"
 msgid "[RMLL/LSM] [Topic: %s] New talk"
 msgstr "[RMLL] [Thème : %s] Nouvelle proposition"
 
-#: manager/models.py:184
+#: manager/models.py:182
 #, python-format
 msgid "[RMLL/LSM] [Topic: %s] Your proposal"
 msgstr "[RMLL] [Thème : %s] Votre proposition"
@@ -399,6 +403,10 @@ msgstr "Visiter notre site"
 
 #, fuzzy
 #~ msgid "SESSION Variables"
+#~ msgstr "Valeur"
+
+#, fuzzy
+#~ msgid "No SESSION data"
 #~ msgstr "Valeur"
 
 #, fuzzy

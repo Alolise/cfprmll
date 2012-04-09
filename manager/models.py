@@ -138,11 +138,11 @@ class Transportation(models.Model, LabelClass):
 class Talk(models.Model):
     YES_NO = ((1,_(u"Yes")),(0,_(u"No")),)
     NO_YES_MAYBE = ((0,_(u"No")),(1,_(u"Yes")),(2,_(u"I don't know yet")),)
-    STATUS = ((1,_(u"Accepted")),(0,_(u"Rejected")),)
+    STATUS = ((0,_(u"Waiting")),(1,_(u"Accepted")),(2,_(u"Rejected")),)
     NATURES = (('conference',_(u"Conference")),('workshop',_(u"Workshop")),)
 
     date = models.DateField(_(u"Send date"), auto_now=True)
-    status = models.PositiveSmallIntegerField(_(u"Status"), choices=STATUS, null=True, blank=True)
+    status = models.PositiveSmallIntegerField(_(u"Status"), choices=STATUS, default=0)
     topic = models.ForeignKey(Topic)
     title = models.CharField(_(u"Title"), max_length=128)
     nature = models.CharField(_(u"Nature"), choices=NATURES, max_length=24, blank=True)
