@@ -205,7 +205,7 @@ msgstr "Je ne sais pas encore"
 
 #: manager/models.py:141
 msgid "Waiting"
-msgstr "En attente"
+msgstr "Attente"
 
 #: manager/models.py:141
 msgid "Accepted"
