@@ -9,6 +9,7 @@ from forms import TalkForm
 
 from datetime import datetime
 
+
 @auto_render
 def new(request, tmpl):
     syserr = None
@@ -27,6 +28,7 @@ def new(request, tmpl):
     else:
         form = TalkForm()
     return tmpl, locals()
+
 
 @auto_render
 def end(request, tmpl):

@@ -6,15 +6,18 @@ from models import Topic, Country, License, Talk, Transportation, Language
 from forms import TopicAdminForm, LanguageAdminForm, CountryAdminForm, TransportationAdminForm, TalkAdminForm
 from actions import export_csv
 
+
 class TopicAdmin(admin.ModelAdmin):
     form = TopicAdminForm
     list_display = ('label', 'email')
     search_fields = ('topiclabel__value', 'email')
 admin.site.register(Topic, TopicAdmin)
 
+
 class LanguageAdmin(admin.ModelAdmin):
     form = LanguageAdminForm
 admin.site.register(Language, LanguageAdmin)
+
 
 class CountryAdmin(admin.ModelAdmin):
     form = CountryAdminForm
@@ -23,14 +26,17 @@ class CountryAdmin(admin.ModelAdmin):
     list_display = ('label', 'code')
 admin.site.register(Country, CountryAdmin)
 
+
 class LicenseAdmin(admin.ModelAdmin):
     ordering = ('name',)
     search_fields = ('name',)
 admin.site.register(License, LicenseAdmin)
 
+
 class TransportationAdmin(admin.ModelAdmin):
     form = TransportationAdminForm
 admin.site.register(Transportation, TransportationAdmin)
+
 
 class TalkAdmin(admin.ModelAdmin):
     form = TalkAdminForm

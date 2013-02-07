@@ -8,8 +8,9 @@ import time
 from django.http import HttpResponse
 from django.utils.translation import ugettext_lazy as _
 
+
 def export_csv(modeladmin, request, queryset):
-    replace_dc = { '\n' : u'¬', '\r' : ''}
+    replace_dc = {'\n': u'¬', '\r': ''}
     opts = modeladmin.model._meta
     response = HttpResponse(mimetype='text/csv')
     response['Content-Disposition'] = 'attachment; filename=%s_%s.csv' % (unicode(opts).replace('.', '_'), time.strftime('%Y%m%d-%H%M%S', time.localtime()))

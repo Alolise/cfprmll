@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-import sys, os.path
+import sys
+import os.path
 
 ######################
 sys.path.append(os.path.realpath(os.path.dirname(os.path.abspath(__file__)) + '/../../'))
-os.environ['DJANGO_SETTINGS_MODULE'] ='cfp.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'cfp.settings'
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.management import setup_environ
@@ -16,6 +17,7 @@ from manager.models import Country
 #####################
 setup_environ(settings)
 #####################
+
 
 class CountryImport:
     @staticmethod
