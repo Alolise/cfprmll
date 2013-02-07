@@ -2,3 +2,6 @@
 *.mo
 /addons
 /sql
+ve
+cfp.db
+*.swp
