@@ -40,6 +40,10 @@ Build the database:
 
     python manage.py syncdb
 
+Build the translations:
+
+    python manage.py compilemessages
+
 Launch the dev webserver:
 
     python manage.py runserver  # to launch the developpement server
