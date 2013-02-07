@@ -31,11 +31,18 @@ To exit the virtualenv:
 Usage
 -----
 
+Get the sources:
+
     git clone git://github.com/RMLL/cfprmll.git
     cd cfprmll
-    python manage.py syncdb
-    python manage.py runserver  # to launch the developpement server
 
+Build the database:
+
+    python manage.py syncdb
+
+Launch the dev webserver:
+
+    python manage.py runserver  # to launch the developpement server
 
 Misc
 ====
