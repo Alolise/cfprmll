@@ -5,7 +5,7 @@ from django.forms.util import ErrorList
 from django.utils.translation import ugettext_lazy as _
 
 from django.conf import settings
-from models import *
+from models import Topic, TopicLabel, Language, LanguageLabel, Country, CountryLabel, Transportation, TransportationLabel, Talk, License
 
 # construction dynamique des classes de formulaires
 bases = (forms.ModelForm,)

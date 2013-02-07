@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from django.conf.urls.defaults import *
+from django.conf.urls.defaults import patterns, url
 from django.views.generic.simple import redirect_to
 
-from cfp.manager.views import *
+from manager.views import new, end
 
 urlpatterns = patterns ('',
     url(r'^new$', new, {'tmpl': 'manager/new.html'}),
