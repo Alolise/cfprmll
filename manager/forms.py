@@ -4,7 +4,7 @@ from django import forms
 from django.forms.util import ErrorList
 from django.utils.translation import ugettext_lazy as _
 
-from cfp import settings
+from django.conf import settings
 from models import *
 
 # construction dynamique des classes de formulaires

@@ -3,8 +3,8 @@
 from django.utils.translation import ugettext_lazy as _
 from django.http import HttpResponse, HttpResponseRedirect
 
-from cfp import settings
-from cfp.utils.decorators import auto_render
+from django.conf import settings
+from utils.decorators import auto_render
 
 from forms import TalkForm
 

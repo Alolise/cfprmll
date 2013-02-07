@@ -8,10 +8,10 @@ os.environ['DJANGO_SETTINGS_MODULE'] ='cfp.settings'
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.management import setup_environ
-from cfp import settings
+from django.conf import settings
 ######################
 
-from cfp.manager.models import Country
+from manager.models import Country
 
 #####################
 setup_environ(settings)

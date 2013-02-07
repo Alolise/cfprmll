@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^i18n/', include('django.conf.urls.i18n')),
     (r'^$', redirect_to, {'url': 'talk/new'}),
-    (r'^talk/', include('cfp.manager.urls')),
+    (r'^talk/', include('manager.urls')),
 )
 
 if settings.DEBUG:

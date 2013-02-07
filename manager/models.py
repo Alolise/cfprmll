@@ -10,7 +10,7 @@ from django.utils.translation import get_language
 from django.core.mail import send_mail, mail_admins
 from django.template import Context, loader
 
-from cfp import settings
+from django.conf import settings
 
 class LabelClass:
     """

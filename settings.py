@@ -87,7 +87,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
 
-ROOT_URLCONF = 'cfp.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = [
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -103,7 +103,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.markup',
     'django.contrib.sites',
-    'cfp.manager',
+    'manager',
 ]
 
 # template processors
