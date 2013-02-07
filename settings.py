@@ -115,3 +115,8 @@ SESSION_ENGINE = "django.contrib.sessions.backends.file"
 CFP_NOTICE_FROM_EMAIL = 'noreply@rmll.info'
 CFP_LIMIT_DATE = '2013-03-31 23:59:59'
 CFP_ACCEPT_DATE = '2013-04-15'
+
+try:
+    from settings_local import *
+except ImportError:
+    pass
