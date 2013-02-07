@@ -2,10 +2,10 @@
 
 # from http://weitlandt.com/theme/2010/05/wir-djangonauten-csv-export-nach-excel-mit-umlauten/
 
-import csv, codecs, time
+import csv
+import time
 
 from django.http import HttpResponse
-from django.template import Context, Template
 from django.utils.translation import ugettext_lazy as _
 
 def export_csv(modeladmin, request, queryset):

@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils.translation import get_language
 
-from django.core.mail import send_mail, mail_admins
+from django.core.mail import send_mail
 from django.template import Context, loader
 
 from django.conf import settings
