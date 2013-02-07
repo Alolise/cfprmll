@@ -3,15 +3,8 @@ import os
 
 PROJECT_DIR = os.path.dirname(__file__)
 
-# DEVEL SETTINGS
-DEVEL = os.environ.has_key('DJANGO_DEVEL')
-
-if DEVEL:
-    DEBUG = True
-    TEMPLATE_DEBUG = DEBUG
-else:
-    DEBUG = False
-    TEMPLATE_DEBUG = False
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 SERVER_EMAIL = 'webmaster@rmll.info'
 # ADMINS needs to be a list (a tuple make mail_admins fails)
@@ -113,11 +106,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     'django.core.context_processors.media',
 ]
 
-### SESSIONS / COOKIES ###
-if DEVEL:
-    SESSION_COOKIE_NAME = 'cfp-dev'
-else:
-    SESSION_COOKIE_NAME = 'cfp'
+SESSION_COOKIE_NAME = 'cfp-dev'
 SESSION_COOKIE_AGE = 10800
 SESSION_ENGINE = "django.contrib.sessions.backends.file"
 
