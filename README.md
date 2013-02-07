@@ -44,6 +44,17 @@ Launch the dev webserver:
 
     python manage.py runserver  # to launch the developpement server
 
+Translation details
+===================
+
+To generate/update a .po file you need to do this:
+
+    python manage.py makemessages -v 2 -a -e .html,.txt,.xml
+
+Once you have edited the .po file, you need to generate the .mo by doing this:
+
+    python manage.py compilemessages
+
 Misc
 ====
 
