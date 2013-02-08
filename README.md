@@ -75,8 +75,8 @@ run the following command to import it:
 
     python manage.py import_countries
 
-To update the default data, do this (*WARNING* this will dump all the data in
-the manager app, not only the countries, *do this only if you know what you are
-doing*):
+To update the default data, do this ( **WARNING** this will dump all the data in
+the manager app, not only the countries, **do this only if you know what you are
+doing**):
 
     python manage.py dumpdata --format=json manager > manager/fixtures/initial_data.json
