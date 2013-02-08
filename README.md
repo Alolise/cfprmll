@@ -64,3 +64,19 @@ Misc
 
 If you need to set specific settings, don't modify the settings.py, create a
 settings\_local.py and put them in it.
+
+Countries datas
+---------------
+
+By default, you will have the countries data loaded in your database.
+
+If you need to modify the data, it's in datas/countries.csv, and you'll need to
+run the following command to import it:
+
+    python manage.py import_countries
+
+To update the default data, do this (*WARNING* this will dump all the data in
+the manager app, not only the countries, *do this only if you know what you are
+doing*):
+
+    python manage.py dumpdata --format=json manager > manager/fixtures/initial_data.json
