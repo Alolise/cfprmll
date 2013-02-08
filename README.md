@@ -14,9 +14,9 @@ advanced enough (django 1.3.\* or 1.4.\*), you can use it. For deployement, be
 sure to have the lastests version of the current subversion of django for
 security reasons.
 
-So, for debian-based (including Ubuntu):
+So, for debian-based (Debian >= Wheezy, Ubuntu >= Oneiric):
 
-    sudo apt-get install django
+    sudo apt-get install python-django
 
 If you want to use a virtualenv:
 
@@ -34,6 +34,8 @@ Usage
 Get the sources:
 
     git clone git://github.com/RMLL/cfprmll.git
+    # If you've dev rights to push changes, use instead:
+    # git clone git@github.com:RMLL/cfprmll.git
     cd cfprmll
 
 Build the database:
@@ -47,6 +49,8 @@ Build the translations:
 Launch the dev webserver:
 
     python manage.py runserver  # to launch the developpement server
+
+Visit it at http://127.0.0.1:8000/
 
 Translation details
 ===================
