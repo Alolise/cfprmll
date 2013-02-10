@@ -166,7 +166,7 @@ class Talk(models.Model):
     title = models.CharField(_(u"Title"), max_length=128)
     nature = models.CharField(_(u"Nature"), choices=NATURES, max_length=24, blank=True)
     abstract = models.TextField(_(u"Abstract"))
-    abstract_other_language = models.TextField(_(u"Abstract in French"))
+    abstract_other_language = models.TextField(_(u"Abstract in French"), blank=True, null=True)
     capture = models.PositiveSmallIntegerField(u"Capture", choices=YES_NO)
     license = models.ForeignKey(License, null=True, blank=True)
     constraints = models.TextField(_(u"Constraints"), blank=True)
@@ -179,7 +179,7 @@ class Talk(models.Model):
 
     speakers = models.TextField(_(u"Speaker(s)"))
     biography = models.TextField(_(u"Biography"))
-    biography_other_language = models.TextField(_(u"Biography in French"))
+    biography_other_language = models.TextField(_(u"Biography in French"), blank=True, null=True)
     charges = models.PositiveSmallIntegerField(_(u"Refund charges"), choices=NO_YES_MAYBE, blank=True)
     city = models.CharField(_(u"City"), max_length=128, blank=True)
     country = models.ForeignKey(Country, null=True, blank=True)
