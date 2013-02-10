@@ -158,7 +158,8 @@ class Talk(models.Model):
     STATUS = ((0, _(u"Waiting")), (1, _(u"Accepted")), (2, _(u"Rejected")),)
     NATURES = (('conference', _(u"Conference")), ('workshop', _(u"Workshop")),)
 
-    date = models.DateField(_(u"Send date"), auto_now=True)
+    created_date = models.DateField(_(u"Submited date"), auto_now_add=True)
+    date = models.DateField(_(u"Last modification date"), auto_now=True)
     status = models.PositiveSmallIntegerField(_(u"Status"), choices=STATUS, default=0)
     topic = models.ForeignKey(Topic)
     title = models.CharField(_(u"Title"), max_length=128)
