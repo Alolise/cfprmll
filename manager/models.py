@@ -172,6 +172,7 @@ class Talk(models.Model):
     constraints = models.TextField(_(u"Constraints"), blank=True)
     speakers = models.TextField(_(u"Speaker(s)"))
     biography = models.TextField(_(u"Biography"))
+    biography_other_language = models.TextField(_(u"Biography in French"))
     charges = models.PositiveSmallIntegerField(_(u"Refund charges"), choices=NO_YES_MAYBE, blank=True)
     city = models.CharField(_(u"City"), max_length=128, blank=True)
     country = models.ForeignKey(Country, null=True, blank=True)

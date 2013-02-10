@@ -171,6 +171,9 @@ class TalkForm(forms.ModelForm):
     biography = forms.CharField(label=_(u"Biography"), widget=forms.Textarea(attrs=_tattrs),
                                 help_text=_(u"Add a few words about the speaker(s). Their, work, activities, involvement in free software, etc. It will be publish with the abstract on the event website."),
                                 )
+    biography_other_language = forms.CharField(label=_(u"Biography in French"), widget=forms.Textarea(attrs=_tattrs),
+                                help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
+                                )
     charges = forms.ChoiceField(label=(_(u"Refund charges")),
                                 choices=Talk.NO_YES_MAYBE, required=False)
     transportation = forms.ModelChoiceField(label=_(u"Transportation"),
