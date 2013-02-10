@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-09 21:20+0200\n"
+"POT-Creation-Date: 2013-02-10 23:10+0100\n"
 "PO-Revision-Date: 2012-02-02 01:27+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -17,49 +17,59 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: manager/actions.py:29
+#: manager/actions.py:30
 msgid "Export in CSV format"
 msgstr "Exporter au format CSV"
 
-#: manager/forms.py:127 templates/manager/mail2coordinator.txt:3
-msgid "Topic"
-msgstr "Thème"
-
-#: manager/forms.py:129 manager/models.py:147
-#: templates/manager/mail2coordinator.txt:5
-msgid "Title"
-msgstr "Intitulé"
-
-#: manager/forms.py:131 manager/models.py:148
-#: templates/manager/mail2coordinator.txt:7
-msgid "Nature"
-msgstr "Nature"
-
-#: manager/forms.py:132 manager/models.py:149
-#: templates/manager/mail2coordinator.txt:9
-msgid "Abstract"
-msgstr "Résumé"
-
-#: manager/forms.py:133
-msgid ""
-"A description of what the talk would be about. For french speakers, we would "
-"be glad to get an English version of the abstract too. This abstract will be "
-"published on the website."
-msgstr ""
-"Description de la présentation. Pour les orateurs français, une description "
-"en anglais en plus du français serait la bienvenue. Cette description sera "
-"publiée sur le site web."
-
-#: manager/forms.py:135 manager/models.py:80
+#: manager/forms.py:144 manager/models.py:82
 #: templates/manager/mail2coordinator.txt:13
 msgid "Language"
 msgstr "Langue"
 
-#: manager/forms.py:137 templates/manager/mail2coordinator.txt:15
+#: manager/forms.py:146 templates/manager/mail2coordinator.txt:3
+msgid "Topic"
+msgstr "Thème"
+
+#: manager/forms.py:148 manager/models.py:166
+#: templates/manager/mail2coordinator.txt:5
+msgid "Title"
+msgstr "Intitulé"
+
+#: manager/forms.py:150 manager/models.py:167
+#: templates/manager/mail2coordinator.txt:7
+msgid "Nature"
+msgstr "Nature"
+
+#: manager/forms.py:151 manager/models.py:168
+#: templates/manager/mail2coordinator.txt:9
+msgid "Abstract"
+msgstr "Résumé"
+
+#: manager/forms.py:152
+msgid ""
+"A description of what the talk would be about. This abstract will be "
+"published on the website."
+msgstr ""
+"Description de la présentation. Cette description sera publiée sur le site "
+"web."
+
+#: manager/forms.py:154 manager/models.py:169
+msgid "Abstract in French"
+msgstr "Résumé en Anglais"
+
+#: manager/forms.py:155 manager/forms.py:175
+msgid ""
+"Same but in French. If you don't know French, don't worry, we'll handle this "
+"for you."
+msgstr ""
+"La même chose mais en Anglais. Si vous n'êtes pas à l'aise en Anglais, ne "
+"vous inquiétez pas, nous nous occuperons de cela pour vous."
+
+#: manager/forms.py:157 templates/manager/mail2coordinator.txt:15
 msgid "Capture"
 msgstr "Captation"
 
-#: manager/forms.py:138
+#: manager/forms.py:158
 msgid ""
 "Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/"
 "or video) and published on the event website (and probably spread on the "
@@ -69,11 +79,11 @@ msgstr ""
 "présentation soit enregistrée (audio et/ou vidéo) et qu'elle soit publiée "
 "sur le site web (et probablement reprise un peu partout sur le web)."
 
-#: manager/forms.py:140 templates/manager/mail2coordinator.txt:18
+#: manager/forms.py:160 templates/manager/mail2coordinator.txt:18
 msgid "License"
 msgstr "Licence"
 
-#: manager/forms.py:142
+#: manager/forms.py:162
 msgid ""
 "The preferred license for the capture of the talk (contact us if you want us "
 "to add another license)."
@@ -81,12 +91,12 @@ msgstr ""
 "La licence choisie pour la captation (contactez nous si vous désirez qu'on "
 "ajoute d'autres licences)."
 
-#: manager/forms.py:144 manager/models.py:153
+#: manager/forms.py:164 manager/models.py:172
 #: templates/manager/mail2coordinator.txt:21
 msgid "Constraints"
 msgstr "Contraintes"
 
-#: manager/forms.py:146
+#: manager/forms.py:166
 msgid ""
 "If the speaker(s) have special needs, constraints (be scheduled on a "
 "specific date, disabled person moving with a wheelchair, etc) or something "
@@ -96,12 +106,12 @@ msgstr ""
 "(être programmé à une date en particulier, des besoins matériels lié à une "
 "mobilité réduite) ou tout autre chose."
 
-#: manager/forms.py:148 manager/models.py:154
+#: manager/forms.py:168 manager/models.py:173
 #: templates/manager/mail2coordinator.txt:25
 msgid "Speaker(s)"
 msgstr "Orateur(s)"
 
-#: manager/forms.py:149
+#: manager/forms.py:169
 msgid ""
 "First name, last name, email of the speaker(s). One speaker per line. Each "
 "line should respect the following format: « Firstname Lastname "
@@ -110,12 +120,12 @@ msgstr ""
 "Prénom, nom, email des orateur(s). Un orateur par ligne. Chaque ligne doit "
 "respecter le format suivant : « Prénom Nom [orateur@domaine.ext] »"
 
-#: manager/forms.py:151 manager/models.py:155
+#: manager/forms.py:171 manager/models.py:174
 #: templates/manager/mail2coordinator.txt:29
 msgid "Biography"
 msgstr "Biographie"
 
-#: manager/forms.py:152
+#: manager/forms.py:172
 msgid ""
 "Add a few words about the speaker(s). Their, work, activities, involvement "
 "in free software, etc. It will be publish with the abstract on the event "
@@ -125,30 +135,34 @@ msgstr ""
 "engagement dans le logiciel libre, etc. Ce sera publié en plus du résumé de "
 "la présentation sur le site web."
 
-#: manager/forms.py:154 manager/models.py:156
+#: manager/forms.py:174 manager/models.py:175
+msgid "Biography in French"
+msgstr "Biographie en Anglais"
+
+#: manager/forms.py:177 manager/models.py:176
 #: templates/manager/mail2coordinator.txt:34
 msgid "Refund charges"
 msgstr "Remboursement des frais"
 
-#: manager/forms.py:156 templates/manager/mail2coordinator.txt:40
+#: manager/forms.py:179 templates/manager/mail2coordinator.txt:40
 msgid "Transportation"
 msgstr "Transport"
 
-#: manager/forms.py:158 manager/models.py:157
+#: manager/forms.py:181 manager/models.py:177
 #: templates/manager/mail2coordinator.txt:36
 msgid "City"
 msgstr "Ville"
 
-#: manager/forms.py:160 manager/models.py:121
+#: manager/forms.py:183 manager/models.py:132
 #: templates/manager/mail2coordinator.txt:38
 msgid "Country"
 msgstr "Pays"
 
-#: manager/forms.py:162 templates/manager/mail2coordinator.txt:42
+#: manager/forms.py:185 templates/manager/mail2coordinator.txt:42
 msgid "Estimated cost (euros)"
 msgstr "Coût estimé (euros)"
 
-#: manager/forms.py:164
+#: manager/forms.py:187
 msgid ""
 "If you know the estimated cost of the transportation, it will be easier for "
 "us to have a clear view of the expenses we could engage."
@@ -157,90 +171,94 @@ msgstr ""
 "sera plus facile d'avoir une vue claire sur les dépenses que nous pourrons "
 "engager."
 
-#: manager/forms.py:181 manager/forms.py:186 manager/forms.py:189
-#: manager/forms.py:194
+#: manager/forms.py:204 manager/forms.py:209 manager/forms.py:212
+#: manager/forms.py:217
 msgid "This field is required."
 msgstr "Ce champ est requis"
 
-#: manager/forms.py:210
+#: manager/forms.py:233
 msgid "The following lines don't match the correct format:"
 msgstr "Les lignes suivantes ne respectent pas le format exigé :"
 
-#: manager/forms.py:219 manager/models.py:161
+#: manager/forms.py:243 manager/models.py:181
 msgid "Notes"
 msgstr "Notes"
 
-#: manager/models.py:83
+#: manager/models.py:85
 msgid "Value"
 msgstr "Valeur"
 
-#: manager/models.py:97 manager/models.py:107 manager/models.py:116
-#: manager/models.py:125 manager/models.py:134
+#: manager/models.py:100 manager/models.py:113 manager/models.py:125
+#: manager/models.py:137 manager/models.py:149
 msgid "Name"
 msgstr "Nom"
 
-#: manager/models.py:98
+#: manager/models.py:101
 msgid "Notice email"
 msgstr "Email de notification"
 
-#: manager/models.py:117
+#: manager/models.py:126
 msgid "Code"
 msgstr "Code"
 
-#: manager/models.py:122
+#: manager/models.py:133
 msgid "Countries"
 msgstr "Pays"
 
-#: manager/models.py:139 manager/models.py:140
+#: manager/models.py:156 manager/models.py:157
 msgid "Yes"
 msgstr "Oui"
 
-#: manager/models.py:139 manager/models.py:140
+#: manager/models.py:156 manager/models.py:157
 msgid "No"
 msgstr "Non"
 
-#: manager/models.py:140
+#: manager/models.py:157
 msgid "I don't know yet"
 msgstr "Je ne sais pas encore"
 
-#: manager/models.py:141
+#: manager/models.py:158
 msgid "Waiting"
 msgstr "Attente"
 
-#: manager/models.py:141
+#: manager/models.py:158
 msgid "Accepted"
 msgstr "Accepté"
 
-#: manager/models.py:141
+#: manager/models.py:158
 msgid "Rejected"
 msgstr "Rejeté"
 
-#: manager/models.py:142
+#: manager/models.py:159
 msgid "Conference"
 msgstr "Conférence"
 
-#: manager/models.py:142
+#: manager/models.py:159
 msgid "Workshop"
 msgstr "Atelier"
 
-#: manager/models.py:144
-msgid "Send date"
+#: manager/models.py:161
+msgid "Submited date"
 msgstr "Date d'envoi"
 
-#: manager/models.py:145
+#: manager/models.py:162
+msgid "Last modification date"
+msgstr ""
+
+#: manager/models.py:163
 msgid "Status"
 msgstr "Statut"
 
-#: manager/models.py:160
+#: manager/models.py:180
 msgid "Estimated cost"
 msgstr "Coût estimé"
 
-#: manager/models.py:176
+#: manager/models.py:196
 #, python-format
 msgid "[RMLL/LSM] [Topic: %s] New talk"
 msgstr "[RMLL] [Thème : %s] Nouvelle proposition"
 
-#: manager/models.py:182
+#: manager/models.py:202
 #, python-format
 msgid "[RMLL/LSM] [Topic: %s] Your proposal"
 msgstr "[RMLL] [Thème : %s] Votre proposition"
@@ -385,55 +403,42 @@ msgstr ""
 msgid "Visit our website"
 msgstr "Visiter notre site"
 
-#, fuzzy
 #~ msgid "Time"
 #~ msgstr "Intitulé"
 
-#, fuzzy
 #~ msgid "Close"
 #~ msgstr "Code"
 
-#, fuzzy
 #~ msgid "COOKIES Variables"
 #~ msgstr "Valeur"
 
-#, fuzzy
 #~ msgid "Variable"
 #~ msgstr "Valeur"
 
-#, fuzzy
 #~ msgid "SESSION Variables"
 #~ msgstr "Valeur"
 
-#, fuzzy
 #~ msgid "No SESSION data"
 #~ msgstr "Valeur"
 
-#, fuzzy
 #~ msgid "GET Variables"
 #~ msgstr "Valeur"
 
-#, fuzzy
 #~ msgid "POST Variables"
 #~ msgstr "Valeur"
 
-#, fuzzy
 #~ msgid "Line"
 #~ msgstr "Licence"
 
-#, fuzzy
 #~ msgid "File"
 #~ msgstr "Intitulé"
 
-#, fuzzy
 #~ msgid "Error"
 #~ msgstr "Erreur 404"
 
-#, fuzzy
 #~ msgid "SQL Selected"
 #~ msgstr "Rejeté"
 
-#, fuzzy
 #~ msgid "None"
 #~ msgstr "Notes"
 
