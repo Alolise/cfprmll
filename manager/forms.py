@@ -149,8 +149,11 @@ class TalkForm(forms.ModelForm):
                             min_length=5, widget=forms.TextInput(attrs=_iattrs))
     nature = forms.ChoiceField(label=_(u"Nature"), choices=Talk.NATURES, required=True)
     abstract = forms.CharField(label=_(u"Abstract"), widget=forms.Textarea(attrs=_tattrs),
-                               help_text=_(u"A description of what the talk would be about. For french speakers, we would be glad to get an English version of the abstract too. This abstract will be published on the website."),
+                               help_text=_(u"A description of what the talk would be about. This abstract will be published on the website."),
                                )
+    abstract_other_language = forms.CharField(label=_(u"Abstract in French"), widget=forms.Textarea(attrs=_tattrs),
+                                              help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
+                                             )
     capture = forms.ChoiceField(label=_(u"Capture"), choices=Talk.YES_NO, required=False,
                                 help_text=_(u"Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/or video) and published on the event website (and probably spread on the whole Internet)."),
                                 )
