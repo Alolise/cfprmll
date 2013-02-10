@@ -165,6 +165,7 @@ class Talk(models.Model):
     topic = models.ForeignKey(Topic)
     title = models.CharField(_(u"Title"), max_length=128)
     nature = models.CharField(_(u"Nature"), choices=NATURES, max_length=24, blank=True)
+    number_of_slot = models.PositiveSmallIntegerField(_(u"Number of 20mins slots"))
     abstract = models.TextField(_(u"Abstract"))
     abstract_other_language = models.TextField(_(u"Abstract in French"), blank=True, null=True)
     capture = models.PositiveSmallIntegerField(u"Capture", choices=YES_NO)

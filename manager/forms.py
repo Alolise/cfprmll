@@ -148,6 +148,7 @@ class TalkForm(forms.ModelForm):
     title = forms.CharField(label=_(u"Title"),
                             min_length=5, widget=forms.TextInput(attrs=_iattrs))
     nature = forms.ChoiceField(label=_(u"Nature"), choices=Talk.NATURES, required=True)
+    number_of_slot = forms.IntegerField(label=_(u"Number of slots"), help_text=_("The number of slots of 20mins needed for your talk/workshop."))
     abstract = forms.CharField(label=_(u"Abstract"), widget=forms.Textarea(attrs=_tattrs),
                                help_text=_(u"A description of what the talk would be about. This abstract will be published on the website."),
                                )
