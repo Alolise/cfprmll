@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-10 23:10+0100\n"
+"POT-Creation-Date: 2013-02-10 23:36+0100\n"
 "PO-Revision-Date: 2012-02-02 01:27+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Abstract in French"
 msgstr "Résumé en Anglais"
 
-#: manager/forms.py:155 manager/forms.py:175
+#: manager/forms.py:155 manager/forms.py:182
 msgid ""
 "Same but in French. If you don't know French, don't worry, we'll handle this "
 "for you."
@@ -106,12 +106,32 @@ msgstr ""
 "(être programmé à une date en particulier, des besoins matériels lié à une "
 "mobilité réduite) ou tout autre chose."
 
-#: manager/forms.py:168 manager/models.py:173
+#: manager/forms.py:169 manager/models.py:174
+msgid "General public"
+msgstr ""
+
+#: manager/forms.py:170 manager/models.py:175
+msgid "Professionals"
+msgstr ""
+
+#: manager/forms.py:171 manager/models.py:176
+msgid "Decision makers"
+msgstr ""
+
+#: manager/forms.py:172 manager/models.py:177
+msgid "Geeks"
+msgstr ""
+
+#: manager/forms.py:173 manager/models.py:178
+msgid "English speaking people"
+msgstr ""
+
+#: manager/forms.py:175 manager/models.py:180
 #: templates/manager/mail2coordinator.txt:25
 msgid "Speaker(s)"
 msgstr "Orateur(s)"
 
-#: manager/forms.py:169
+#: manager/forms.py:176
 msgid ""
 "First name, last name, email of the speaker(s). One speaker per line. Each "
 "line should respect the following format: « Firstname Lastname "
@@ -120,12 +140,12 @@ msgstr ""
 "Prénom, nom, email des orateur(s). Un orateur par ligne. Chaque ligne doit "
 "respecter le format suivant : « Prénom Nom [orateur@domaine.ext] »"
 
-#: manager/forms.py:171 manager/models.py:174
+#: manager/forms.py:178 manager/models.py:181
 #: templates/manager/mail2coordinator.txt:29
 msgid "Biography"
 msgstr "Biographie"
 
-#: manager/forms.py:172
+#: manager/forms.py:179
 msgid ""
 "Add a few words about the speaker(s). Their, work, activities, involvement "
 "in free software, etc. It will be publish with the abstract on the event "
@@ -135,34 +155,34 @@ msgstr ""
 "engagement dans le logiciel libre, etc. Ce sera publié en plus du résumé de "
 "la présentation sur le site web."
 
-#: manager/forms.py:174 manager/models.py:175
+#: manager/forms.py:181 manager/models.py:182
 msgid "Biography in French"
 msgstr "Biographie en Anglais"
 
-#: manager/forms.py:177 manager/models.py:176
+#: manager/forms.py:184 manager/models.py:183
 #: templates/manager/mail2coordinator.txt:34
 msgid "Refund charges"
 msgstr "Remboursement des frais"
 
-#: manager/forms.py:179 templates/manager/mail2coordinator.txt:40
+#: manager/forms.py:186 templates/manager/mail2coordinator.txt:40
 msgid "Transportation"
 msgstr "Transport"
 
-#: manager/forms.py:181 manager/models.py:177
+#: manager/forms.py:188 manager/models.py:184
 #: templates/manager/mail2coordinator.txt:36
 msgid "City"
 msgstr "Ville"
 
-#: manager/forms.py:183 manager/models.py:132
+#: manager/forms.py:190 manager/models.py:132
 #: templates/manager/mail2coordinator.txt:38
 msgid "Country"
 msgstr "Pays"
 
-#: manager/forms.py:185 templates/manager/mail2coordinator.txt:42
+#: manager/forms.py:192 templates/manager/mail2coordinator.txt:42
 msgid "Estimated cost (euros)"
 msgstr "Coût estimé (euros)"
 
-#: manager/forms.py:187
+#: manager/forms.py:194
 msgid ""
 "If you know the estimated cost of the transportation, it will be easier for "
 "us to have a clear view of the expenses we could engage."
@@ -171,16 +191,16 @@ msgstr ""
 "sera plus facile d'avoir une vue claire sur les dépenses que nous pourrons "
 "engager."
 
-#: manager/forms.py:204 manager/forms.py:209 manager/forms.py:212
-#: manager/forms.py:217
+#: manager/forms.py:211 manager/forms.py:216 manager/forms.py:219
+#: manager/forms.py:224
 msgid "This field is required."
 msgstr "Ce champ est requis"
 
-#: manager/forms.py:233
+#: manager/forms.py:240
 msgid "The following lines don't match the correct format:"
 msgstr "Les lignes suivantes ne respectent pas le format exigé :"
 
-#: manager/forms.py:243 manager/models.py:181
+#: manager/forms.py:250 manager/models.py:188
 msgid "Notes"
 msgstr "Notes"
 
@@ -249,16 +269,16 @@ msgstr ""
 msgid "Status"
 msgstr "Statut"
 
-#: manager/models.py:180
+#: manager/models.py:187
 msgid "Estimated cost"
 msgstr "Coût estimé"
 
-#: manager/models.py:196
+#: manager/models.py:203
 #, python-format
 msgid "[RMLL/LSM] [Topic: %s] New talk"
 msgstr "[RMLL] [Thème : %s] Nouvelle proposition"
 
-#: manager/models.py:202
+#: manager/models.py:209
 #, python-format
 msgid "[RMLL/LSM] [Topic: %s] Your proposal"
 msgstr "[RMLL] [Thème : %s] Votre proposition"
@@ -337,7 +357,7 @@ msgstr "La liste des propositions acceptées sera publiée après le %(limit)s"
 msgid "Form error"
 msgstr "Erreur dans le formulaire"
 
-#: templates/manager/new.html:20 templates/manager/new.html.py:106
+#: templates/manager/new.html:20 templates/manager/new.html.py:117
 msgid "Submit your talk"
 msgstr "Proposer votre présentation"
 
@@ -368,10 +388,18 @@ msgid "Information about the speaker(s)"
 msgstr "Informations à propos d(es) orateur(s)"
 
 #: templates/manager/new.html:58
+msgid "Targeted public"
+msgstr ""
+
+#: templates/manager/new.html:61
+msgid "Check the box corresponding to the public targeted by this talk."
+msgstr ""
+
+#: templates/manager/new.html:69
 msgid "Information about the transportation charges"
 msgstr "Informations à propos du remboursement des frais de transports"
 
-#: templates/manager/new.html:60
+#: templates/manager/new.html:71
 msgid ""
 "RMLL/LSM is a FLOSS event with limited resources. But (and as usual), for "
 "speakers which need it we can refund their transportation charges. If you "
@@ -382,15 +410,15 @@ msgstr ""
 "rembourser leurs frais de transports. Si vous êtes dans ce cas, remplissez "
 "les informations suivantes."
 
-#: templates/manager/new.html:91
+#: templates/manager/new.html:102
 msgid "Examples:"
 msgstr "Exemples :"
 
-#: templates/manager/new.html:109
+#: templates/manager/new.html:120
 msgid "Help RMLL/LSM"
 msgstr "Aider les RMLL"
 
-#: templates/manager/new.html:111
+#: templates/manager/new.html:122
 msgid ""
 "Professionals, organisations and companies wishing to financially support "
 "the RMLL/LSM will get more information on the website:"
@@ -399,7 +427,7 @@ msgstr ""
 "financièrement les RMLL peuvent obtenir plus d'informations sur le site "
 "Internet :"
 
-#: templates/manager/new.html:112
+#: templates/manager/new.html:123
 msgid "Visit our website"
 msgstr "Visiter notre site"
 
