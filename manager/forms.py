@@ -141,6 +141,8 @@ _tattrs = {'cols': '80', 'rows': 12}
 
 
 class TalkForm(forms.ModelForm):
+    language = forms.ModelChoiceField(label=_(u"Language"),
+                                      queryset=Language.objects.all(), empty_label=None)
     topic = forms.ModelChoiceField(label=_(u"Topic"),
                                    queryset=Topic.objects.all(), empty_label=None, widget=SortedForm)
     title = forms.CharField(label=_(u"Title"),
@@ -149,8 +151,6 @@ class TalkForm(forms.ModelForm):
     abstract = forms.CharField(label=_(u"Abstract"), widget=forms.Textarea(attrs=_tattrs),
                                help_text=_(u"A description of what the talk would be about. For french speakers, we would be glad to get an English version of the abstract too. This abstract will be published on the website."),
                                )
-    language = forms.ModelChoiceField(label=_(u"Language"),
-                                      queryset=Language.objects.all(), empty_label=None)
     capture = forms.ChoiceField(label=_(u"Capture"), choices=Talk.YES_NO, required=False,
                                 help_text=_(u"Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/or video) and published on the event website (and probably spread on the whole Internet)."),
                                 )
