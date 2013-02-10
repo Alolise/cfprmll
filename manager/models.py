@@ -170,6 +170,13 @@ class Talk(models.Model):
     capture = models.PositiveSmallIntegerField(u"Capture", choices=YES_NO)
     license = models.ForeignKey(License, null=True, blank=True)
     constraints = models.TextField(_(u"Constraints"), blank=True)
+
+    for_general_public = models.BooleanField(_(u"General public"))
+    for_professionals = models.BooleanField(_(u"Professionals"))
+    for_decision_makers = models.BooleanField(_(u"Decision makers"))
+    for_geeks = models.BooleanField(_(u"Geeks"))
+    for_english_speaking_people = models.BooleanField(_(u"English speaking people"))
+
     speakers = models.TextField(_(u"Speaker(s)"))
     biography = models.TextField(_(u"Biography"))
     biography_other_language = models.TextField(_(u"Biography in French"))

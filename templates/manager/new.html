@@ -52,6 +52,17 @@
                     <legend>{% trans 'Information about the speaker(s)' %}</legend>
             {% endifequal %}
 
+            {% ifequal field.name 'for_general_public' %}
+                </fieldset>
+                <fieldset>
+                    <legend>{% trans 'Targeted public' %}</legend>
+                    <div class="field">
+                        <div class="help">
+                            {% trans "Check the box corresponding to the public targeted by this talk." %}
+                        </div>
+                    </div>
+            {% endifequal %}
+
             {% ifequal field.name 'charges' %}
                 </fieldset>
                 <fieldset>

@@ -165,6 +165,13 @@ class TalkForm(forms.ModelForm):
                                   widget=forms.Textarea(attrs=_tattrs), required=False,
                                   help_text=_(u"If the speaker(s) have special needs, constraints (be scheduled on a specific date, disabled person moving with a wheelchair, etc) or something else."),
                                   )
+
+    for_general_public = forms.BooleanField(label=_(u"General public"))
+    for_professionals = forms.BooleanField(label=_(u"Professionals"))
+    for_decision_makers = forms.BooleanField(label=_(u"Decision makers"))
+    for_geeks = forms.BooleanField(label=_(u"Geeks"))
+    for_english_speaking_people = forms.BooleanField(label=_(u"English speaking people"))
+
     speakers = forms.CharField(label=_(u"Speaker(s)"), widget=forms.Textarea(attrs=_tattrs),
                                help_text=_(u"First name, last name, email of the speaker(s). One speaker per line. Each line should respect the following format: « Firstname Lastname [speaker@domain.tld] »"),
                                )
