@@ -66,7 +66,7 @@ msgstr ""
 
 #: manager/forms.py:157 templates/manager/mail2coordinator.txt:15
 msgid "Capture"
-msgstr "Vangst"
+msgstr "Opname"
 
 #: manager/forms.py:158
 msgid ""
@@ -74,8 +74,8 @@ msgid ""
 "or video) and published on the event website (and probably spread on the "
 "whole Internet)."
 msgstr ""
-"Kies “ka” als de spreker (s) eens ter sprake te worden vastgelegd (audio en / of video)"
-"en gepubliceerd op de website van het evenement (en waarschijnlijk verspreid over"
+"Kies “ja” als de spreker (s) akkoord gaan de presentatie te laten vastleggen (audio en / of video)"
+"en te laten publiceren op de website van het evenement (en waarschijnlijk verspreid over"
 "het hele internet)."
 
 #: manager/forms.py:160 templates/manager/mail2coordinator.txt:18
@@ -87,13 +87,13 @@ msgid ""
 "The preferred license for the capture of the talk (contact us if you want us "
 "to add another license)."
 msgstr ""
-"The preferred license for the capture of the talk (contact us if you want us "
-"to add another license)."
+"De voorkeurslicentie voor de opname van de presentatie (neem contact met "
+" ons op om een licentie toe te voegen)"
 
 #: manager/forms.py:164 manager/models.py:172
 #: templates/manager/mail2coordinator.txt:21
 msgid "Constraints"
-msgstr "Constraints"
+msgstr "Beperkingen"
 
 #: manager/forms.py:166
 msgid ""
@@ -101,21 +101,21 @@ msgid ""
 "specific date, disabled person moving with a wheelchair, etc) or something "
 "else."
 msgstr ""
-"If the speaker(s) have special needs, constraints (be scheduled on a "
-"specific date, disabled person moving with a wheelchair, etc) or something "
-"else."
+"Als de spreker(s) bepaalde voorzieningen nodig hebben, beperkingen (op een"
+"specifieke datum gepland worden, persoon met een rolstoel, etc) of iets anders."
 
 #: manager/forms.py:169 manager/models.py:174
 msgid "General public"
-msgstr "General public"
+msgstr "Het algemene publiek"
 
 #: manager/forms.py:170 manager/models.py:175
 msgid "Professionals"
-msgstr "Professionelen"
+msgstr "Professionals"
+# Yes, the most common term really is the english one
 
 #: manager/forms.py:171 manager/models.py:176
 msgid "Beslissers"
-msgstr "Décideurs"
+msgstr "Besluitnemers"
 
 #: manager/forms.py:172 manager/models.py:177
 msgid "Geeks"
@@ -136,9 +136,9 @@ msgid ""
 "line should respect the following format: « Firstname Lastname "
 "[speaker@domain.tld] »"
 msgstr ""
-"First name, last name, email of the speaker(s). One speaker per line. Each "
-"line should respect the following format: « Firstname Lastname "
-"[speaker@domain.tld] »"
+"Voonaam, achternaam, emailadres van de spreker(s). Één spreker per regel. "
+"Elke regel moet het volgende formaat hebben: « Voornaam Achternaam "
+"[spreker@domein.tld] »"
 
 #: manager/forms.py:178 manager/models.py:181
 #: templates/manager/mail2coordinator.txt:29
@@ -151,9 +151,9 @@ msgid ""
 "in free software, etc. It will be publish with the abstract on the event "
 "website."
 msgstr ""
-"Add a few words about the speaker(s). Their, work, activities, involvement "
-"in free software, etc. It will be publish with the abstract on the event "
-"website."
+"Een paar woorden over de spreker(s). Werk, activiteiten, deelname binnnen "
+"free  software, etc. Dit zal met de korte  inhoud op de evenementswebsite "
+"worden gepubliceerd."
 
 #: manager/forms.py:181 manager/models.py:182
 msgid "Biography in French"
@@ -187,8 +187,9 @@ msgid ""
 "If you know the estimated cost of the transportation, it will be easier for "
 "us to have a clear view of the expenses we could engage."
 msgstr ""
-"If you know the estimated cost of the transportation, it will be easier for "
-"us to have a clear view of the expenses we could engage."
+"Als de geschatte kosten van het vervoer bekend zijn is het makkelijker "
+"voor ons om een helder beeld te hebben van de kosten die wij kunnen "
+"hebben."
 
 #: manager/forms.py:211 manager/forms.py:216 manager/forms.py:219
 #: manager/forms.py:224
@@ -197,11 +198,11 @@ msgstr "Dit veld is verplicht."
 
 #: manager/forms.py:240
 msgid "The following lines don't match the correct format:"
-msgstr "De volgende lijnen hebben niet het juiste formaat:"
+msgstr "De volgende regels hebben niet het juiste formaat:"
 
 #: manager/forms.py:250 manager/models.py:188
 msgid "Notes"
-msgstr "Nota's"
+msgstr "Aantekeningen"
 
 #: manager/models.py:85
 msgid "Value"
@@ -238,7 +239,7 @@ msgstr "Ik weet het nog niet"
 
 #: manager/models.py:158
 msgid "Waiting"
-msgstr "Attente"
+msgstr "In behandeling"
 
 #: manager/models.py:158
 msgid "Accepted"
@@ -304,7 +305,7 @@ msgstr "RMLL/LSM"
 
 #: templates/base.html:17
 msgid "Contact the webmaster"
-msgstr "Webmaster contacteren"
+msgstr "Neem contact op met de webmaster"
 
 #: templates/manager/closed.html:6 templates/manager/closed.html.py:11
 #: templates/manager/end.html:6 templates/manager/end.html.py:11
@@ -314,18 +315,18 @@ msgstr "RMLL/LSM Call for papers"
 
 #: templates/manager/closed.html:16
 msgid "The call for paper is now closed."
-msgstr ""
+msgstr "De oproep voor papers is nu gesloten."
 
 #: templates/manager/end.html:16
 msgid "Your talk was successfully submitted."
-msgstr ""
+msgstr "Uw presentatie is succesvol verzonden"
 
 #: templates/manager/end.html:18
 msgid ""
 "You should receive a summary of your proposal by email in a few minutes."
 msgstr ""
-""
-""
+"U zou binnen enkele minuten per email een samenvatting van uw voorstel "
+"moeten ontvangen"
 
 #: templates/manager/mail2coordinator.txt:46
 msgid "Regards,"
@@ -337,20 +338,19 @@ msgstr "Het organisatieteam van RMLL"
 
 #: templates/manager/mail2submitter.txt:2
 msgid "Below is the summary of your proposal."
-msgstr "Ci-dessous, le récapitulatif de votre proposition."
+msgstr "Hieronder staat de samenvatting van uw voorstel."
 
 #: templates/manager/mail2submitter.txt:4
 #, python-format
 msgid ""
 "If you have any question, please contact the people in charge at %(contact)s"
 msgstr ""
-"Si vous avez des questions, n'hésiter pas a contacter les coordinateurs du "
-"thème à %(contact)s"
+"Als u vragen heeft, neem dan contact op met de organisatie op %(contact)s"
 
 #: templates/manager/mail2submitter.txt:6
 #, python-format
 msgid "The accepted proposals should be published after the %(limit)s"
-msgstr "La liste des propositions acceptées sera publiée après le %(limit)s"
+msgstr "De aanvaardde voorstellen zouden gepubliceerd moeten worden na %(limit)s"
 
 #: templates/manager/new.html:8
 msgid "Form error"
@@ -358,45 +358,45 @@ msgstr "Fout in het formulier"
 
 #: templates/manager/new.html:20 templates/manager/new.html.py:117
 msgid "Submit your talk"
-msgstr "Proposer votre présentation"
+msgstr "Stuur uw presentatie in"
 
 #: templates/manager/new.html:24
 #, python-format
 msgid "Call for papers will end on %(limit)s %(utc)s."
-msgstr "L'appel a conférence se terminera le %(limit)s %(utc)s."
+msgstr "De call for papers zal sluiten om %(limit)s %(utc)s."
 
 #: templates/manager/new.html:31
 msgid "Operation failed (internal error)"
-msgstr "L'opération a échoué (erreur interne)"
+msgstr "Actie misluke (interne fout)"
 
 #: templates/manager/new.html:33
 msgid "Operation failed (field(s) missing or incomplete)"
-msgstr "L'opération a échoué (champ(s) manquant(s) ou incomplet(s))"
+msgstr "Operatie misluke (er missen velden of zijn niet compleet)"
 
 #: templates/manager/new.html:40
 #, python-format
 msgid "Fields prefixed with a %(mark)s are mandatory."
-msgstr "Les champs préfixés par %(mark)s sont obligatoires."
+msgstr "Velden met %(mark)s ervoor zijn verplicht."
 
 #: templates/manager/new.html:46
 msgid "Information about the talk"
-msgstr "Informations à propos de la présentation"
+msgstr "Information about the talk"
 
 #: templates/manager/new.html:52
 msgid "Information about the speaker(s)"
-msgstr "Informations à propos d(es) orateur(s)"
+msgstr "Information about the speaker(s)"
 
 #: templates/manager/new.html:58
 msgid "Targeted public"
-msgstr "Public ciblé"
+msgstr "Targeted public"
 
 #: templates/manager/new.html:61
 msgid "Check the box corresponding to the public targeted by this talk."
-msgstr "Cochez la case correspondant au public cible de votre exposé"
+msgstr "Check the box corresponding to the public targeted by this talk."
 
 #: templates/manager/new.html:69
 msgid "Information about the transportation charges"
-msgstr "Informations à propos du remboursement des frais de transports"
+msgstr "Information about the transportation charges"
 
 #: templates/manager/new.html:71
 msgid ""
@@ -404,10 +404,9 @@ msgid ""
 "speakers which need it we can refund their transportation charges. If you "
 "are in such case, please fill out the following fields."
 msgstr ""
-"Les RMLL sont un événement avec des ressources limitées. Cependant (et comme "
-"d'habitude), nous proposons aux orateurs qui en font la demande de leur "
-"rembourser leurs frais de transports. Si vous êtes dans ce cas, remplissez "
-"les informations suivantes."
+"RMLL/LSM is a FLOSS event with limited resources. But (and as usual), for "
+"speakers which need it we can refund their transportation charges. If you "
+"are in such case, please fill out the following fields."
 
 #: templates/manager/new.html:102
 msgid "Examples:"
@@ -516,6 +515,7 @@ msgstr "Bezoek onze webpagina"
 
 #~ msgid "Transportation:"
 #~ msgstr "Transport:"
+# Or, in context likely to be "Vervoer:"
 
 #~ msgid "Estimated cost (euros):"
 #~ msgstr "Geschatte kosten (euro)"
