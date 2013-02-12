@@ -28,7 +28,7 @@ class Command(BaseCommand):
             sys.stdout.write("%s/%s\r" % (a, total))
             sys.stdout.flush()
             lbls = {}
-            code, lbls['en'], lbls['fr'], lbls['sp'] = i.split(';')
+            code, lbls['fr'], lbls['en'], lbls['nl'] = i.split(';')
             try:
                 country = Country.objects.get(code=code)
             except ObjectDoesNotExist:
