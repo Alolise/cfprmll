@@ -77,7 +77,7 @@ class LabelClass:
 
 class BaseLabel(models.Model):
     """
-    Abstract class for labels
+     class for labels
     """
     language = models.CharField(_(u"Language"), max_length=2,
                                 choices=settings.LANGUAGES)
@@ -164,9 +164,9 @@ class Talk(models.Model):
     language = models.ForeignKey(Language)
     topic = models.ForeignKey(Topic)
     title = models.CharField(_(u"Title"), max_length=128)
-    nature = models.CharField(_(u"Nature"), choices=NATURES, max_length=24, blank=True)
-    abstract = models.TextField(_(u"Abstract"))
-    abstract_other_language = models.TextField(_(u"Abstract in French"))
+    nature = models.CharField(_(u"Type"), choices=NATURES, max_length=24, blank=True)
+    abstract = models.TextField(_(u"Summary"))
+    abstract_other_language = models.TextField(_(u"Summary in French"))
     capture = models.PositiveSmallIntegerField(u"Capture", choices=YES_NO)
     license = models.ForeignKey(License, null=True, blank=True)
     constraints = models.TextField(_(u"Constraints"), blank=True)

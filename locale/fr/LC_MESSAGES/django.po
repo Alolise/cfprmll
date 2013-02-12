@@ -37,12 +37,12 @@ msgstr "Intitulé"
 
 #: manager/forms.py:150 manager/models.py:167
 #: templates/manager/mail2coordinator.txt:7
-msgid "Nature"
+msgid "Type"
 msgstr "Nature"
 
 #: manager/forms.py:151 manager/models.py:168
 #: templates/manager/mail2coordinator.txt:9
-msgid "Abstract"
+msgid "Summary"
 msgstr "Résumé"
 
 #: manager/forms.py:152
@@ -54,7 +54,7 @@ msgstr ""
 "web."
 
 #: manager/forms.py:154 manager/models.py:169
-msgid "Abstract in French"
+msgid "Summary in French"
 msgstr "Résumé en Anglais"
 
 #: manager/forms.py:155 manager/forms.py:182

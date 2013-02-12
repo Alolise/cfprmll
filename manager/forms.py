@@ -147,11 +147,11 @@ class TalkForm(forms.ModelForm):
                                    queryset=Topic.objects.all(), empty_label=None, widget=SortedForm)
     title = forms.CharField(label=_(u"Title"),
                             min_length=5, widget=forms.TextInput(attrs=_iattrs))
-    nature = forms.ChoiceField(label=_(u"Nature"), choices=Talk.NATURES, required=True)
-    abstract = forms.CharField(label=_(u"Abstract"), widget=forms.Textarea(attrs=_tattrs),
+    nature = forms.ChoiceField(label=_(u"Type"), choices=Talk.NATURES, required=True)
+    abstract = forms.CharField(label=_(u"Summary"), widget=forms.Textarea(attrs=_tattrs),
                                help_text=_(u"A description of what the talk would be about. This abstract will be published on the website."),
                                )
-    abstract_other_language = forms.CharField(label=_(u"Abstract in French"), widget=forms.Textarea(attrs=_tattrs),
+    abstract_other_language = forms.CharField(label=_(u"Summary in French"), widget=forms.Textarea(attrs=_tattrs),
                                               help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
                                              )
     capture = forms.ChoiceField(label=_(u"Capture"), choices=Talk.YES_NO, required=False,

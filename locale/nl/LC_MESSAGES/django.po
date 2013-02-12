@@ -37,12 +37,12 @@ msgstr "Titel"
 
 #: manager/forms.py:150 manager/models.py:167
 #: templates/manager/mail2coordinator.txt:7
-msgid "Nature"
-msgstr "Natuur"
+msgid "Type"
+msgstr "Type"
 
 #: manager/forms.py:151 manager/models.py:168
 #: templates/manager/mail2coordinator.txt:9
-msgid "Abstract"
+msgid "Summary"
 msgstr "Korte inhoud"
 
 #: manager/forms.py:152
@@ -53,7 +53,7 @@ msgstr ""
 "Een korte beschrijving van de presentatie. Deze zal op de website geplaatst worden."
 
 #: manager/forms.py:154 manager/models.py:169
-msgid "Abstract in French"
+msgid "Summary in French"
 msgstr "Korte inhoud in het Engels"
 
 #: manager/forms.py:155 manager/forms.py:182
