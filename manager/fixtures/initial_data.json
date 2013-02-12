@@ -40,6 +40,56 @@
         }
     },
     {
+        "pk": 5,
+        "model": "manager.languagelabel",
+        "fields": {
+            "parent": 1,
+            "label_number": 0,
+            "value": "Frans",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "manager.languagelabel",
+        "fields": {
+            "parent": 2,
+            "label_number": 0,
+            "value": "Engels",
+            "language": "n;"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "manager.languagelabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Nederlands",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "manager.languagelabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Néerlandais",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "manager.languagelabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Dutch",
+            "language": "en"
+        }
+    },
+    {
         "pk": 1,
         "model": "manager.language",
         "fields": {
@@ -48,6 +98,13 @@
     },
     {
         "pk": 2,
+        "model": "manager.language",
+        "fields": {
+
+        }
+    },
+    {
+        "pk": 3,
         "model": "manager.language",
         "fields": {
 

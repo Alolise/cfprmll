@@ -1,0 +1,522 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Emmanuel Bouthenot <kolter@openics.org>, 2010, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-10 23:36+0100\n"
+"PO-Revision-Date: 2013-02-12 11:30+0100\n"
+"Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
+"Language-Team: Dutch <info@rmll.info>>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: manager/actions.py:30
+msgid "Export in CSV format"
+msgstr "Exporteer in CSV-formaat"
+
+#: manager/forms.py:144 manager/models.py:82
+#: templates/manager/mail2coordinator.txt:13
+msgid "Language"
+msgstr "Taal"
+
+#: manager/forms.py:146 templates/manager/mail2coordinator.txt:3
+msgid "Topic"
+msgstr "Onderwerp"
+
+#: manager/forms.py:148 manager/models.py:166
+#: templates/manager/mail2coordinator.txt:5
+msgid "Title"
+msgstr "Titel"
+
+#: manager/forms.py:150 manager/models.py:167
+#: templates/manager/mail2coordinator.txt:7
+msgid "Nature"
+msgstr "Natuur"
+
+#: manager/forms.py:151 manager/models.py:168
+#: templates/manager/mail2coordinator.txt:9
+msgid "Abstract"
+msgstr "Korte inhoud"
+
+#: manager/forms.py:152
+msgid ""
+"A description of what the talk would be about. This abstract will be "
+"published on the website."
+msgstr ""
+"Een korte beschrijving van de presentatie. Dit zal op de website geplaatst worden."
+
+#: manager/forms.py:154 manager/models.py:169
+msgid "Abstract in French"
+msgstr "Korte inhoud in het Engels"
+
+#: manager/forms.py:155 manager/forms.py:182
+msgid ""
+"Same but in French. If you don't know French, don't worry, we'll handle this "
+"for you."
+msgstr ""
+"Hetzelfde, maar in het Engels. Als je geen Engels kent, maak je geen zorgen, we"
+"behandelen dit voor jou."
+
+#: manager/forms.py:157 templates/manager/mail2coordinator.txt:15
+msgid "Capture"
+msgstr "Vangst"
+
+#: manager/forms.py:158
+msgid ""
+"Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/"
+"or video) and published on the event website (and probably spread on the "
+"whole Internet)."
+msgstr ""
+"Kies “ka” als de spreker (s) eens ter sprake te worden vastgelegd (audio en / of video)"
+"en gepubliceerd op de website van het evenement (en waarschijnlijk verspreid over"
+"het hele internet)."
+
+#: manager/forms.py:160 templates/manager/mail2coordinator.txt:18
+msgid "License"
+msgstr "Licentie"
+
+#: manager/forms.py:162
+msgid ""
+"The preferred license for the capture of the talk (contact us if you want us "
+"to add another license)."
+msgstr ""
+"The preferred license for the capture of the talk (contact us if you want us "
+"to add another license)."
+
+#: manager/forms.py:164 manager/models.py:172
+#: templates/manager/mail2coordinator.txt:21
+msgid "Constraints"
+msgstr "Constraints"
+
+#: manager/forms.py:166
+msgid ""
+"If the speaker(s) have special needs, constraints (be scheduled on a "
+"specific date, disabled person moving with a wheelchair, etc) or something "
+"else."
+msgstr ""
+"If the speaker(s) have special needs, constraints (be scheduled on a "
+"specific date, disabled person moving with a wheelchair, etc) or something "
+"else."
+
+#: manager/forms.py:169 manager/models.py:174
+msgid "General public"
+msgstr "General public"
+
+#: manager/forms.py:170 manager/models.py:175
+msgid "Professionals"
+msgstr "Professionelen"
+
+#: manager/forms.py:171 manager/models.py:176
+msgid "Beslissers"
+msgstr "Décideurs"
+
+#: manager/forms.py:172 manager/models.py:177
+msgid "Geeks"
+msgstr "Geeks"
+
+#: manager/forms.py:173 manager/models.py:178
+msgid "English speaking people"
+msgstr "Engelssprekenden"
+
+#: manager/forms.py:175 manager/models.py:180
+#: templates/manager/mail2coordinator.txt:25
+msgid "Speaker(s)"
+msgstr "Spreker(s)"
+
+#: manager/forms.py:176
+msgid ""
+"First name, last name, email of the speaker(s). One speaker per line. Each "
+"line should respect the following format: « Firstname Lastname "
+"[speaker@domain.tld] »"
+msgstr ""
+"First name, last name, email of the speaker(s). One speaker per line. Each "
+"line should respect the following format: « Firstname Lastname "
+"[speaker@domain.tld] »"
+
+#: manager/forms.py:178 manager/models.py:181
+#: templates/manager/mail2coordinator.txt:29
+msgid "Biography"
+msgstr "Biografie"
+
+#: manager/forms.py:179
+msgid ""
+"Add a few words about the speaker(s). Their, work, activities, involvement "
+"in free software, etc. It will be publish with the abstract on the event "
+"website."
+msgstr ""
+"Add a few words about the speaker(s). Their, work, activities, involvement "
+"in free software, etc. It will be publish with the abstract on the event "
+"website."
+
+#: manager/forms.py:181 manager/models.py:182
+msgid "Biography in French"
+msgstr "Biografie in het Engels"
+
+#: manager/forms.py:184 manager/models.py:183
+#: templates/manager/mail2coordinator.txt:34
+msgid "Refund charges"
+msgstr "Vergoeding"
+
+#: manager/forms.py:186 templates/manager/mail2coordinator.txt:40
+msgid "Transportation"
+msgstr "Vervoer"
+
+#: manager/forms.py:188 manager/models.py:184
+#: templates/manager/mail2coordinator.txt:36
+msgid "City"
+msgstr "Stad"
+
+#: manager/forms.py:190 manager/models.py:132
+#: templates/manager/mail2coordinator.txt:38
+msgid "Country"
+msgstr "Land"
+
+#: manager/forms.py:192 templates/manager/mail2coordinator.txt:42
+msgid "Estimated cost (euros)"
+msgstr "Geschatte kosten (euro)"
+
+#: manager/forms.py:194
+msgid ""
+"If you know the estimated cost of the transportation, it will be easier for "
+"us to have a clear view of the expenses we could engage."
+msgstr ""
+"If you know the estimated cost of the transportation, it will be easier for "
+"us to have a clear view of the expenses we could engage."
+
+#: manager/forms.py:211 manager/forms.py:216 manager/forms.py:219
+#: manager/forms.py:224
+msgid "This field is required."
+msgstr "Dit veld is verplicht."
+
+#: manager/forms.py:240
+msgid "The following lines don't match the correct format:"
+msgstr "De volgende lijnen hebben niet het juiste formaat:"
+
+#: manager/forms.py:250 manager/models.py:188
+msgid "Notes"
+msgstr "Nota's"
+
+#: manager/models.py:85
+msgid "Value"
+msgstr "Waarde"
+
+#: manager/models.py:100 manager/models.py:113 manager/models.py:125
+#: manager/models.py:137 manager/models.py:149
+msgid "Name"
+msgstr "Naam"
+
+#: manager/models.py:101
+msgid "Notice email"
+msgstr "Email"
+
+#: manager/models.py:126
+msgid "Code"
+msgstr "Code"
+
+#: manager/models.py:133
+msgid "Countries"
+msgstr "Landen"
+
+#: manager/models.py:156 manager/models.py:157
+msgid "Yes"
+msgstr "Ja"
+
+#: manager/models.py:156 manager/models.py:157
+msgid "No"
+msgstr "Neen"
+
+#: manager/models.py:157
+msgid "I don't know yet"
+msgstr "Ik weet het nog niet"
+
+#: manager/models.py:158
+msgid "Waiting"
+msgstr "Attente"
+
+#: manager/models.py:158
+msgid "Accepted"
+msgstr "Aangenomen"
+
+#: manager/models.py:158
+msgid "Rejected"
+msgstr "Verworpen"
+
+#: manager/models.py:159
+msgid "Conference"
+msgstr "Conferentie"
+
+#: manager/models.py:159
+msgid "Workshop"
+msgstr "Workshop"
+
+#: manager/models.py:161
+msgid "Submited date"
+msgstr "Datum inzending"
+
+#: manager/models.py:162
+msgid "Last modification date"
+msgstr "Laatste wijziging op"
+
+#: manager/models.py:163
+msgid "Status"
+msgstr "Status"
+
+#: manager/models.py:187
+msgid "Estimated cost"
+msgstr "Geschatte kosten"
+
+#: manager/models.py:203
+#, python-format
+msgid "[RMLL/LSM] [Topic: %s] New talk"
+msgstr "[RMLL/LSM] [Onderwerp: %s] Nieuwe presentatie"
+
+#: manager/models.py:209
+#, python-format
+msgid "[RMLL/LSM] [Topic: %s] Your proposal"
+msgstr "[RMLL/LSM] [Onderwerp: %s] Uw voorstel"
+
+#: templates/404.html:5 templates/404.html.py:9
+msgid "Error 404"
+msgstr "Fout 404"
+
+#: templates/404.html:12
+msgid "Page not found"
+msgstr "Pagina niet gevonden"
+
+#: templates/500.html:5 templates/500.html.py:9
+msgid "Error 500"
+msgstr "Fout 500"
+
+#: templates/500.html:12
+msgid "Internal Error"
+msgstr "Interne Fout"
+
+#: templates/base.html:5
+msgid "RMLL/LSM"
+msgstr "RMLL/LSM"
+
+#: templates/base.html:17
+msgid "Contact the webmaster"
+msgstr "Webmaster contacteren"
+
+#: templates/manager/closed.html:6 templates/manager/closed.html.py:11
+#: templates/manager/end.html:6 templates/manager/end.html.py:11
+#: templates/manager/new.html:10 templates/manager/new.html.py:16
+msgid "RMLL/LSM Call for papers"
+msgstr "RMLL/LSM Call for papers"
+
+#: templates/manager/closed.html:16
+msgid "The call for paper is now closed."
+msgstr ""
+
+#: templates/manager/end.html:16
+msgid "Your talk was successfully submitted."
+msgstr ""
+
+#: templates/manager/end.html:18
+msgid ""
+"You should receive a summary of your proposal by email in a few minutes."
+msgstr ""
+""
+""
+
+#: templates/manager/mail2coordinator.txt:46
+msgid "Regards,"
+msgstr "Met vriendelijke groeten,"
+
+#: templates/manager/mail2coordinator.txt:49
+msgid "The RMLL/LSM Organization Team"
+msgstr "Het organisatieteam van RMLL"
+
+#: templates/manager/mail2submitter.txt:2
+msgid "Below is the summary of your proposal."
+msgstr "Ci-dessous, le récapitulatif de votre proposition."
+
+#: templates/manager/mail2submitter.txt:4
+#, python-format
+msgid ""
+"If you have any question, please contact the people in charge at %(contact)s"
+msgstr ""
+"Si vous avez des questions, n'hésiter pas a contacter les coordinateurs du "
+"thème à %(contact)s"
+
+#: templates/manager/mail2submitter.txt:6
+#, python-format
+msgid "The accepted proposals should be published after the %(limit)s"
+msgstr "La liste des propositions acceptées sera publiée après le %(limit)s"
+
+#: templates/manager/new.html:8
+msgid "Form error"
+msgstr "Fout in het formulier"
+
+#: templates/manager/new.html:20 templates/manager/new.html.py:117
+msgid "Submit your talk"
+msgstr "Proposer votre présentation"
+
+#: templates/manager/new.html:24
+#, python-format
+msgid "Call for papers will end on %(limit)s %(utc)s."
+msgstr "L'appel a conférence se terminera le %(limit)s %(utc)s."
+
+#: templates/manager/new.html:31
+msgid "Operation failed (internal error)"
+msgstr "L'opération a échoué (erreur interne)"
+
+#: templates/manager/new.html:33
+msgid "Operation failed (field(s) missing or incomplete)"
+msgstr "L'opération a échoué (champ(s) manquant(s) ou incomplet(s))"
+
+#: templates/manager/new.html:40
+#, python-format
+msgid "Fields prefixed with a %(mark)s are mandatory."
+msgstr "Les champs préfixés par %(mark)s sont obligatoires."
+
+#: templates/manager/new.html:46
+msgid "Information about the talk"
+msgstr "Informations à propos de la présentation"
+
+#: templates/manager/new.html:52
+msgid "Information about the speaker(s)"
+msgstr "Informations à propos d(es) orateur(s)"
+
+#: templates/manager/new.html:58
+msgid "Targeted public"
+msgstr "Public ciblé"
+
+#: templates/manager/new.html:61
+msgid "Check the box corresponding to the public targeted by this talk."
+msgstr "Cochez la case correspondant au public cible de votre exposé"
+
+#: templates/manager/new.html:69
+msgid "Information about the transportation charges"
+msgstr "Informations à propos du remboursement des frais de transports"
+
+#: templates/manager/new.html:71
+msgid ""
+"RMLL/LSM is a FLOSS event with limited resources. But (and as usual), for "
+"speakers which need it we can refund their transportation charges. If you "
+"are in such case, please fill out the following fields."
+msgstr ""
+"Les RMLL sont un événement avec des ressources limitées. Cependant (et comme "
+"d'habitude), nous proposons aux orateurs qui en font la demande de leur "
+"rembourser leurs frais de transports. Si vous êtes dans ce cas, remplissez "
+"les informations suivantes."
+
+#: templates/manager/new.html:102
+msgid "Examples:"
+msgstr "Exemples :"
+
+#: templates/manager/new.html:120
+msgid "Help RMLL/LSM"
+msgstr "De LSM Hulpen"
+
+#: templates/manager/new.html:122
+msgid ""
+"Professionals, organisations and companies wishing to financially support "
+"the RMLL/LSM will get more information on the website:"
+msgstr ""
+"Les professionnels, associations et entreprises qui souhaitent soutenir "
+"financièrement les RMLL peuvent obtenir plus d'informations sur le site "
+"Internet :"
+
+#: templates/manager/new.html:123
+msgid "Visit our website"
+msgstr "Bezoek onze webpagina"
+
+#~ msgid "Time"
+#~ msgstr "Tijd"
+
+#~ msgid "Close"
+#~ msgstr "Sluiten"
+
+#~ msgid "COOKIES Variables"
+#~ msgstr "Valeur"
+
+#~ msgid "Variable"
+#~ msgstr "Valeur"
+
+#~ msgid "SESSION Variables"
+#~ msgstr "Valeur"
+
+#~ msgid "No SESSION data"
+#~ msgstr "Valeur"
+
+#~ msgid "GET Variables"
+#~ msgstr "Valeur"
+
+#~ msgid "POST Variables"
+#~ msgstr "Valeur"
+
+#~ msgid "Line"
+#~ msgstr "Licence"
+
+#~ msgid "File"
+#~ msgstr "Intitulé"
+
+#~ msgid "Error"
+#~ msgstr "Error"
+
+#~ msgid "SQL Selected"
+#~ msgstr "Rejeté"
+
+#~ msgid "None"
+#~ msgstr "Nota's"
+
+#~ msgid ""
+#~ "If you have no news from the people in charge of the Topic before the "
+#~ "%(limit)s,\n"
+#~ "you should contact the coordinators at %(contact)s"
+#~ msgstr ""
+#~ "Si vous n'avez pas de nouvelles des coordinateurs du thème d'ici le "
+#~ "%(limit)s,\n"
+#~ "vous devriez les contacter sur %(contact)s"
+
+#~ msgid "Topic:"
+#~ msgstr "Onderwerp:"
+
+#~ msgid "Title:"
+#~ msgstr "Titel:"
+
+#~ msgid "Nature:"
+#~ msgstr "Natuur:"
+
+#~ msgid "Abstract:"
+#~ msgstr "Korte inhoud:"
+
+#~ msgid "Language:"
+#~ msgstr "Taal:"
+
+#~ msgid "Capture:"
+#~ msgstr "Captation :"
+
+#~ msgid "License:"
+#~ msgstr "Licentie:"
+
+#~ msgid "Constraints:"
+#~ msgstr "Contraintes :"
+
+#~ msgid "Speaker(s):"
+#~ msgstr "Spreker(s) :"
+
+#~ msgid "Biography:"
+#~ msgstr "Biografie :"
+
+#~ msgid "City:"
+#~ msgstr "Stad:"
+
+#~ msgid "Country:"
+#~ msgstr "Land:"
+
+#~ msgid "Transportation:"
+#~ msgstr "Transport:"
+
+#~ msgid "Estimated cost (euros):"
+#~ msgstr "Geschatte kosten (euro)"
+

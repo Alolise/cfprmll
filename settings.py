@@ -40,6 +40,7 @@ LANGUAGE_CODE = 'en-US'
 LANGUAGES = [
     (u'en', u'English'),
     (u'fr', u'Français'),
+    (u'nl', u'Nederlands'),
 ]
 
 SITE_ID = 1
