@@ -4,9 +4,9 @@
 
 **{% trans 'Title' %}** {{ talk.title }}
 
-**{% trans 'Nature' %}** {{ talk.get_nature_display }}
+**{% trans 'Type' %}** {{ talk.get_nature_display }}
 
-**{% trans 'Abstract' %}**
+**{% trans 'Summary' %}**
 
 {{ talk.abstract }}
 

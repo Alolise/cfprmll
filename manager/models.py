@@ -77,7 +77,7 @@ class LabelClass:
 
 class BaseLabel(models.Model):
     """
-    Abstract class for labels
+     class for labels
     """
     language = models.CharField(_(u"Language"), max_length=2,
                                 choices=settings.LANGUAGES)
@@ -158,16 +158,16 @@ class Talk(models.Model):
     STATUS = ((0, _(u"Waiting")), (1, _(u"Accepted")), (2, _(u"Rejected")),)
     NATURES = (('conference', _(u"Conference")), ('workshop', _(u"Workshop")),)
 
-    created_date = models.DateField(_(u"Submited date"), auto_now_add=True)
+    created_date = models.DateField(_(u"Submitted date"), auto_now_add=True)
     date = models.DateField(_(u"Last modification date"), auto_now=True)
     status = models.PositiveSmallIntegerField(_(u"Status"), choices=STATUS, default=0)
     language = models.ForeignKey(Language)
     topic = models.ForeignKey(Topic)
     title = models.CharField(_(u"Title"), max_length=128)
-    nature = models.CharField(_(u"Nature"), choices=NATURES, max_length=24, blank=True)
+    nature = models.CharField(_(u"Type"), choices=NATURES, max_length=24, blank=True)
     number_of_slot = models.PositiveSmallIntegerField(_(u"Number of 20mins slots"))
-    abstract = models.TextField(_(u"Abstract"))
-    abstract_other_language = models.TextField(_(u"Abstract in French"), blank=True, null=True)
+    abstract = models.TextField(_(u"Summary"))
+    abstract_other_language = models.TextField(_(u"Summary in French"), blank=True, null=True)
     capture = models.PositiveSmallIntegerField(u"Capture", choices=YES_NO)
     license = models.ForeignKey(License, null=True, blank=True)
     constraints = models.TextField(_(u"Constraints"), blank=True)

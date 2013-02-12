@@ -147,12 +147,12 @@ class TalkForm(forms.ModelForm):
                                    queryset=Topic.objects.all(), empty_label=None, widget=SortedForm)
     title = forms.CharField(label=_(u"Title"),
                             min_length=5, widget=forms.TextInput(attrs=_iattrs))
-    nature = forms.ChoiceField(label=_(u"Nature"), choices=Talk.NATURES, required=True)
+    nature = forms.ChoiceField(label=_(u"Type"), choices=Talk.NATURES, required=True)
     number_of_slot = forms.IntegerField(label=_(u"Number of slots"), help_text=_("The number of slots of 20mins needed for your talk/workshop."))
-    abstract = forms.CharField(label=_(u"Abstract"), widget=forms.Textarea(attrs=_tattrs),
+    abstract = forms.CharField(label=_(u"Summary"), widget=forms.Textarea(attrs=_tattrs),
                                help_text=_(u"A description of what the talk would be about. This abstract will be published on the website."),
                                )
-    abstract_other_language = forms.CharField(label=_(u"Abstract in French"), widget=forms.Textarea(attrs=_tattrs),
+    abstract_other_language = forms.CharField(label=_(u"Summary in French"), widget=forms.Textarea(attrs=_tattrs),
                                               help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
                                               required=False,
                                              )
@@ -178,7 +178,7 @@ class TalkForm(forms.ModelForm):
                                help_text=_(u"First name, last name, email of the speaker(s). One speaker per line. Each line should respect the following format: « Firstname Lastname [speaker@domain.tld] »"),
                                )
     biography = forms.CharField(label=_(u"Biography"), widget=forms.Textarea(attrs=_tattrs),
-                                help_text=_(u"Add a few words about the speaker(s). Their, work, activities, involvement in free software, etc. It will be publish with the abstract on the event website."),
+                                help_text=_(u"Add a few words about the speaker(s). Their, work, activities, involvement in free software, etc. It will be published with the abstract on the event website."),
                                 )
     biography_other_language = forms.CharField(label=_(u"Biography in French"), widget=forms.Textarea(attrs=_tattrs),
                                 help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
