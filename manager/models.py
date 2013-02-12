@@ -133,11 +133,21 @@ class Country(models.Model, LabelClass):
         verbose_name_plural = _(u"Countries")
 
 
-class License(models.Model):
-    name = models.CharField(_(u"Name"), max_length=128)
+class LicenseLabel(BaseLabel):
+    parent = models.ForeignKey('License')
+
+
+class License(models.Model, LabelClass):
+    label_class = LicenseLabel
+    labels = (('lbl_name', _(u"Name")),)
+    code = models.CharField(_(u"Code"), max_length=12)
 
     def __unicode__(self):
-        return self.name
+        return self.label(lang=get_language())
+
+    class Meta:
+        verbose_name = _(u"License")
+        verbose_name_plural = _(u"Licenses")
 
 
 class TransportationLabel(BaseLabel):

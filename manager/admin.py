@@ -3,7 +3,7 @@
 from django.contrib import admin
 
 from models import Topic, Country, License, Talk, Transportation, Language
-from forms import TopicAdminForm, LanguageAdminForm, CountryAdminForm, TransportationAdminForm, TalkAdminForm
+from forms import TopicAdminForm, LanguageAdminForm, CountryAdminForm, LicenseAdminForm, TransportationAdminForm, TalkAdminForm
 from actions import export_csv
 
 
@@ -28,8 +28,10 @@ admin.site.register(Country, CountryAdmin)
 
 
 class LicenseAdmin(admin.ModelAdmin):
-    ordering = ('name',)
-    search_fields = ('name',)
+    form = LicenseAdminForm
+    ordering = ('code',)
+    search_fields = ('licenselabel__value', 'code',)
+    list_display = ('label', 'code')
 admin.site.register(License, LicenseAdmin)
 
 
@@ -42,7 +44,7 @@ class TalkAdmin(admin.ModelAdmin):
     form = TalkAdminForm
     list_filter = ('status', 'nature', 'language', 'charges', 'topic')
     search_fields = ('title', 'speakers', 'abstract', 'constraints', 'biography')
-    list_display = ('title', 'date', 'status', 'language', 'speakers', 'capture', 'charges', 'city', 'country', 'cost')
+    list_display = ('title', 'date', 'status', 'language', 'speakers', 'license', 'capture', 'charges', 'city', 'country', 'cost')
     actions = [export_csv]
 
 admin.site.register(Talk, TalkAdmin)

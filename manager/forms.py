@@ -4,7 +4,7 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 
 from django.conf import settings
-from models import Topic, TopicLabel, Language, LanguageLabel, Country, CountryLabel, Transportation, TransportationLabel, Talk, License
+from models import Topic, TopicLabel, Language, LanguageLabel, Country, CountryLabel, Transportation, TransportationLabel, Talk, License, LicenseLabel
 
 # construction dynamique des classes de formulaires
 bases = (forms.ModelForm,)
@@ -105,6 +105,16 @@ class CountryAdminForm(CountryAdminFormBase):
     class Meta:
         model = Country
 
+LicenseAdminFormBase = getattr(forms.ModelForm, '__metaclass__', type) \
+    ('LicenseAdminFormBase', bases, get_attributes(License))
+
+
+class LicenseAdminForm(LicenseAdminFormBase):
+    label_model = LicenseLabel
+
+    class Meta:
+        model = License
+
 TransportationAdminFormBase = getattr(forms.ModelForm, '__metaclass__', type) \
     ('TransportationAdminFormBase', bases, get_attributes(Transportation))
 
@@ -159,7 +169,7 @@ class TalkForm(forms.ModelForm):
     capture = forms.ChoiceField(label=_(u"Capture"), choices=Talk.YES_NO, required=False,
                                 help_text=_(u"Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/or video) and published on the event website (and probably spread on the whole Internet)."),
                                 )
-    license = forms.ModelChoiceField(label=_(u"License"),
+    license = forms.ModelChoiceField(label=_(u"License"), widget=SortedForm,
                                      required=False, queryset=License.objects.all(),
                                      help_text=_(u"The preferred license for the capture of the talk (contact us if you want us to add another license)."),
                                      )
