@@ -43,7 +43,7 @@ msgstr "Type"
 #: manager/forms.py:151 manager/models.py:168
 #: templates/manager/mail2coordinator.txt:9
 msgid "Summary"
-msgstr "Korte inhoud"
+msgstr "Abstract"
 
 #: manager/forms.py:152
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 
 #: manager/forms.py:154 manager/models.py:169
 msgid "Summary in French"
-msgstr "Korte inhoud in het Engels"
+msgstr "Abstract in het Engels"
 
 #: manager/forms.py:155 manager/forms.py:182
 msgid ""
