@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-10 23:36+0100\n"
-"PO-Revision-Date: 2012-02-02 01:27+0100\n"
+"PO-Revision-Date: 2013-02-12 11:30+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -108,19 +108,19 @@ msgstr ""
 
 #: manager/forms.py:169 manager/models.py:174
 msgid "General public"
-msgstr ""
+msgstr "Grand public"
 
 #: manager/forms.py:170 manager/models.py:175
 msgid "Professionals"
-msgstr ""
+msgstr "Professionnels"
 
 #: manager/forms.py:171 manager/models.py:176
 msgid "Decision makers"
-msgstr ""
+msgstr "Décideurs"
 
 #: manager/forms.py:172 manager/models.py:177
 msgid "Geeks"
-msgstr ""
+msgstr "Geeks"
 
 #: manager/forms.py:173 manager/models.py:178
 msgid "English speaking people"
@@ -263,7 +263,7 @@ msgstr "Date d'envoi"
 
 #: manager/models.py:162
 msgid "Last modification date"
-msgstr ""
+msgstr "Date de la dernière modification"
 
 #: manager/models.py:163
 msgid "Status"
@@ -389,11 +389,11 @@ msgstr "Informations à propos d(es) orateur(s)"
 
 #: templates/manager/new.html:58
 msgid "Targeted public"
-msgstr ""
+msgstr "Public ciblé"
 
 #: templates/manager/new.html:61
 msgid "Check the box corresponding to the public targeted by this talk."
-msgstr ""
+msgstr "Cochez la case correspondant au public cible de votre exposé"
 
 #: templates/manager/new.html:69
 msgid "Information about the transportation charges"
