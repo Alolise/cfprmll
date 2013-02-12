@@ -1,7 +1,7 @@
 {% load i18n %}{% autoescape off %}
 {% trans 'Below is the summary of your proposal.' %}
 
-{% blocktrans with talk.topic.email as contact %}If you have any question, please contact the people in charge at {{ contact }}{% endblocktrans %}
+{% blocktrans with talk.topic.email as contact %}If you have any questions, please contact the people in charge at {{ contact }}{% endblocktrans %}
 
 {% blocktrans %}The accepted proposals should be published after the {{ limit }}{% endblocktrans %}{% endautoescape %}
 

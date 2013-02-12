@@ -50,7 +50,7 @@ msgid ""
 "A description of what the talk would be about. This abstract will be "
 "published on the website."
 msgstr ""
-"Een korte beschrijving van de presentatie. Dit zal op de website geplaatst worden."
+"Een korte beschrijving van de presentatie. Deze zal op de website geplaatst worden."
 
 #: manager/forms.py:154 manager/models.py:169
 msgid "Abstract in French"
@@ -74,7 +74,7 @@ msgid ""
 "or video) and published on the event website (and probably spread on the "
 "whole Internet)."
 msgstr ""
-"Kies “ja” als de spreker (s) akkoord gaan de presentatie te laten vastleggen (audio en / of video)"
+"Kies "ja" als de spreker(s) akkoord gaan om de presentatie te laten vastleggen (audio en/of video)"
 "en te laten publiceren op de website van het evenement (en waarschijnlijk verspreid over"
 "het hele internet)."
 
@@ -88,7 +88,7 @@ msgid ""
 "to add another license)."
 msgstr ""
 "De voorkeurslicentie voor de opname van de presentatie (neem contact met "
-" ons op om een licentie toe te voegen)"
+" ons op om een licentie toe te voegen aan de lijst)"
 
 #: manager/forms.py:164 manager/models.py:172
 #: templates/manager/mail2coordinator.txt:21
@@ -102,11 +102,11 @@ msgid ""
 "else."
 msgstr ""
 "Als de spreker(s) bepaalde voorzieningen nodig hebben, beperkingen (op een"
-"specifieke datum gepland worden, persoon met een rolstoel, etc) of iets anders."
+"specifieke datum gepland worden, persoon met een rolstoel, enz) of iets anders."
 
 #: manager/forms.py:169 manager/models.py:174
 msgid "General public"
-msgstr "Het algemene publiek"
+msgstr "Het grote publiek"
 
 #: manager/forms.py:170 manager/models.py:175
 msgid "Professionals"
@@ -148,11 +148,11 @@ msgstr "Biografie"
 #: manager/forms.py:179
 msgid ""
 "Add a few words about the speaker(s). Their, work, activities, involvement "
-"in free software, etc. It will be publish with the abstract on the event "
+"in free software, etc. It will be published with the abstract on the event "
 "website."
 msgstr ""
 "Een paar woorden over de spreker(s). Werk, activiteiten, deelname binnnen "
-"free  software, etc. Dit zal met de korte  inhoud op de evenementswebsite "
+"vrije software, etc. Dit zal met de korte  inhoud op de evenementswebsite "
 "worden gepubliceerd."
 
 #: manager/forms.py:181 manager/models.py:182
@@ -162,7 +162,7 @@ msgstr "Biografie in het Engels"
 #: manager/forms.py:184 manager/models.py:183
 #: templates/manager/mail2coordinator.txt:34
 msgid "Refund charges"
-msgstr "Vergoeding"
+msgstr "Onkostenvergoeding"
 
 #: manager/forms.py:186 templates/manager/mail2coordinator.txt:40
 msgid "Transportation"
@@ -188,8 +188,8 @@ msgid ""
 "us to have a clear view of the expenses we could engage."
 msgstr ""
 "Als de geschatte kosten van het vervoer bekend zijn is het makkelijker "
-"voor ons om een helder beeld te hebben van de kosten die wij kunnen "
-"hebben."
+"voor ons om een duidelijker beeld te hebben van de kosten die het kan "
+"meebrengen."
 
 #: manager/forms.py:211 manager/forms.py:216 manager/forms.py:219
 #: manager/forms.py:224
@@ -258,7 +258,7 @@ msgid "Workshop"
 msgstr "Workshop"
 
 #: manager/models.py:161
-msgid "Submited date"
+msgid "Submitted date"
 msgstr "Datum inzending"
 
 #: manager/models.py:162
@@ -314,7 +314,7 @@ msgid "RMLL/LSM Call for papers"
 msgstr "RMLL/LSM Call for papers"
 
 #: templates/manager/closed.html:16
-msgid "The call for paper is now closed."
+msgid "The call for papers is now closed."
 msgstr "De oproep voor papers is nu gesloten."
 
 #: templates/manager/end.html:16
@@ -343,7 +343,7 @@ msgstr "Hieronder staat de samenvatting van uw voorstel."
 #: templates/manager/mail2submitter.txt:4
 #, python-format
 msgid ""
-"If you have any question, please contact the people in charge at %(contact)s"
+"If you have any questions, please contact the people in charge at %(contact)s"
 msgstr ""
 "Als u vragen heeft, neem dan contact op met de organisatie op %(contact)s"
 
@@ -371,7 +371,7 @@ msgstr "Actie misluke (interne fout)"
 
 #: templates/manager/new.html:33
 msgid "Operation failed (field(s) missing or incomplete)"
-msgstr "Operatie misluke (er missen velden of zijn niet compleet)"
+msgstr "Operatie mislukt (sommige velden werden niet ingevuld of zijn niet compleet)"
 
 #: templates/manager/new.html:40
 #, python-format
@@ -380,23 +380,23 @@ msgstr "Velden met %(mark)s ervoor zijn verplicht."
 
 #: templates/manager/new.html:46
 msgid "Information about the talk"
-msgstr "Information about the talk"
+msgstr "Informatie over de presentatie"
 
 #: templates/manager/new.html:52
 msgid "Information about the speaker(s)"
-msgstr "Information about the speaker(s)"
+msgstr "Informatie over de spreker(s)"
 
 #: templates/manager/new.html:58
 msgid "Targeted public"
-msgstr "Targeted public"
+msgstr "Doelpubliek"
 
 #: templates/manager/new.html:61
 msgid "Check the box corresponding to the public targeted by this talk."
-msgstr "Check the box corresponding to the public targeted by this talk."
+msgstr "Vink aan welk het doelpubliek van uw presentatie is."
 
 #: templates/manager/new.html:69
 msgid "Information about the transportation charges"
-msgstr "Information about the transportation charges"
+msgstr "Informatie over de vervoerskosten"
 
 #: templates/manager/new.html:71
 msgid ""
@@ -404,26 +404,26 @@ msgid ""
 "speakers which need it we can refund their transportation charges. If you "
 "are in such case, please fill out the following fields."
 msgstr ""
-"RMLL/LSM is a FLOSS event with limited resources. But (and as usual), for "
-"speakers which need it we can refund their transportation charges. If you "
-"are in such case, please fill out the following fields."
+"RMLL/LSM is een FLOSS evenement met beperkte middelen. Maar (zoals dat gebruikelijk is), voor "
+"sprekers die dat nodig hebben, kunnen de vervoersonkosten vergoeden. Als dat voor u "
+"van toepassing is, vul dan de gevraagde informatie in."
 
 #: templates/manager/new.html:102
 msgid "Examples:"
-msgstr "Exemples :"
+msgstr "Voorbeelden:"
 
 #: templates/manager/new.html:120
 msgid "Help RMLL/LSM"
-msgstr "De LSM Hulpen"
+msgstr "Help RMLL/LSM"
+# more context is needed here
 
 #: templates/manager/new.html:122
 msgid ""
 "Professionals, organisations and companies wishing to financially support "
 "the RMLL/LSM will get more information on the website:"
 msgstr ""
-"Les professionnels, associations et entreprises qui souhaitent soutenir "
-"financièrement les RMLL peuvent obtenir plus d'informations sur le site "
-"Internet :"
+"Professionnals, verenigingen en bedrijven die de RMLL financieel wensen te ondersteunen,"
+"vinden daarvoor meer informatie op onze website:"
 
 #: templates/manager/new.html:123
 msgid "Visit our website"
@@ -439,13 +439,13 @@ msgstr "Bezoek onze webpagina"
 #~ msgstr "Valeur"
 
 #~ msgid "Variable"
-#~ msgstr "Valeur"
+#~ msgstr "Variabele"
 
 #~ msgid "SESSION Variables"
 #~ msgstr "Valeur"
 
 #~ msgid "No SESSION data"
-#~ msgstr "Valeur"
+#~ msgstr "Geen SESSIE-data"
 
 #~ msgid "GET Variables"
 #~ msgstr "Valeur"
@@ -454,13 +454,13 @@ msgstr "Bezoek onze webpagina"
 #~ msgstr "Valeur"
 
 #~ msgid "Line"
-#~ msgstr "Licence"
+#~ msgstr "Lijn"
 
 #~ msgid "File"
-#~ msgstr "Intitulé"
+#~ msgstr "Bestand"
 
 #~ msgid "Error"
-#~ msgstr "Error"
+#~ msgstr "Fout"
 
 #~ msgid "SQL Selected"
 #~ msgstr "Rejeté"
@@ -473,9 +473,9 @@ msgstr "Bezoek onze webpagina"
 #~ "%(limit)s,\n"
 #~ "you should contact the coordinators at %(contact)s"
 #~ msgstr ""
-#~ "Si vous n'avez pas de nouvelles des coordinateurs du thème d'ici le "
-#~ "%(limit)s,\n"
-#~ "vous devriez les contacter sur %(contact)s"
+#~ "Indien u niets meer vernomen heeft van de mensen verantwoordelijk voor dat onderdeel voor de"
+#~ "%(limit)en,\n"
+#~ "moet u hen op %(contact)en contacteren"
 
 #~ msgid "Topic:"
 #~ msgstr "Onderwerp:"
@@ -484,7 +484,7 @@ msgstr "Bezoek onze webpagina"
 #~ msgstr "Titel:"
 
 #~ msgid "Nature:"
-#~ msgstr "Natuur:"
+#~ msgstr "Aard:"
 
 #~ msgid "Abstract:"
 #~ msgstr "Korte inhoud:"
@@ -493,13 +493,13 @@ msgstr "Bezoek onze webpagina"
 #~ msgstr "Taal:"
 
 #~ msgid "Capture:"
-#~ msgstr "Captation :"
+#~ msgstr "Opname:"
 
 #~ msgid "License:"
 #~ msgstr "Licentie:"
 
 #~ msgid "Constraints:"
-#~ msgstr "Contraintes :"
+#~ msgstr "Beperkingen:"
 
 #~ msgid "Speaker(s):"
 #~ msgstr "Spreker(s) :"
@@ -514,7 +514,7 @@ msgstr "Bezoek onze webpagina"
 #~ msgstr "Land:"
 
 #~ msgid "Transportation:"
-#~ msgstr "Transport:"
+#~ msgstr "Vervoermiddel:"
 # Or, in context likely to be "Vervoer:"
 
 #~ msgid "Estimated cost (euros):"

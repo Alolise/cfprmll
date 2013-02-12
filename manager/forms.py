@@ -176,7 +176,7 @@ class TalkForm(forms.ModelForm):
                                help_text=_(u"First name, last name, email of the speaker(s). One speaker per line. Each line should respect the following format: « Firstname Lastname [speaker@domain.tld] »"),
                                )
     biography = forms.CharField(label=_(u"Biography"), widget=forms.Textarea(attrs=_tattrs),
-                                help_text=_(u"Add a few words about the speaker(s). Their, work, activities, involvement in free software, etc. It will be publish with the abstract on the event website."),
+                                help_text=_(u"Add a few words about the speaker(s). Their, work, activities, involvement in free software, etc. It will be published with the abstract on the event website."),
                                 )
     biography_other_language = forms.CharField(label=_(u"Biography in French"), widget=forms.Textarea(attrs=_tattrs),
                                 help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
