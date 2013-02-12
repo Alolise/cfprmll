@@ -74,7 +74,7 @@ msgid ""
 "or video) and published on the event website (and probably spread on the "
 "whole Internet)."
 msgstr ""
-"Kies "ja" als de spreker(s) akkoord gaan om de presentatie te laten vastleggen (audio en/of video)"
+"Kies “ja” als de spreker(s) akkoord gaan om de presentatie te laten vastleggen (audio en/of video)"
 "en te laten publiceren op de website van het evenement (en waarschijnlijk verspreid over"
 "het hele internet)."
 
