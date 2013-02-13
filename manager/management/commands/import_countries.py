@@ -15,7 +15,7 @@ class Command(BaseCommand):
     help = 'Closes the specified poll for voting'
 
     def handle(self, *args, **options):
-        countries_data_file = os.path.join(settings.PROJECT_DIR, "datas", "countries.csv")
+        countries_data_file = os.path.join(settings.PROJECT_DIR, "data", "countries.csv")
         if not os.path.exists(countries_data_file):
             print "Error: '%s' does not exist" % countries_data_file
             return

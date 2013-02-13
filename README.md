@@ -69,12 +69,12 @@ Misc
 If you need to set specific settings, don't modify the settings.py, create a
 settings\_local.py and put them in it.
 
-Countries datas
----------------
+Countries data
+--------------
 
 By default, you will have the countries data loaded in your database.
 
-If you need to modify the data, it's in datas/countries.csv, and you'll need to
+If you need to modify the data, it's in data/countries.csv, and you'll need to
 run the following command to import it:
 
     python manage.py import_countries
