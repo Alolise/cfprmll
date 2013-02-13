@@ -150,6 +150,14 @@ class License(models.Model, LabelClass):
         verbose_name_plural = _(u"Licenses")
 
 
+class CaptureLicense(models.Model):
+    """ License for Audio/video Capture """ 
+    name = models.CharField(_(u"Name"), max_length=128)
+
+    def __unicode__(self):
+        return self.name
+
+
 class TransportationLabel(BaseLabel):
     parent = models.ForeignKey('Transportation')
 
@@ -178,8 +186,9 @@ class Talk(models.Model):
     number_of_slot = models.PositiveSmallIntegerField(_(u"Number of 20mins slots"))
     abstract = models.TextField(_(u"Summary"))
     abstract_other_language = models.TextField(_(u"Summary in French"), blank=True, null=True)
-    capture = models.PositiveSmallIntegerField(u"Capture", choices=YES_NO)
     license = models.ForeignKey(License, null=True, blank=True)
+    capture = models.PositiveSmallIntegerField(u"Capture", choices=YES_NO)
+    capture_license = models.ForeignKey(CaptureLicense, null=True, blank=True)
     constraints = models.TextField(_(u"Constraints"), blank=True)
 
     for_general_public = models.BooleanField(_(u"General public"))

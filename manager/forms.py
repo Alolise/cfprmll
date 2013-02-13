@@ -4,7 +4,7 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 
 from django.conf import settings
-from models import Topic, TopicLabel, Language, LanguageLabel, Country, CountryLabel, Transportation, TransportationLabel, Talk, License, LicenseLabel
+from models import Topic, TopicLabel, Language, LanguageLabel, Country, CountryLabel, Transportation, TransportationLabel, Talk, License, LicenseLabel, CaptureLicense
 
 # construction dynamique des classes de formulaires
 bases = (forms.ModelForm,)
@@ -166,12 +166,19 @@ class TalkForm(forms.ModelForm):
                                               help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
                                               required=False,
                                              )
-    capture = forms.ChoiceField(label=_(u"Capture"), choices=Talk.YES_NO, required=False,
-                                help_text=_(u"Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/or video) and published on the event website (and probably spread on the whole Internet)."),
+    license = forms.ModelChoiceField(
+        label=_(u"License"), widget=SortedForm, required=False,
+        queryset=License.objects.all(),
+        help_text=_(u"The preferred license for your support files (contact us if you would like us to add another license)."),
+        )
+    capture = forms.ChoiceField(
+            label=_(u"Capture"), choices=Talk.YES_NO, required=False,
+            help_text=_(u"Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/or video) and published on the event website (and probably spread on the whole Internet)."),
                                 )
-    license = forms.ModelChoiceField(label=_(u"License"), widget=SortedForm,
-                                     required=False, queryset=License.objects.all(),
-                                     help_text=_(u"The preferred license for the capture of the talk (contact us if you want us to add another license)."),
+    capture_license = forms.ModelChoiceField(
+            label=_(u"Capture License"), required=False,
+            queryset=CaptureLicense.objects.all(),
+            help_text=_(u"The preferred license for the capture of the talk (contact us if you would like us to add another license)."),
                                      )
     constraints = forms.CharField(label=_(u"Constraints"),
                                   widget=forms.Textarea(attrs=_tattrs), required=False,
