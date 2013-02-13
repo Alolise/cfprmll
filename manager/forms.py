@@ -147,7 +147,7 @@ class SortedForm(widgets.Select):
         return u'\n'.join(output)
 
 _iattrs = {'class': 'text', 'size': 60}
-_tattrs = {'cols': '80', 'rows': 12}
+_tattrs = {'cols': '80', 'rows': 8}
 
 
 class TalkForm(forms.ModelForm):
@@ -155,31 +155,40 @@ class TalkForm(forms.ModelForm):
                                       queryset=Language.objects.all(), empty_label=None)
     topic = forms.ModelChoiceField(label=_(u"Topic"),
                                    queryset=Topic.objects.all(), empty_label=None, widget=SortedForm)
-    title = forms.CharField(label=_(u"Title"),
-                            min_length=5, widget=forms.TextInput(attrs=_iattrs))
-    nature = forms.ChoiceField(label=_(u"Type"), choices=Talk.NATURES, required=True)
-    number_of_slot = forms.IntegerField(label=_(u"Number of slots"), help_text=_("The number of slots of 20mins needed for your talk/workshop."))
-    abstract = forms.CharField(label=_(u"Summary"), widget=forms.Textarea(attrs=_tattrs),
-                               help_text=_(u"A description of what the talk would be about. This abstract will be published on the website."),
-                               )
-    abstract_other_language = forms.CharField(label=_(u"Summary in French"), widget=forms.Textarea(attrs=_tattrs),
-                                              help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
-                                              required=False,
-                                             )
+    title = forms.CharField(
+        label=_(u"Title"),
+        min_length=5, widget=forms.TextInput(attrs=_iattrs))
+    translated_title = forms.CharField(
+        label=_(u"Title in French (or Dutch)"),
+        required=False,
+        widget=forms.TextInput(attrs=_iattrs))
+    nature = forms.ChoiceField(
+        label=_(u"Type"), choices=Talk.NATURES, required=True)
+    abstract = forms.CharField(
+        label=_(u"Summary"),
+        widget=forms.Textarea(attrs=_tattrs),
+        help_text=_(u"A description of what the talk would be about. This abstract will be published on the website."),
+        )
+    translated_abstract = forms.CharField(
+        label=_(u"Summary in French (or Dutch)"),
+        widget=forms.Textarea(attrs=_tattrs),
+        help_text=_(u"If you can write an abstract in French, please do so. If you can't, we'll handle that for you."),
+        required=False,
+        )
     license = forms.ModelChoiceField(
         label=_(u"License"), widget=SortedForm, required=False,
         queryset=License.objects.all(),
         help_text=_(u"The preferred license for your support files (contact us if you would like us to add another license)."),
         )
     capture = forms.ChoiceField(
-            label=_(u"Capture"), choices=Talk.YES_NO, required=False,
-            help_text=_(u"Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/or video) and published on the event website (and probably spread on the whole Internet)."),
+        label=_(u"Capture"), choices=Talk.YES_NO, required=False,
+        help_text=_(u"Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/or video) and published on the event website (and probably spread on the whole Internet)."),
                                 )
-    capture_license = forms.ModelChoiceField(
-            label=_(u"Capture License"), required=False,
-            queryset=CaptureLicense.objects.all(),
-            help_text=_(u"The preferred license for the capture of the talk (contact us if you would like us to add another license)."),
-                                     )
+    capture_license = forms.ChoiceField(
+        label=_(u"Capture License"), choices=Talk.CAPTURE_LIC,
+        required=False,
+        help_text=_(u"The preferred license for the capture of the talk (contact us if you would like us to add another license)."),
+        )
     constraints = forms.CharField(label=_(u"Constraints"),
                                   widget=forms.Textarea(attrs=_tattrs), required=False,
                                   help_text=_(u"If the speaker(s) have special needs, constraints (be scheduled on a specific date, disabled person moving with a wheelchair, etc) or something else."),
