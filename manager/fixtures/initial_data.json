@@ -9285,5 +9285,161 @@
         "fields": {
             "code": "ZZ"
         }
-    }
+    },
+    {
+	"pk": 1, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 1, 
+	    "label_number": 0, 
+	    "value": "GNU General Public License", 
+	    "language": "en"
+	}
+    }, 
+    {
+	"pk": 2, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 1, 
+	    "label_number": 0, 
+	    "value": "Licence GNU GPL", 
+	    "language": "fr"
+	}
+    }, 
+    {
+	"pk": 3, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 2, 
+	    "label_number": 0, 
+	    "value": "Creative Commons Attribution", 
+	    "language": "en"
+	}
+    }, 
+    {
+	"pk": 4, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 2, 
+	    "label_number": 0, 
+	    "value": "Creative Commons Attribution", 
+	    "language": "fr"
+	}
+    }, 
+    {
+	"pk": 5, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 3, 
+	    "label_number": 0, 
+	    "value": "Creative Commons Attribution - ShareAlike", 
+	    "language": "en"
+	}
+    }, 
+    {
+	"pk": 6, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 3, 
+	    "label_number": 0, 
+	    "value": "Creative Commons Attribution - Partage dans les Mêmes Conditions", 
+	    "language": "fr"
+	}
+    }, 
+    {
+	"pk": 7, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 4, 
+	    "label_number": 0, 
+	    "value": "Creative Commons Attribution - NoDerivs", 
+	    "language": "en"
+	}
+    }, 
+    {
+	"pk": 8, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 4, 
+	    "label_number": 0, 
+	    "value": "Creative Commons Attribution - Pas de Modification", 
+	    "language": "fr"
+	}
+    }, 
+    {
+	"pk": 9, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 5, 
+	    "label_number": 0, 
+	    "value": "Creative Commons Attribution - NonCommercial", 
+	    "language": "en"
+	}
+    }, 
+    {
+	"pk": 10, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 5, 
+	    "label_number": 0, 
+	    "value": "Creative Commons Attribution - Pas d’Utilisation Commerciale", 
+	    "language": "fr"
+	}
+    }, 
+    {
+	"pk": 11, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 6, 
+	    "label_number": 0, 
+	    "value": "Free Art License", 
+	    "language": "en"
+	}
+    }, 
+    {
+	"pk": 12, 
+	"model": "manager.licenselabel", 
+	"fields": {
+	    "parent": 6, 
+	    "label_number": 0, 
+	    "value": "Licence Art Libre", 
+	    "language": "fr"
+	}
+    }, 
+    {"pk": 1, "model": "manager.license", "fields": {"code":"gpl"}}, 
+    {"pk": 2, "model": "manager.license", "fields": {"code":"cc-by"}}, 
+    {"pk": 3, "model": "manager.license", "fields": {"code":"cc-by-sa"}},    
+    {"pk": 4, "model": "manager.license", "fields": {"code":"cc-by-nd"}}, 
+    {"pk": 5, "model": "manager.license", "fields": {"code":"cc-by-nc"}}, 
+    {"pk": 6, "model": "manager.license", "fields": {"code":"al"}}, 
+    {
+	"pk": 1, 
+	"model": "manager.transportationlabel", 
+	"fields": {
+	    "parent": 1, 
+	    "label_number": 0, 
+	    "value": "Car", 
+	    "language": "en"
+	}
+    }, 
+    {
+	"pk": 2, 
+    	"model": "manager.transportationlabel", 
+	"fields": {
+		  "parent": 1, 
+		  "label_number": 0, 
+		  "value": "Voiture", 
+		  "language": "fr"
+		  }
+    }, 
+    {
+	"pk": 3, 
+	"model": "manager.transportationlabel", 
+	"fields": {"parent": 2, "label_number": 0, "value": "Train", "language": "en"}}, 
+{"pk": 4, "model": "manager.transportationlabel", "fields": {"parent": 2, "label_number": 0, "value": "Train", "language": "fr"}}, 
+{"pk": 5, "model": "manager.transportationlabel", "fields": {"parent": 3, "label_number": 0, "value": "Plane", "language": "en"}}, 
+{"pk": 6, "model": "manager.transportationlabel", "fields": {"parent": 3, "label_number": 0, "value": "Avion", "language": "fr"}}, 
+{"pk": 1, "model": "manager.transportation", "fields": {}}, 
+{"pk": 2, "model": "manager.transportation", "fields": {}}, 
+{"pk": 3, "model": "manager.transportation", "fields": {}}
 ]
