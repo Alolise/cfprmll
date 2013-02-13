@@ -9292,7 +9292,7 @@
 	"fields": {
 	    "parent": 1, 
 	    "label_number": 0, 
-	    "value": "GNU General Public License", 
+	    "value": "Creative Commons Attribution - ShareAlike 3.0", 
 	    "language": "en"
 	}
     }, 
@@ -9302,7 +9302,7 @@
 	"fields": {
 	    "parent": 1, 
 	    "label_number": 0, 
-	    "value": "Licence GNU GPL", 
+	    "value": "Creative Commons Attribution - Partage dans les Mêmes Conditions, 3.0", 
 	    "language": "fr"
 	}
     }, 
@@ -9312,7 +9312,7 @@
 	"fields": {
 	    "parent": 2, 
 	    "label_number": 0, 
-	    "value": "Creative Commons Attribution", 
+	    "value": "Creative Commons Attribution - NoDerivs 3.0", 
 	    "language": "en"
 	}
     }, 
@@ -9322,7 +9322,7 @@
 	"fields": {
 	    "parent": 2, 
 	    "label_number": 0, 
-	    "value": "Creative Commons Attribution", 
+	    "value": "Creative Commons Attribution - Pas de Modification 3.0", 
 	    "language": "fr"
 	}
     }, 
@@ -9332,7 +9332,7 @@
 	"fields": {
 	    "parent": 3, 
 	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - ShareAlike", 
+	    "value": "Free Art License 1.3", 
 	    "language": "en"
 	}
     }, 
@@ -9342,7 +9342,7 @@
 	"fields": {
 	    "parent": 3, 
 	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - Partage dans les Mêmes Conditions", 
+	    "value": "Licence Art Libre 1.3", 
 	    "language": "fr"
 	}
     }, 
@@ -9352,7 +9352,7 @@
 	"fields": {
 	    "parent": 4, 
 	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - NoDerivs", 
+	    "value": "GNU Free Documentation License", 
 	    "language": "en"
 	}
     }, 
@@ -9362,7 +9362,7 @@
 	"fields": {
 	    "parent": 4, 
 	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - Pas de Modification", 
+	    "value": "Licence de documentation libre GNU FDL", 
 	    "language": "fr"
 	}
     }, 
@@ -9372,7 +9372,7 @@
 	"fields": {
 	    "parent": 5, 
 	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - NonCommercial", 
+	    "value": "FreeBSD Documentation License", 
 	    "language": "en"
 	}
     }, 
@@ -9382,7 +9382,7 @@
 	"fields": {
 	    "parent": 5, 
 	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - Pas d’Utilisation Commerciale", 
+	    "value": "Licence de documentation libre de FreeBSD", 
 	    "language": "fr"
 	}
     }, 
@@ -9392,7 +9392,7 @@
 	"fields": {
 	    "parent": 6, 
 	    "label_number": 0, 
-	    "value": "Free Art License", 
+	    "value": "Public Domain", 
 	    "language": "en"
 	}
     }, 
@@ -9402,16 +9402,16 @@
 	"fields": {
 	    "parent": 6, 
 	    "label_number": 0, 
-	    "value": "Licence Art Libre", 
+	    "value": "Domaine public", 
 	    "language": "fr"
 	}
     }, 
-    {"pk": 1, "model": "manager.license", "fields": {"code":"gpl"}}, 
-    {"pk": 2, "model": "manager.license", "fields": {"code":"cc-by"}}, 
-    {"pk": 3, "model": "manager.license", "fields": {"code":"cc-by-sa"}},    
-    {"pk": 4, "model": "manager.license", "fields": {"code":"cc-by-nd"}}, 
-    {"pk": 5, "model": "manager.license", "fields": {"code":"cc-by-nc"}}, 
-    {"pk": 6, "model": "manager.license", "fields": {"code":"al"}}, 
+    {"pk": 1, "model": "manager.license", "fields": {"code":"cc-by-sa"}},    
+    {"pk": 2, "model": "manager.license", "fields": {"code":"cc-by-nd"}}, 
+    {"pk": 3, "model": "manager.license", "fields": {"code":"lal"}}, 
+    {"pk": 4, "model": "manager.license", "fields": {"code":"gnu-fdl"}}, 
+    {"pk": 5, "model": "manager.license", "fields": {"code":"freebsd-dl"}}, 
+    {"pk": 6, "model": "manager.license", "fields": {"code":"public-domain"}}, 
     {
 	"pk": 1, 
 	"model": "manager.transportationlabel", 
