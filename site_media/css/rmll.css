@@ -1,0 +1,501 @@
+
+body {
+    font-size: 13px;
+    font-family: 'Arial','Helvetica','Sans';
+    color: #444;
+    background-color: #000;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #000;
+}
+a:hover, a:active {
+    color: #999;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald','Arial','Helvetica','Sans';
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 135%;
+}
+h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+h3 {
+    font-size: 16px;
+    margin-bottom: 14px;
+    line-height: 135%;
+}
+h4 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+h5 {
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+h6 {
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.green, #content h3, strong em {
+    color: #9eb62d;
+}
+
+#header {
+    position: relative;
+    height: 125px;
+    padding-top: 0px;
+}
+#header,
+#header div.container {
+    background-color: #FFF;
+}
+#header div.container {
+    padding-top: 15px;
+    position: relative;
+    background-image: url('../img/brussels.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% -127px;
+}
+#header div.logo {
+    margin-top: 10px;
+}
+#header div.event {
+    margin-top: 24px;
+    text-align: right;
+}
+
+#languages {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    font-size: 11px;
+}
+#languages ul.language-switcher-locale-url {
+    margin: 0px;
+    padding: 0px;
+    padding-right: 10px;
+    list-style-type: none;
+}
+#languages ul.language-switcher-locale-url li {
+    list-style-type: none;
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: solid 1px #666;
+}
+#languages ul.language-switcher-locale-url li.last {
+    padding-left: 0px;
+    border-left: none;
+}
+#languages ul.language-switcher-locale-url li.active {
+    font-weight: bold;
+}
+body.not-front #languages li.de {
+    display: none;
+}
+
+#librelogos {
+    position: absolute;
+    left: 0px;
+    bottom: 20px;
+    width: 850px;
+    height: 35px;
+}
+#librelogos div.fader {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 35px;
+    background-image: url('../img/fade-left.png');
+    background-repeat: no-repeat;
+    z-index: 401;
+}
+#librelogos div.fader.right {
+    left: 800px;
+    background-image: url('../img/fade-right.png');
+    z-index: 402;
+}
+#librelogos div.scrollableArea img {
+    position: relative;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: none;
+    cursor: pointer;
+}
+#menu {
+    position: relative;
+    font-family: 'Oswald','Arial','Helvetica','Sans';
+    font-size: 14px;
+    height: 35px;
+    background-color: #000;
+}
+#menu div.container {
+    background-color: #000;
+    height: 30px;
+    padding-top: 5px;
+}
+#menu a, #menu a:link, #menu a:visited {
+    color: #FFF;
+}
+#menu a:hover, #menu a:active,
+#superfish-1 li a.active, #superfish-1 li a.active:link, #superfish-1 li a.active:visited,
+#superfish-1 li.active-trail a.active, #superfish-1 li.active-trail a.active:link, #superfish-1 li.active-trail a.active:visited,
+#superfish-1 li.active-trail a.sf-depth-1, #superfish-1 li.active-trail a.sf-depth-1:link, #superfish-1 li.active-trail a.sf-depth-1:visited,
+#superfish-2 li a.active, #superfish-2 li a.active:link, #superfish-2 li a.active:visited,
+#superfish-2 li.active-trail a.active, #superfish-2 li.active-trail a.active:link, #superfish-2 li.active-trail a.active:visited,
+#superfish-2 li.active-trail a.sf-depth-1, #superfish-2 li.active-trail a.sf-depth-1:link, #superfish-2 li.active-trail a.sf-depth-1:visited {
+    color: #9eb62d;
+}
+#superfish-1,
+#superfish-2 {
+    position: relative;
+    top: 4px;
+}
+#superfish-1 li.sf-depth-1,
+#superfish-2 li.sf-depth-1 {
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: solid 1px #FFF;
+}
+#superfish-1 li.sf-depth-1.last,
+#superfish-2 li.sf-depth-1.last {
+    padding-left: 0px;
+}
+#superfish-1 li.sf-depth-1.first,
+#superfish-2 li.sf-depth-1.first {
+    padding-right: 0px;
+    border-right: none;
+}
+#superfish-1 li.sf-depth-1 ul,
+#superfish-1 li.sf-depth-1 li,
+#superfish-2 li.sf-depth-1 ul,
+#superfish-2 li.sf-depth-1 li {
+    background-color: #000;
+    font-size: 13px;
+}
+#superfish-1 li.sf-depth-1 ul,
+#superfish-2 li.sf-depth-1 ul {
+    padding: 15px;
+}
+#superfish-1 li.sf-depth-1 li,
+#superfish-2 li.sf-depth-1 li {
+    padding: 5px;
+}
+
+#wrapper {
+    position: relative;
+}
+#wrapper,
+#wrapper div.container {
+    background-color: #FFF;
+}
+#wrapper div.container {
+    padding-top: 15px;
+}
+#wrapper div.blueprint {
+    background-color: #CCC;
+}
+#wrapper div.shadow {
+    border-bottom: solid 2px #666;
+}
+#wrapper div.band {
+    position: relative;
+    width: 850px;
+    height: 170px;
+    background-color: #FFF;
+    margin: 10px;
+}
+#wrapper div.leftcol {
+    position: relative;
+    margin: 10px;
+    margin-top: 0px;
+    font-family: 'Oswald','Arial','Helvetica','Sans';
+}
+#wrapper div.leftcol div.button {
+    background-color: #FFF;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 14px;
+}
+#festival {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+#wrapper div.leftcol div.button a:hover, #wrapper div.leftcol div.button a:active,
+#wrapper div.leftcol div.button a:hover span, #wrapper div.leftcol div.button a:active span,
+#wrapper div.leftcol div.button:hover a, #wrapper div.leftcol div.button:hover a span,
+#wrapper div.leftcol div.button:hover {
+    color: #999;
+    cursor: pointer;
+}
+#wrapper div.rightcol {
+    width: 610px;
+    background-color: #FFF;
+    margin: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#content {
+    padding: 30px;
+}
+#content p {
+    text-align: justify;
+}
+#content a, #content a:link, #content a:visited {
+    color: #9eb62d;
+}
+#content a:hover, #content a:active {
+    color: #000;
+}
+#content div.messages,
+#content ul.tabs {
+    margin-bottom: 20px;
+}
+#content ul.tabs a.active {
+    font-weight: bold;
+}
+
+#footer,
+#footer div.container {
+    background-color: #000;
+}
+#footer h4 {
+    color: #FFF;
+    font-family: 'Oswald','Arial','Helvetica','Sans';
+    font-size: 13px;
+    margin: 10px;
+    padding: 8px;
+    background-color: #000;
+    text-align: center;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    background-image: url('../img/switch.png');
+    background-repeat: no-repeat;
+    background-position: 88px 6px;
+}
+#news h4.en {
+    background-position: 106px 6px;
+}
+#community h4 {
+    background-position: 66px 6px;
+}
+#community h4.en {
+    background-position: 69px 6px;
+}
+#footer div.block {
+    margin-top: 20px;
+    background-color: #212121;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+}
+#footer span.date {
+    font-family: 'Oswald','Arial','Helvetica','Sans';
+    font-size: 10px;
+    color: #FFF;
+    margin: 0px;
+    padding: 0px;
+    padding-right: 10px;
+}
+#footer div.data {
+    font-size: 12px;
+    margin: 0px;
+    padding: 30px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+#footer a, #footer a:link, #footer a:visited, #footer a:hover, #footer a:active {
+    color: #9EB62D;
+}
+#footer a:hover, #footer a:active {
+    color: #999;
+}
+
+#media-kit-examples textarea {
+    width: 530px;
+    height: 65px;
+    color: #666;
+}
+
+#webform-component-intro {
+    padding-bottom: 2px;
+}
+
+#webform-component-hosting--dates,
+#webform-component-people--genre,
+#webform-component-village-stand--village-presence,
+#webform-component-village-asso--village-nom,
+#webform-component-benevole-dispo--benevole-dates,
+#webform-component-benevole-person--benevole-titre,
+#webform-component-benevole-taches--teaser-taches,
+#webform-component-hebergement--dates,
+#webform-component-vos-coordonnees--titre,
+#webform-component-lodging--dates,
+#webform-component-your-coordinates--title,
+#webform-component-inscription--langue,
+#webform-component-regles--explications,
+#webform-component-subscription--language,
+#webform-component-rules--explications,
+#webform-component-inscription--nom {
+    margin-top: 0px;
+}
+#webform-component-regles--explications,
+#webform-component-rules--explications {
+    margin-bottom: 0px;
+}
+
+#edit-submitted-hosting-constraints,
+#edit-submitted-village-asso-village-objectifs,
+#edit-submitted-village-stand-village-presenter,
+#edit-submitted-village-stand-village-vente,
+#edit-submitted-village-stand-village-besoins,
+#edit-submitted-hebergement-contraintes,
+#edit-submitted-lodging-restrictions,
+#edit-submitted-inscription-resume-abstract,
+#edit-submitted-inscription-courte-biographie-de-lauteur,
+#edit-submitted-inscription-remarques-facultatif,
+#edit-submitted-subscription-abstract,
+#edit-submitted-subscription-short-biography-of-the-author,
+#edit-submitted-subscription-remarks-optional {
+    height: 70px;
+}
+#webform-component-people--genre,
+#webform-component-benevole-person--benevole-titre {
+    margin-bottom: 8px;
+}
+#webform-component-people div.webform-component-textfield,
+#webform-component-village-asso div.webform-component-textfield,
+#webform-component-benevole-person div.webform-component-textfield,
+#webform-component-vos-coordonnees div.webform-component-textfield,
+#webform-component-your-coordinates div.webform-component-textfield {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#webform-component-people div.webform-component-textfield input,
+#webform-component-village-asso div.webform-component-textfield input,
+#webform-component-benevole-person div.webform-component-textfield input,
+#webform-component-vos-coordonnees div.webform-component-textfield input,
+#webform-component-your-coordinates div.webform-component-textfield input {
+    margin-top: 3px;
+}
+#edit-submitted-people-email,
+#edit-submitted-village-asso-village-email,
+#edit-submitted-benevole-person-benevole-email,
+#edit-submitted-vos-coordonnees-adresse-e-mail,
+#edit-submitted-your-coordinates-e-mail-address,
+#edit-submitted-inscription-contact-mail,
+#edit-submitted-subscription-contact-email,
+#edit-submitted-inscription-adresse-e-mail {
+    border: solid 1px #BBB;
+    margin-bottom: 5px;
+}
+#edit-submitted-people-email.error,
+#edit-submitted-village-asso-village-email.error,
+#edit-submitted-benevole-person-benevole-email.error,
+#edit-submitted-vos-coordonnees-adresse-e-mail.error,
+#edit-submitted-your-coordinates-e-mail-address.error,
+#edit-submitted-inscription-contact-mail.error,
+#edit-submitted-subscription-contact-email.error,
+#edit-submitted-inscription-adresse-e-mail.error {
+    border: solid 2px red;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: #FFF;
+}
+#webform-component-homepage,
+#webform-component-color {
+    display: none;
+}
+#edit-submitted-benevole-taches-benevole-tasks div.form-item {
+    padding-bottom: 5px;
+}
+#webform-component-inscription--depot-fichier div.description,
+#webform-component-subscription--please-upload-your-pdf-here div.description {
+    padding-top: 5px;
+}
+
+form.webform-client-form div.webform-component-textfield input,
+form.webform-client-form div.webform-component-webform_email input,
+form.webform-client-form div.form-textarea-wrapper.resizable-textarea,
+form.webform-client-form input.select-or-other-other.form-text {
+    width: 500px;
+}
+
+#node-69 table,
+#node-82 table {
+    border: solid 1px #333;
+}
+#node-69 table tr, #node-69 table td,
+#node-82 table tr, #node-82 table td {
+    background-color: #FFF !important;
+    font-size: 12px;
+    vertical-align: top;
+}
+#node-69 table td.name,
+#node-82 table td.name {
+    font-weight: bold;
+    font-size: 14px;
+
+}
+#node-69 table tr.price td,
+#node-82 table tr.price td {
+    border-top: solid 1px #333;
+    border-bottom: solid 1px #333;
+}
+#node-69 table td.price,
+#node-82 table td.price {
+    font-weight: bold;
+}
+#node-69 table tr.more td,
+#node-82 table tr.more td {
+    border-top: solid 1px #333;
+}
+
+#block-views-rmllmap-block {
+    padding-top: 20px;
+}
+#block-views-rmllmap-block div.openlayers-tooltip-name {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+#block-views-rmllmap-block div.openlayers-tooltip-description p {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10px;
+}
+#block-views-rmllmap-block .olPopupCloseBox {
+}
+
+#block-views-radio-articles-block {
+  padding-top:30px;
+}

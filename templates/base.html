@@ -1,37 +1,225 @@
 {% load i18n %}
-<!doctype html >
-<html lang="{{ LANGUAGE_CODE }}">
-<head>
-    <title>{% block title %}{% endblock %} - {% trans "RMLL/LSM" %}</title>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/png" href="{{ MEDIA_URL }}images/favicon.png" />
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/default.css" type="text/css" media="screen" />
-    {% block extrahead %}{% endblock %}
-</head>
-<body>
-    <div id="page">
-        <div id="content">
-            <div id="header">
-                <div id="contact">
-                    <a href="mailto:&#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#109;&#108;&#108;&#046;&#105;&#110;&#102;&#111;"
-                        title="{% trans 'Contact the webmaster' %}">
-                        &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#109;&#108;&#108;&#046;&#105;&#110;&#102;&#111;
-                    </a>
-                </div>
-                <div id="flags">
-                    {% for lang in LANGUAGES%}
-                    <form action="/i18n/setlang/" method="post">
-                        <input type="hidden" name="language" value="{{ lang.0 }}" />
-                        <abbr title="{{ lang.1 }}">
-                            <input type="submit" value="{{ lang.0|upper }}" />
-                        </abbr>
-                    </form>{%endfor%}
-                </div>
-                <div class="clear"></div>
-            </div>
-            {% block content %}{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>{% block title %}{% endblock %} - {% trans "RMLL/LSM" %}</title>
+        <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+        <style type="text/css" media="all">@import url("{{ MEDIA_URL }}css/system.base.css");
+            @import url("{{ MEDIA_URL }}css/system.menus.css");
+            @import url("{{ MEDIA_URL }}css/system.messages.css");
+            @import url("{{ MEDIA_URL }}css/system.theme.css");</style>
+        <style type="text/css" media="all">@import url("{{ MEDIA_URL }}css/jquery.ui.core.css");
+            @import url("{{ MEDIA_URL }}css/jquery.ui.theme.css");</style>
+        <style type="text/css" media="all">@import url("{{ MEDIA_URL }}css/field.css");
+            @import url("{{ MEDIA_URL }}css/node.css");
+            @import url("{{ MEDIA_URL }}css/user.css");
+            @import url("{{ MEDIA_URL }}css/views.css");</style>
+        <style type="text/css" media="all">@import url("{{ MEDIA_URL }}css/ctools.css");
+            @import url("{{ MEDIA_URL }}css/superfish.css");
+            @import url("{{ MEDIA_URL }}css/superfish-vertical.css");
+            @import url("{{ MEDIA_URL }}css/superfish-navbar.css");
+            @import url("{{ MEDIA_URL }}css/extlink.css");
+            @import url("{{ MEDIA_URL }}css/locale.css");
+            @import url("{{ MEDIA_URL }}css/openlayers.css");
+            @import url("{{ MEDIA_URL }}css/smoothDivScroll.css");</style>
+        <style type="text/css" media="screen,projection">@import url("{{ MEDIA_URL }}css/screen.css");</style>
+        <style type="text/css" media="print">@import url("{{ MEDIA_URL }}css/print.css");</style>
+        <style type="text/css" media="all">@import url("{{ MEDIA_URL }}css/rmll.css");</style>
+
+        <!--[if lt IE 8]>
+        <style type="text/css" media="all">@import url("{{ MEDIA_URL }}css/ie.css");</style>
+        <![endif]-->
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.js?v=1.4.4"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.once.js?v=1.2"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/drupal.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.ui.core.min.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.ui.widget.min.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.hoverIntent.minified.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.bgiframe.min.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/superfish.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/supersubs.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/supposition.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/sftouchscreen.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/extlink.js"></script>
+        <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.smoothDivScroll-1.1-min.js"></script>
+        <script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+            jQuery(function(){
+                    jQuery('#superfish-1').supersubs({minWidth: 12, maxWidth: 27, extraWidth: 1}).superfish({
+animation: {opacity:'show'},
+speed: 'fast',
+autoArrows: false,
+dropShadows: false});
+                    });
+//--><!]]>
+</script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/rmll.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {
+        
+"extlink": {
+        "extTarget": "_blank",
+        "extClass": "ext",
+        "extSubdomains": 1,
+        "extExclude": "",
+        "extInclude": "",
+        "extAlert": 0,
+        "extAlertText": "This link will take you to an external web site. We are not responsible for their content.",
+        "mailtoClass": "mailto"
+    }
+
+        });
+//--><!]]>
+</script>
+        </head>
+        <body class="html front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-page i18n-fr">
+
+<div id="header">
+  <div class="container">
+    <div class="span-22 push-1">
+      <div class="span-6 first logo">
+          <a href="http://2013.rmll.info"><img src="{{ MEDIA_URL }}img/rmllfr.png" alt="RMLL Rencontres Mondiales du Logiciel Libre" width="205" height="84" /></a>
+              </div>
+      <div class="span-16 last event">
+          <a href="http://2013.rmll.info"><img src="{{ MEDIA_URL }}img/brussels-2013-fr.png" alt="Brussels 2013" /></a>
+              </div>
+    </div>
+    <div id="languages">
+        <div id="block-locale-language" class="block block-locale">
+
+
+            <div class="content">
+                {% for lang in LANGUAGES%}
+                <form action="/i18n/setlang/" method="post">
+                    <input type="hidden" name="language" value="{{ lang.0 }}" />
+                    <abbr title="{{ lang.1 }}">
+                        <input type="submit" value="{{ lang.0|upper }}" />
+                    </abbr>
+                </form>{%endfor%}
+
+             </div>
         </div>
     </div>
-    {% block extrafoot %}{% endblock %}
+</div>
+</div>
+<!-- #RMLL-start-header -->
+<div id="menu">
+    <div class="container">
+        <div class="span-22 push-1">
+            <div id="block-superfish-1" class="block block-superfish">
+                <div class="content">
+
+                    <ul id="superfish-1" class="sf-menu main-menu sf-horizontal sf-style-none sf-total-items-1">
+                        <li class="last"><a href="http://2013.rmll.info/">LSM Website</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #RMLL-end-header -->
+<div id="wrapper">
+    <div class="container">
+        <div class="span-22 push-1 blueprint">
+            <div class="span-22 band shadow">
+                <div id="block-block-1" class="block block-block">
+                    <div class="content">
+                        <img src="{{ MEDIA_URL }}img/cfp-home-en.png" width="850" height="170" alt="" />  </div>
+                </div>
+                <div id="librelogos">
+                    <div class="fader left"></div>
+                    <div class="fader right"></div>
+                    <div class="scrollWrapper">
+                        <div class="scrollableArea">
+                            <img alt="http://amarok.kde.org" src="{{ MEDIA_URL }}libre-logos/amarok.png" width="35" height="35" alt="" />
+                            <img alt="http://www.apache.org" src="{{ MEDIA_URL }}libre-logos/apache.png" width="35" height="35" alt="" />
+                            <img alt="http://www.archlinux.org" src="{{ MEDIA_URL }}libre-logos/archlinux.png" width="35" height="35" alt="" />
+                            <img alt="http://www.arduino.cc" src="{{ MEDIA_URL }}libre-logos/arduino.png" width="35" height="35" alt="" />
+                            <img alt="http://www.bitcoin.org" src="{{ MEDIA_URL }}libre-logos/bitcoin.png" width="35" height="35" alt="" />
+                            <img alt="http://www.blender.org" src="{{ MEDIA_URL }}libre-logos/blender.png" width="35" height="35" alt="" />
+                            <img alt="http://www.creativecommons.org" src="{{ MEDIA_URL }}libre-logos/cc.png" width="35" height="35" alt="" />
+                            <img alt="http://www.ohwr.org/projects/cernohl/wiki" src="{{ MEDIA_URL }}libre-logos/cern-ohl.png" width="35" height="35" alt="" />
+                            <img alt="http://www.debian.org" src="{{ MEDIA_URL }}libre-logos/debian.png" width="35" height="35" alt="" />
+                            <img alt="http://www.dokeos.com" src="{{ MEDIA_URL }}libre-logos/dokeos.png" width="35" height="35" alt="" />
+                            <img alt="http://www.drupal.org" src="{{ MEDIA_URL }}libre-logos/drupal.png" width="35" height="35" alt="" />
+                            <img alt="http://www.elphel.com" src="{{ MEDIA_URL }}libre-logos/elphel.png" width="35" height="35" alt="" />
+                            <img alt="http://www.fedoraproject.org" src="{{ MEDIA_URL }}libre-logos/fedora.png" width="35" height="35" alt="" />
+                            <img alt="http://www.mozilla.org/firefox" src="{{ MEDIA_URL }}libre-logos/firefox.png" width="35" height="35" alt="" />
+                            <img alt="http://www.gentoo.org" src="{{ MEDIA_URL }}libre-logos/gentoo.png" width="35" height="35" alt="" />
+                            <img alt="http://www.gimp.org" src="{{ MEDIA_URL }}libre-logos/gimp.png" width="35" height="35" alt="" />
+                            <img alt="http://www.gnome.org" src="{{ MEDIA_URL }}libre-logos/gnome.png" width="35" height="35" alt="" />
+                            <img alt="http://www.gnu.org" src="{{ MEDIA_URL }}libre-logos/gnu.png" width="35" height="35" alt="" />
+                            <img alt="http://gstreamer.freedesktop.org" src="{{ MEDIA_URL }}libre-logos/gstreamer.png" width="35" height="35" alt="" />
+                            <img alt="http://www.freebsd.org" src="{{ MEDIA_URL }}libre-logos/freebsd.png" width="35" height="35" alt="" />
+                            <img alt="http://www.freeguppy.org" src="{{ MEDIA_URL }}libre-logos/guppy.png" width="35" height="35" alt="" />
+                            <img alt="http://www.haiku-os.org" src="{{ MEDIA_URL }}libre-logos/haiku.png" width="35" height="35" alt="" />
+                            <img alt="http://www.imagemagick.org" src="{{ MEDIA_URL }}libre-logos/imagemagick.png" width="35" height="35" alt="" />
+                            <img alt="http://www.inkscape.org" src="{{ MEDIA_URL }}libre-logos/inkscape.png" width="35" height="35" alt="" />
+                            <img alt="http://www.jabber.org" src="{{ MEDIA_URL }}libre-logos/jabber.png" width="35" height="35" alt="" />
+                            <img alt="http://www.joomla.org" src="{{ MEDIA_URL }}libre-logos/joomla.png" width="35" height="35" alt="" />
+                            <img alt="http://www.kde.org" src="{{ MEDIA_URL }}libre-logos/kde.png" width="35" height="35" alt="" />
+                            <img alt="http://www.knoppix.net" src="{{ MEDIA_URL }}libre-logos/knoppix.png" width="35" height="35" alt="" />
+                            <img alt="http://www.libreoffice.org" src="{{ MEDIA_URL }}libre-logos/libreoffice.png" width="35" height="35" alt="" />
+                            <img alt="http://www.linux.com" src="{{ MEDIA_URL }}libre-logos/linux.png" width="35" height="35" alt="" />
+                            <img alt="http://www.mageia.org" src="{{ MEDIA_URL }}libre-logos/mageia.png" width="35" height="35" alt="" />
+                            <img alt="http://www.mandriva.com" src="{{ MEDIA_URL }}libre-logos/mandriva.png" width="35" height="35" alt="" />
+                            <img alt="http://www.moodle.org" src="{{ MEDIA_URL }}libre-logos/moodle.png" width="35" height="35" alt="" />
+                            <img alt="http://www.mozilla.org" src="{{ MEDIA_URL }}libre-logos/mozilla.png" width="35" height="35" alt="" />
+                            <img alt="http://www.mozilla.org" src="{{ MEDIA_URL }}libre-logos/openarena.png" width="35" height="35" alt="" />
+                            <img alt="http://www.openbsd.org" src="{{ MEDIA_URL }}libre-logos/openbsd.png" width="35" height="35" alt="" />
+                            <img alt="http://www.opensuse.org" src="{{ MEDIA_URL }}libre-logos/opensuse.png" width="35" height="35" alt="" />
+                            <img alt="http://www.perl.org" src="{{ MEDIA_URL }}libre-logos/perl.png" width="35" height="35" alt="" />
+                            <img alt="http://www.php.net" src="{{ MEDIA_URL }}libre-logos/php.png" width="35" height="35" alt="" />
+                            <img alt="http://www.pidgin.im" src="{{ MEDIA_URL }}libre-logos/pidgin.png" width="35" height="35" alt="" />
+                            <img alt="http://www.plone.org" src="{{ MEDIA_URL }}libre-logos/plone.png" width="35" height="35" alt="" />
+                            <img alt="http://www.postgresql.org" src="{{ MEDIA_URL }}libre-logos/postgresql.png" width="35" height="35" alt="" />
+                            <img alt="http://www.python.org" src="{{ MEDIA_URL }}libre-logos/python.png" width="35" height="35" alt="" />
+                            <img alt="http://www.ruby-lang.org" src="{{ MEDIA_URL }}libre-logos/ruby.png" width="35" height="35" alt="" />
+                            <img alt="http://www.scribus.net" src="{{ MEDIA_URL }}libre-logos/scribus.png" width="35" height="35" alt="" />
+                            <img alt="http://www.spip.net" src="{{ MEDIA_URL }}libre-logos/spip.png" width="35" height="35" alt="" />
+                            <img alt="http://www.mozilla.org/thunderbird" src="{{ MEDIA_URL }}libre-logos/thunderbird.png" width="35" height="35" alt="" />
+                            <img alt="http://tomcat.apache.org" src="{{ MEDIA_URL }}libre-logos/tomcat.png" width="35" height="35" alt="" />
+                            <img alt="http://www.typo3.com" src="{{ MEDIA_URL }}libre-logos/typo3.png" width="35" height="35" alt="" />
+                            <img alt="http://www.ubuntu.com" src="{{ MEDIA_URL }}libre-logos/ubuntu.png" width="35" height="35" alt="" />
+                            <img alt="http://www.videolan.org" src="{{ MEDIA_URL }}libre-logos/vlc.png" width="35" height="35" alt="" />
+                            <img alt="http://www.wikipedia.org" src="{{ MEDIA_URL }}libre-logos/wikipedia.png" width="35" height="35" alt="" />
+                            <img alt="http://www.wordpress.org" src="{{ MEDIA_URL }}libre-logos/wordpress.png" width="35" height="35" alt="" />
+                            <img alt="http://www.xfce.org" src="{{ MEDIA_URL }}libre-logos/xfce.png" width="35" height="35" alt="" />
+                            <img alt="http://www.xonotic.org" src="{{ MEDIA_URL }}libre-logos/xonotic.png" width="35" height="35" alt="" />
+                            <img alt="{% trans "Your free project here?" %}" src="{{ MEDIA_URL }}libre-logos/libre.png" width="35" height="35" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span-22">
+                <div class="span-6 first leftcol">
+                    <div class="button shadow">
+                        <a href="http://2013.rmll.info"><span class="green">LSM/RMLL</span> 2013</a>
+                    </div>
+                </div>
+                <div class="span-16 last rightcol shadow">
+                    <div id="content">
+                        <div class="tabs"></div><div id="block-system-main" class="block block-system">
+                            <div class="content">
+        {% block content %}{% endblock %}
+                            </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #RMLL-start-footer -->
+<div id="footer">
+    <div class="container">
+        <div class="span-20 push-3">
+        </div>
+    </div>
+    <div class="container">
+    </div>
+</div>
+<!-- #RMLL-end-footer -->
 </body>
 </html>
