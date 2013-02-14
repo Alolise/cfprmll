@@ -67,6 +67,17 @@
                     </div>
             {% endifequal %}
 
+            {% ifequal field.name 'fil_rouge_auquotidien' %}
+                </fieldset>
+                <fieldset>
+                    <legend>{% trans 'Underlying thread' %}</legend>
+                    <div class="field">
+                        <div class="help">
+                            {% trans "Check the box corresponding to the underlying thread of this talk." %}
+                        </div>
+                    </div>
+            {% endifequal %}
+
             {% ifequal field.name 'charges' %}
                 </fieldset>
                 <fieldset>
