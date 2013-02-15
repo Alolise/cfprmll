@@ -152,7 +152,7 @@ class License(models.Model, LabelClass):
 
 
 class CaptureLicense(models.Model):
-    """ License for Audio/video Capture """ 
+    """ License for Audio/video Capture """
     name = models.CharField(_(u"Name"), max_length=128)
 
     def __unicode__(self):
@@ -179,7 +179,7 @@ class Talk(models.Model):
     NUMBER_OF_SLOTS = ((1, _(u"20'")), (2, _(u"40'")), (3, _(u"60'")),)
     LANGS = (('en', _(u"English")), ('fr', _(u"French")), ('nl', _(u"Dutch")),)
     CAPTURE_LIC = (('cc-by-sa', _(u"Creative Commons Attribution-ShareAlike 3.0")), ('x', _(u"Other License")), ('', _(u"No Capture")),)
-    
+
 
     created_date = models.DateField(_(u"Submitted date"), auto_now_add=True)
     date = models.DateField(_(u"Last modification date"), auto_now=True)
@@ -192,7 +192,7 @@ class Talk(models.Model):
     number_of_slots = models.PositiveSmallIntegerField(_(u"Duration"), choices=NUMBER_OF_SLOTS, default=2)
     abstract = models.TextField(_(u"Summary"), max_length=512)
     translated_abstract = models.TextField(_(u"Summary in French (or Dutch)"), max_length=512, blank=True)
-    slides_language = models.CharField(_(u"Slides Language"), max_length=2, choices=LANGS, default="en") 
+    slides_language = models.CharField(_(u"Slides Language"), max_length=2, choices=LANGS, default="en")
     license = models.ForeignKey(License)
     capture = models.PositiveSmallIntegerField(_(u"Capture"), choices=YES_NO)
     capture_license = models.CharField(_(u"Capture License"), max_length=128, choices=CAPTURE_LIC, default="cc-by-sa")
@@ -207,14 +207,14 @@ class Talk(models.Model):
     fil_rouge_2 = models.BooleanField(_(u"fil_rouge_2"))
     fil_rouge_3 = models.BooleanField(_(u"fil_rouge_3"))
     fil_rouge_4 = models.BooleanField(_(u"fil_rouge_4"))
-    
+
     speakers = models.TextField(_(u"Speaker(s)"))
     biography = models.TextField(_(u"Biography"))
     translated_biography = models.TextField(_(u"Biography in French (or Dutch)"), blank=True)
     charges = models.PositiveSmallIntegerField(_(u"Refund charges"), choices=NO_YES_MAYBE, blank=True)
     city = models.CharField(_(u"City"), max_length=128, blank=True)
-    country = models.ForeignKey(Country, blank=True)
-    transportation = models.ForeignKey(Transportation, blank=True)
+    country = models.ForeignKey(Country, blank=True, null=True)
+    transportation = models.ForeignKey(Transportation, blank=True, null=True)
     cost = models.CharField(_(u"Estimated cost"), max_length=64, blank=True)
     notes = models.TextField(_(u"Notes"), blank=True)
 
