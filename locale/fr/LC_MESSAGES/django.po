@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-15 11:15+0100\n"
+"POT-Creation-Date: 2013-02-15 11:29+0100\n"
 "PO-Revision-Date: 2013-02-12 11:30+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -543,6 +543,10 @@ msgstr ""
 "Les professionnels, associations et entreprises qui souhaitent soutenir "
 "financièrement les RMLL peuvent obtenir plus d'informations sur le site "
 "Internet :"
+
+#: templates/manager/new.html:133
+msgid "http://2013.rmll.info/en/partners-and-sponsors"
+msgstr "http://2013.rmll.info/fr/partenaires-et-sponsors"
 
 #: templates/manager/new.html:133
 msgid "Visit our website"
