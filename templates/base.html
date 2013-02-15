@@ -5,10 +5,57 @@
     <title>{% block title %}{% endblock %} - {% trans "RMLL/LSM" %}</title>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/png" href="{{ MEDIA_URL }}images/favicon.png" />
-    <link rel="stylesheet" href="{{ MEDIA_URL }}css/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/rmll_appel.css" type="text/css" media="screen" />
+    <style type="text/css" media="screen,projection">@import url("{{ MEDIA_URL }}css/screen.css");</style>
     {% block extrahead %}{% endblock %}
 </head>
 <body>
+
+<div id="header">
+  <div class="container">
+    <div class="span-22 push-1">
+      <div class="span-6 first logo">
+          <a href="http://2013.rmll.info"><img src="{{ MEDIA_URL }}img/rmll{{ LANGUAGE_CODE }}.png" alt="RMLL Rencontres Mondiales du Logiciel Libre" width="205" height="84" /></a>
+              </div>
+      <div class="span-16 last event">
+          <a href="http://2013.rmll.info"><img src="{{ MEDIA_URL }}img/brussels-2013-{{ LANGUAGE_CODE }}.png" alt="Brussels 2013" /></a>
+              </div>
+    </div>
+    <div id="languages">
+        <div id="block-locale-language" class="block block-locale">
+
+
+            <div class="content">
+                {% for lang in LANGUAGES%}
+                <form action="/i18n/setlang/" method="post">
+                    <input type="hidden" name="language" value="{{ lang.0 }}" />
+                    <abbr title="{{ lang.1 }}">
+                        <input type="submit" value="{{ lang.0|upper }}" />
+                    </abbr>
+                </form>{%endfor%}
+
+             </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- #RMLL-start-header -->
+<div id="menu">
+    <div class="container">
+        <div class="span-22 push-1">
+            <div id="block-superfish-1" class="block block-superfish">
+                <div class="content">
+
+                    <ul id="superfish-1" class="sf-menu main-menu sf-horizontal sf-style-none sf-total-items-1">
+                        <li class="last"><a href="http://2013.rmll.info/"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #RMLL-end-header -->
+
     <div id="page">
         <div id="content">
             <div id="header">
@@ -17,15 +64,6 @@
                         title="{% trans 'Contact the webmaster' %}">
                         &#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#109;&#108;&#108;&#046;&#105;&#110;&#102;&#111;
                     </a>
-                </div>
-                <div id="flags">
-                    {% for lang in LANGUAGES%}
-                    <form action="/i18n/setlang/" method="post">
-                        <input type="hidden" name="language" value="{{ lang.0 }}" />
-                        <abbr title="{{ lang.1 }}">
-                            <input type="submit" value="{{ lang.0|upper }}" />
-                        </abbr>
-                    </form>{%endfor%}
                 </div>
                 <div class="clear"></div>
             </div>

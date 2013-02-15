@@ -15,11 +15,6 @@
 {% endblock %}
 
 {% block content %}
-    <h1>
-        <a href="/">
-            {% trans 'RMLL/LSM Call for papers' %}
-        </a>
-    </h1>
 
     <h2>{% trans 'Submit your talk' %}</h2>
 
@@ -63,6 +58,17 @@
                     <div class="field">
                         <div class="help">
                             {% trans "Check the box corresponding to the public targeted by this talk." %}
+                        </div>
+                    </div>
+            {% endifequal %}
+
+            {% ifequal field.name 'fil_rouge_auquotidien' %}
+                </fieldset>
+                <fieldset>
+                    <legend>{% trans 'Underlying thread' %}</legend>
+                    <div class="field">
+                        <div class="help">
+                            {% trans "Check the box corresponding to the underlying thread of this talk." %}
                         </div>
                     </div>
             {% endifequal %}
@@ -124,7 +130,7 @@
             <legend>{% trans "Help RMLL/LSM" %}</legend>
             <div class="description">
                 {% blocktrans %}Professionals, organisations and companies wishing to financially support the RMLL/LSM will get more information on the website:{% endblocktrans %}
-                <a href="http://2013.rmll.info/fr/partenaires-et-sponsors" title="{% trans "Visit our website" %}">http://2013.rmll.info/fr/partenaires-et-sponsors</a>
+                <a href="{% trans "http://2013.rmll.info/en/partners-and-sponsors" %}" title="{% trans "Visit our website" %}">{% trans "http://2013.rmll.info/en/partners-and-sponsors" %}</a>
             </div>
         </fieldset>
     </form>

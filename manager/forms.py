@@ -198,7 +198,10 @@ class TalkForm(forms.ModelForm):
     for_professionals = forms.BooleanField(label=_(u"Professionals"))
     for_decision_makers = forms.BooleanField(label=_(u"Decision makers"))
     for_geeks = forms.BooleanField(label=_(u"Geeks"))
-    for_english_speaking_people = forms.BooleanField(label=_(u"English speaking people"))
+
+    fil_rouge_auquotidien = forms.BooleanField(label=_(u"Freedom in everyday life"))
+    fil_rouge_2 = forms.BooleanField(label=_(u"Fil rouge 2"))
+    fil_rouge_3 = forms.BooleanField(label=_(u"Fil rouge 3"))
 
     speakers = forms.CharField(label=_(u"Speaker(s)"), widget=forms.Textarea(attrs=_tattrs),
                                help_text=_(u"First name, last name, email of the speaker(s). One speaker per line. Each line should respect the following format: « Firstname Lastname [speaker@domain.tld] »"),
@@ -206,7 +209,7 @@ class TalkForm(forms.ModelForm):
     biography = forms.CharField(label=_(u"Biography"), widget=forms.Textarea(attrs=_tattrs),
                                 help_text=_(u"Add a few words about the speaker(s). Their, work, activities, involvement in free software, etc. It will be published with the abstract on the event website."),
                                 )
-    biography_other_language = forms.CharField(label=_(u"Biography in French"), widget=forms.Textarea(attrs=_tattrs),
+    translated_biography = forms.CharField(label=_(u"Biography in French"), widget=forms.Textarea(attrs=_tattrs),
                                 help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
                                 required=False,
                                 )
