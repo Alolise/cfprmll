@@ -176,8 +176,8 @@ class TalkForm(forms.ModelForm):
         required=False,
         )
     license = forms.ModelChoiceField(
-        label=_(u"License"), widget=SortedForm, required=False,
-        queryset=License.objects.all(),
+        label=_(u"License"), required=False,
+        queryset=License.objects.order_by('order'),
         help_text=_(u"The preferred license for your support files (contact us if you would like us to add another license)."),
         )
     capture = forms.ChoiceField(

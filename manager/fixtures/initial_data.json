@@ -9287,159 +9287,249 @@
         }
     },
     {
-	"pk": 1, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 1, 
-	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - ShareAlike 3.0", 
-	    "language": "en"
-	}
-    }, 
+        "pk": 1,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 1,
+            "label_number": 0,
+            "value": "Creative Commons Attribution - ShareAlike 3.0",
+            "language": "en"
+        }
+    },
     {
-	"pk": 2, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 1, 
-	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - Partage dans les Mêmes Conditions, 3.0", 
-	    "language": "fr"
-	}
-    }, 
+        "pk": 2,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 1,
+            "label_number": 0,
+            "value": "Creative Commons Attribution - Partage dans les Mêmes Conditions, 3.0",
+            "language": "fr"
+        }
+    },
     {
-	"pk": 3, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 2, 
-	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - NoDerivs 3.0", 
-	    "language": "en"
-	}
-    }, 
+        "pk": 3,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 2,
+            "label_number": 0,
+            "value": "Creative Commons Attribution - NoDerivs 3.0",
+            "language": "en"
+        }
+    },
     {
-	"pk": 4, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 2, 
-	    "label_number": 0, 
-	    "value": "Creative Commons Attribution - Pas de Modification 3.0", 
-	    "language": "fr"
-	}
-    }, 
+        "pk": 4,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 2,
+            "label_number": 0,
+            "value": "Creative Commons Attribution - Pas de Modification 3.0",
+            "language": "fr"
+        }
+    },
     {
-	"pk": 5, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 3, 
-	    "label_number": 0, 
-	    "value": "Free Art License 1.3", 
-	    "language": "en"
-	}
-    }, 
+        "pk": 5,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Free Art License 1.3",
+            "language": "en"
+        }
+    },
     {
-	"pk": 6, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 3, 
-	    "label_number": 0, 
-	    "value": "Licence Art Libre 1.3", 
-	    "language": "fr"
-	}
-    }, 
+        "pk": 6,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Licence Art Libre 1.3",
+            "language": "fr"
+        }
+    },
     {
-	"pk": 7, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 4, 
-	    "label_number": 0, 
-	    "value": "GNU Free Documentation License", 
-	    "language": "en"
-	}
-    }, 
+        "pk": 7,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 4,
+            "label_number": 0,
+            "value": "GNU Free Documentation License",
+            "language": "en"
+        }
+    },
     {
-	"pk": 8, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 4, 
-	    "label_number": 0, 
-	    "value": "Licence de documentation libre GNU FDL", 
-	    "language": "fr"
-	}
-    }, 
+        "pk": 8,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 4,
+            "label_number": 0,
+            "value": "Licence de documentation libre GNU FDL",
+            "language": "fr"
+        }
+    },
     {
-	"pk": 9, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 5, 
-	    "label_number": 0, 
-	    "value": "FreeBSD Documentation License", 
-	    "language": "en"
-	}
-    }, 
+        "pk": 9,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 5,
+            "label_number": 0,
+            "value": "FreeBSD Documentation License",
+            "language": "en"
+        }
+    },
     {
-	"pk": 10, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 5, 
-	    "label_number": 0, 
-	    "value": "Licence de documentation libre de FreeBSD", 
-	    "language": "fr"
-	}
-    }, 
+        "pk": 10,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 5,
+            "label_number": 0,
+            "value": "Licence de documentation libre de FreeBSD",
+            "language": "fr"
+        }
+    },
     {
-	"pk": 11, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 6, 
-	    "label_number": 0, 
-	    "value": "Public Domain", 
-	    "language": "en"
-	}
-    }, 
+        "pk": 11,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 6,
+            "label_number": 0,
+            "value": "Public Domain",
+            "language": "en"
+        }
+    },
     {
-	"pk": 12, 
-	"model": "manager.licenselabel", 
-	"fields": {
-	    "parent": 6, 
-	    "label_number": 0, 
-	    "value": "Domaine public", 
-	    "language": "fr"
-	}
-    }, 
-    {"pk": 1, "model": "manager.license", "fields": {"code":"cc-by-sa"}},    
-    {"pk": 2, "model": "manager.license", "fields": {"code":"cc-by-nd"}}, 
-    {"pk": 3, "model": "manager.license", "fields": {"code":"lal"}}, 
-    {"pk": 4, "model": "manager.license", "fields": {"code":"gnu-fdl"}}, 
-    {"pk": 5, "model": "manager.license", "fields": {"code":"freebsd-dl"}}, 
-    {"pk": 6, "model": "manager.license", "fields": {"code":"public-domain"}}, 
+        "pk": 12,
+        "model": "manager.licenselabel",
+        "fields": {
+            "parent": 6,
+            "label_number": 0,
+            "value": "Domaine public",
+            "language": "fr"
+        }
+    },
     {
-	"pk": 1, 
-	"model": "manager.transportationlabel", 
-	"fields": {
-	    "parent": 1, 
-	    "label_number": 0, 
-	    "value": "Car", 
-	    "language": "en"
-	}
-    }, 
+        "pk": 1,
+        "model": "manager.license",
+        "fields": {
+            "code":"cc-by-sa",
+            "order": 1
+        }
+    },
     {
-	"pk": 2, 
-    	"model": "manager.transportationlabel", 
-	"fields": {
-		  "parent": 1, 
-		  "label_number": 0, 
-		  "value": "Voiture", 
-		  "language": "fr"
-		  }
-    }, 
+        "pk": 2,
+        "model": "manager.license",
+        "fields": {
+            "code":"cc-by-nd",
+            "order": 2
+        }
+    },
     {
-	"pk": 3, 
-	"model": "manager.transportationlabel", 
-	"fields": {"parent": 2, "label_number": 0, "value": "Train", "language": "en"}}, 
-{"pk": 4, "model": "manager.transportationlabel", "fields": {"parent": 2, "label_number": 0, "value": "Train", "language": "fr"}}, 
-{"pk": 5, "model": "manager.transportationlabel", "fields": {"parent": 3, "label_number": 0, "value": "Plane", "language": "en"}}, 
-{"pk": 6, "model": "manager.transportationlabel", "fields": {"parent": 3, "label_number": 0, "value": "Avion", "language": "fr"}}, 
-{"pk": 1, "model": "manager.transportation", "fields": {}}, 
-{"pk": 2, "model": "manager.transportation", "fields": {}}, 
-{"pk": 3, "model": "manager.transportation", "fields": {}}
+        "pk": 3,
+        "model": "manager.license",
+        "fields": {
+            "code":"lal",
+            "order": 3
+        }
+    },
+    {
+        "pk": 4,
+        "model": "manager.license",
+        "fields": {
+            "code":"gnu-fdl",
+            "order": 4
+        }
+    },
+    {
+        "pk": 5,
+        "model": "manager.license",
+        "fields": {
+            "code":"freebsd-dl",
+            "order": 5
+        }
+    },
+    {
+        "pk": 6,
+        "model": "manager.license",
+        "fields": {
+            "code":"public-domain",
+            "order": 6
+        }
+    },
+    {
+        "pk": 1,
+        "model": "manager.transportationlabel",
+        "fields": {
+            "parent": 1,
+            "label_number": 0,
+            "value": "Car",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 2,
+            "model": "manager.transportationlabel",
+        "fields": {
+            "parent": 1,
+            "label_number": 0,
+            "value": "Voiture",
+            "language": "fr"
+            }
+        },
+    {
+        "pk": 3,
+        "model": "manager.transportationlabel",
+        "fields": {
+            "parent": 2,
+            "label_number": 0,
+            "value": "Train",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "manager.transportationlabel",
+        "fields": {
+            "parent": 2,
+            "label_number": 0,
+            "value": "Train",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "manager.transportationlabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Plane",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "manager.transportationlabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Avion",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "manager.transportation",
+        "fields": {
+        }
+    },
+    {
+        "pk": 2,
+        "model": "manager.transportation",
+        "fields": {
+        }
+    },
+    {
+        "pk": 3,
+        "model": "manager.transportation",
+        "fields": {
+        }
+    }
 ]

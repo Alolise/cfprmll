@@ -140,7 +140,8 @@ class LicenseLabel(BaseLabel):
 class License(models.Model, LabelClass):
     label_class = LicenseLabel
     labels = (('lbl_name', _(u"Name")),)
-    code = models.CharField(_(u"Code"), max_length=12)
+    code = models.CharField(_(u"Code"), max_length=24)
+    order = models.PositiveIntegerField(_(u"Sorting"))
 
     def __unicode__(self):
         return self.label(lang=get_language())

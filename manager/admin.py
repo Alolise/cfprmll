@@ -29,8 +29,9 @@ admin.site.register(Country, CountryAdmin)
 
 class LicenseAdmin(admin.ModelAdmin):
     form = LicenseAdminForm
+    ordering = ('order',)
     search_fields = ('licenselabel__value', 'code',)
-    list_display = ('label', 'code')
+    list_display = ('label', 'code', 'order')
 admin.site.register(License, LicenseAdmin)
 
 
