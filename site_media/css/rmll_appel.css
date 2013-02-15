@@ -1,3 +1,5 @@
+/* reprise su style du formulaire initial */
+
 body {
     padding: 0;
     margin: 0;
@@ -58,7 +60,7 @@ h2 {
 #content {
     text-align: left;
     border: 1px solid black;
-    width: 650px;
+    width: 700px;
     padding: 20px;
     margin: 15px auto;
     border-radius: 1em;
@@ -112,8 +114,8 @@ textarea {
 
 .field {
     margin-bottom: 20px;
-    padding-left: 10px;
-    border-left: 2px solid #ececec;
+   /* padding-left: 10px;
+    border-left: 2px solid #ececec; */
 }
 
 label, .label {
@@ -227,4 +229,68 @@ label, .label {
     background: #D7EBD7;
     border: 2px solid #ADD6AD;
     color: #194C19 !important;
+}
+
+/* Importation de parties de rmll.css */
+
+#header {
+    position: relative;
+    /* height: 125px; */
+    padding-top: 0px;
+}
+#header,
+#header div.container {
+    background-color: #FFF;
+}
+#header div.container {
+    padding-top: 15px;
+    position: relative;
+    background-image: url('../img/brussels.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% -127px;
+}
+#header div.logo {
+    margin-top: 10px;
+}
+#header div.event {
+    margin-top: 24px;
+    text-align: right;
+}
+
+#languages {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    font-size: 11px;
+}
+#languages ul.language-switcher-locale-url {
+    margin: 0px;
+    padding: 0px;
+    padding-right: 10px;
+    list-style-type: none;
+}
+#languages ul.language-switcher-locale-url li {
+    list-style-type: none;
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: solid 1px #666;
+}
+#languages ul.language-switcher-locale-url li.last {
+    padding-left: 0px;
+    border-left: none;
+}
+#languages ul.language-switcher-locale-url li.active {
+    font-weight: bold;
+}
+body.not-front #languages li.de {
+    display: none;
+}
+
+#menu {
+    position: relative;
+    font-family: 'Oswald','Arial','Helvetica','Sans';
+    font-size: 14px;
+    height: 35px;
+    background-color: #000;
 }
