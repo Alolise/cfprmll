@@ -171,7 +171,17 @@ class Transportation(models.Model, LabelClass):
         return self.label(lang=get_language())
 
 
-class Talk(models.Model):
+class TalkLabel(BaseLabel):
+    parent = models.ForeignKey('Talk')
+
+class Talk(models.Model, LabelClass):
+    label_class = TalkLabel
+    labels = (
+            ('lbl_title', _(u"Title")),
+            ('lbl_abstract', _(u"Abstract")),
+            ('lbl_biography', _(u"Biography")),
+            )
+
     YES_NO = ((1, _(u"Yes")), (0, _(u"No")),)
     NO_YES_MAYBE = ((0, _(u"No")), (1, _(u"Yes")), (2, _(u"I don't know yet")),)
     STATUS = ((0, _(u"Waiting")), (1, _(u"Accepted")), (2, _(u"Rejected")),)
@@ -179,19 +189,15 @@ class Talk(models.Model):
     NUMBER_OF_SLOTS = ((1, _(u"20'")), (2, _(u"40'")), (3, _(u"60'")),)
     LANGS = (('en', _(u"English")), ('fr', _(u"French")), ('nl', _(u"Dutch")),)
     CAPTURE_LIC = (('cc-by-sa', _(u"Creative Commons Attribution-ShareAlike 3.0")), ('x', _(u"Other License")), ('', _(u"No Capture")),)
-    
+
 
     created_date = models.DateField(_(u"Submitted date"), auto_now_add=True)
     date = models.DateField(_(u"Last modification date"), auto_now=True)
     status = models.PositiveSmallIntegerField(_(u"Status"), choices=STATUS, default=0)
     language = models.ForeignKey(Language)
     topic = models.ForeignKey(Topic)
-    title = models.CharField(_(u"Title"), max_length=128)
-    translated_title = models.CharField(_(u"Title in French (or Dutch)"), max_length=128, blank=True)
     nature = models.CharField(_(u"Type"), choices=NATURES, max_length=24, blank=True)
     number_of_slots = models.PositiveSmallIntegerField(_(u"Duration"), choices=NUMBER_OF_SLOTS, default=2)
-    abstract = models.TextField(_(u"Summary"), max_length=512)
-    translated_abstract = models.TextField(_(u"Summary in French (or Dutch)"), max_length=512, blank=True)
     slides_language = models.CharField(_(u"Slides Language"), max_length=2, choices=LANGS, default="en") 
     license = models.ForeignKey(License)
     capture = models.PositiveSmallIntegerField(_(u"Capture"), choices=YES_NO)
@@ -207,10 +213,8 @@ class Talk(models.Model):
     fil_rouge_2 = models.BooleanField(_(u"fil_rouge_2"))
     fil_rouge_3 = models.BooleanField(_(u"fil_rouge_3"))
     fil_rouge_4 = models.BooleanField(_(u"fil_rouge_4"))
-    
+
     speakers = models.TextField(_(u"Speaker(s)"))
-    biography = models.TextField(_(u"Biography"))
-    translated_biography = models.TextField(_(u"Biography in French (or Dutch)"), blank=True)
     charges = models.PositiveSmallIntegerField(_(u"Refund charges"), choices=NO_YES_MAYBE, blank=True)
     city = models.CharField(_(u"City"), max_length=128, blank=True)
     country = models.ForeignKey(Country, blank=True)

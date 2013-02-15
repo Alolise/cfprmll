@@ -42,9 +42,9 @@ admin.site.register(Transportation, TransportationAdmin)
 
 class TalkAdmin(admin.ModelAdmin):
     form = TalkAdminForm
-    list_filter = ('status', 'nature', 'language', 'charges', 'topic')
-    search_fields = ('title', 'speakers', 'abstract', 'constraints', 'biography')
-    list_display = ('title', 'date', 'status', 'language', 'speakers', 'license', 'capture', 'charges', 'city', 'country', 'cost')
+    list_filter = ('status', 'nature', 'charges', 'topic')
+    search_fields = ('speakers', 'constraints')
+    list_display = ('date', 'status', 'speakers', 'license', 'capture', 'charges', 'city', 'country', 'cost')
     actions = [export_csv]
 
 admin.site.register(Talk, TalkAdmin)
