@@ -239,7 +239,7 @@ class Talk(models.Model, LabelClass):
         tmpl = loader.get_template('manager/mail2coordinator.txt')
         content = tmpl.render(Context(ctx))
 
-        send_mail(subject, content, settings.CFP_NOTICE_FROM_EMAIL, [talk.topic.email])
+        #send_mail(subject, content, settings.CFP_NOTICE_FROM_EMAIL, [talk.topic.email])
 
         subject = _(u"[RMLL/LSM] [Topic: %s] Your proposal") % talk.topic.label()
         tmpl = loader.get_template('manager/mail2submitter.txt')
@@ -255,6 +255,6 @@ class Talk(models.Model, LabelClass):
                 email = matches.group(2)
                 dest.append('%s <%s>' % (name, email))
 
-            if dest != []:
-                send_mail(subject, content, settings.CFP_NOTICE_FROM_EMAIL, dest)
+            #if dest != []:
+                #send_mail(subject, content, settings.CFP_NOTICE_FROM_EMAIL, dest)
                 # mail_admins(subject, content)

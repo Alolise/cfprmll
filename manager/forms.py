@@ -74,6 +74,8 @@ def get_attributes(base_class):
     atts['save'] = base_save
     return atts
 
+print getattr(forms.ModelForm, '__metaclass__', type)
+print ('TopicAdminFormBase', bases, get_attributes(Topic))
 
 TopicAdminFormBase = getattr(forms.ModelForm, '__metaclass__', type) \
                             ('TopicAdminFormBase', bases, get_attributes(Topic))
@@ -155,6 +157,7 @@ _tattrs = {'cols': '80', 'rows': 8}
 
 class TalkForm(forms.ModelForm):
     label_model = TalkLabel
+
     language = forms.ModelChoiceField(label=_(u"Language"),
                                       queryset=Language.objects.all(), empty_label=None)
     topic = forms.ModelChoiceField(label=_(u"Topic"),
@@ -214,6 +217,32 @@ class TalkForm(forms.ModelForm):
     class Meta:
         model = Talk
         exclude = ('status', 'notes')
+
+    def __init__(self, *args, **keys):
+        """
+        Alimentation du formulaire en modification
+        """
+        labels = Talk.labels
+
+        forms.ModelForm.__init__(self, *args, **keys)
+        for idx in xrange(len(labels)):
+            for language_id, language_label in settings.LANGUAGES:
+                self.fields['label_%s_%d' % (language_id, idx)] = \
+                    forms.CharField(label=labels[idx][1] + u" (%s)" % language_label,
+                                widget=forms.TextInput, required=False, max_length=256)
+        if 'instance' in keys and keys['instance']:
+            instance = keys['instance']
+            property_dct = {}
+            if self.label_model:
+                labels = self.label_model.objects.filter(parent=instance)
+                for label in labels:
+                    property_dct['label_%s_%d' % (label.language, label.label_number)] = label.value
+            if 'initial' in keys:
+                keys['initial'].update(property_dct)
+            else:
+                keys['initial'] = property_dct
+        print self.__dict__
+        print keys
 
     def clean(self):
         cleaned_data = self.cleaned_data
