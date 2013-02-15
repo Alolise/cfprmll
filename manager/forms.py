@@ -188,6 +188,7 @@ class TalkForm(forms.ModelForm):
         label=_(u"Capture License"), choices=Talk.CAPTURE_LIC,
         required=False,
         help_text=_(u"The preferred license for the capture of the talk (contact us if you would like us to add another license)."),
+        initial="cc-by-sa",
         )
     constraints = forms.CharField(label=_(u"Constraints"),
                                   widget=forms.Textarea(attrs=_tattrs), required=False,
