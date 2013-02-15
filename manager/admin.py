@@ -16,6 +16,8 @@ admin.site.register(Topic, TopicAdmin)
 
 class LanguageAdmin(admin.ModelAdmin):
     form = LanguageAdminForm
+    ordering = ('code',)
+    list_display = ('label', 'code')
 admin.site.register(Language, LanguageAdmin)
 
 

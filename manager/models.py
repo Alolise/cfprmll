@@ -111,6 +111,7 @@ class LanguageLabel(BaseLabel):
 class Language(models.Model, LabelClass):
     label_class = LanguageLabel
     labels = (('lbl_name', _(u"Name")),)
+    code = models.CharField(_(u"Code"), max_length=2)
 
     def __unicode__(self):
         return self.label(lang=get_language())
@@ -177,7 +178,6 @@ class Talk(models.Model):
     STATUS = ((0, _(u"Waiting")), (1, _(u"Accepted")), (2, _(u"Rejected")),)
     NATURES = (('conference', _(u"Conference")), ('workshop', _(u"Workshop")),)
     NUMBER_OF_SLOTS = ((1, _(u"20'")), (2, _(u"40'")), (3, _(u"60'")),)
-    LANGS = (('en', _(u"English")), ('fr', _(u"French")), ('nl', _(u"Dutch")),)
     CAPTURE_LIC = (('cc-by-sa', _(u"Creative Commons Attribution-ShareAlike 3.0")), ('x', _(u"Other License")), ('', _(u"No Capture")),)
 
 
@@ -192,7 +192,7 @@ class Talk(models.Model):
     number_of_slots = models.PositiveSmallIntegerField(_(u"Duration"), choices=NUMBER_OF_SLOTS, default=2)
     abstract = models.TextField(_(u"Summary"), max_length=512)
     translated_abstract = models.TextField(_(u"Summary in French (or Dutch)"), max_length=512, blank=True)
-    slides_language = models.CharField(_(u"Slides Language"), max_length=2, choices=LANGS, default="en")
+    slides_language = models.ForeignKey(Language, related_name="talk_slides")
     license = models.ForeignKey(License)
     capture = models.PositiveSmallIntegerField(_(u"Capture"), choices=YES_NO)
     capture_license = models.CharField(_(u"Capture License"), max_length=128, choices=CAPTURE_LIC, default="cc-by-sa")

@@ -152,7 +152,8 @@ _tattrs = {'cols': '60', 'rows': 8}
 
 class TalkForm(forms.ModelForm):
     language = forms.ModelChoiceField(label=_(u"Language"),
-                                      queryset=Language.objects.all(), empty_label=None)
+                                      queryset=Language.objects.all(), empty_label=None,
+                                      initial=Language.objects.get(code='en'))
     topic = forms.ModelChoiceField(label=_(u"Topic"),
                                    queryset=Topic.objects.all(), empty_label=None, widget=SortedForm)
     title = forms.CharField(
@@ -175,6 +176,9 @@ class TalkForm(forms.ModelForm):
         help_text=_(u"If you can write an abstract in French, please do so. If you can't, we'll handle that for you."),
         required=False,
         )
+    slides_language = forms.ModelChoiceField(label=_(u"Slides Language"),
+                                      queryset=Language.objects.all(), empty_label=None,
+                                      initial=Language.objects.get(code='en'))
     license = forms.ModelChoiceField(
         label=_(u"License"), required=False,
         queryset=License.objects.order_by('order'),

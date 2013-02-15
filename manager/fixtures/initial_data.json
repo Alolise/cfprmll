@@ -93,21 +93,21 @@
         "pk": 1,
         "model": "manager.language",
         "fields": {
-
+            "code": "fr"
         }
     },
     {
         "pk": 2,
         "model": "manager.language",
         "fields": {
-
+            "code": "en"
         }
     },
     {
         "pk": 3,
         "model": "manager.language",
         "fields": {
-
+            "code": "nl"
         }
     },
     {
