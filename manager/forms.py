@@ -4,7 +4,7 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 
 from django.conf import settings
-from models import Topic, TopicLabel, Language, LanguageLabel, Country, CountryLabel, Transportation, TransportationLabel, Talk, License, LicenseLabel, CaptureLicense
+from models import Topic, TopicLabel, Language, LanguageLabel, Country, CountryLabel, Transportation, TransportationLabel, Talk, License, LicenseLabel, CaptureLicense, TalkLabel
 
 # construction dynamique des classes de formulaires
 bases = (forms.ModelForm,)
@@ -74,6 +74,8 @@ def get_attributes(base_class):
     atts['save'] = base_save
     return atts
 
+print getattr(forms.ModelForm, '__metaclass__', type)
+print ('TopicAdminFormBase', bases, get_attributes(Topic))
 
 TopicAdminFormBase = getattr(forms.ModelForm, '__metaclass__', type) \
                             ('TopicAdminFormBase', bases, get_attributes(Topic))
@@ -125,6 +127,9 @@ class TransportationAdminForm(TransportationAdminFormBase):
     class Meta:
         model = Transportation
 
+    def __init__(self, *args, **kwargs):
+        super(TransportationAdminForm, self).__init__(args, **kwargs)
+        print self.fields
 
 # Ugly hack
 from django.forms import widgets
@@ -151,24 +156,14 @@ _tattrs = {'cols': '80', 'rows': 8}
 
 
 class TalkForm(forms.ModelForm):
+    label_model = TalkLabel
+
     language = forms.ModelChoiceField(label=_(u"Language"),
                                       queryset=Language.objects.all(), empty_label=None)
     topic = forms.ModelChoiceField(label=_(u"Topic"),
                                    queryset=Topic.objects.all(), empty_label=None, widget=SortedForm)
-    title = forms.CharField(
-        label=_(u"Title"),
-        min_length=5, widget=forms.TextInput(attrs=_iattrs))
-    translated_title = forms.CharField(
-        label=_(u"Title in French (or Dutch)"),
-        required=False,
-        widget=forms.TextInput(attrs=_iattrs))
     nature = forms.ChoiceField(
         label=_(u"Type"), choices=Talk.NATURES, required=True)
-    abstract = forms.CharField(
-        label=_(u"Summary"),
-        widget=forms.Textarea(attrs=_tattrs),
-        help_text=_(u"A description of what the talk would be about. This abstract will be published on the website."),
-        )
     translated_abstract = forms.CharField(
         label=_(u"Summary in French (or Dutch)"),
         widget=forms.Textarea(attrs=_tattrs),
@@ -206,13 +201,6 @@ class TalkForm(forms.ModelForm):
     speakers = forms.CharField(label=_(u"Speaker(s)"), widget=forms.Textarea(attrs=_tattrs),
                                help_text=_(u"First name, last name, email of the speaker(s). One speaker per line. Each line should respect the following format: « Firstname Lastname [speaker@domain.tld] »"),
                                )
-    biography = forms.CharField(label=_(u"Biography"), widget=forms.Textarea(attrs=_tattrs),
-                                help_text=_(u"Add a few words about the speaker(s). Their, work, activities, involvement in free software, etc. It will be published with the abstract on the event website."),
-                                )
-    translated_biography = forms.CharField(label=_(u"Biography in French"), widget=forms.Textarea(attrs=_tattrs),
-                                help_text=_(u"Same but in French. If you don't know French, don't worry, we'll handle this for you."),
-                                required=False,
-                                )
     charges = forms.ChoiceField(label=(_(u"Refund charges")),
                                 choices=Talk.NO_YES_MAYBE, required=False)
     transportation = forms.ModelChoiceField(label=_(u"Transportation"),
@@ -229,6 +217,32 @@ class TalkForm(forms.ModelForm):
     class Meta:
         model = Talk
         exclude = ('status', 'notes')
+
+    def __init__(self, *args, **keys):
+        """
+        Alimentation du formulaire en modification
+        """
+        labels = Talk.labels
+
+        forms.ModelForm.__init__(self, *args, **keys)
+        for idx in xrange(len(labels)):
+            for language_id, language_label in settings.LANGUAGES:
+                self.fields['label_%s_%d' % (language_id, idx)] = \
+                    forms.CharField(label=labels[idx][1] + u" (%s)" % language_label,
+                                widget=forms.TextInput, required=False, max_length=256)
+        if 'instance' in keys and keys['instance']:
+            instance = keys['instance']
+            property_dct = {}
+            if self.label_model:
+                labels = self.label_model.objects.filter(parent=instance)
+                for label in labels:
+                    property_dct['label_%s_%d' % (label.language, label.label_number)] = label.value
+            if 'initial' in keys:
+                keys['initial'].update(property_dct)
+            else:
+                keys['initial'] = property_dct
+        print self.__dict__
+        print keys
 
     def clean(self):
         cleaned_data = self.cleaned_data
