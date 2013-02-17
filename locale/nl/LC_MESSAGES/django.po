@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-15 11:29+0100\n"
+"POT-Creation-Date: 2013-02-17 23:52+0100\n"
 "PO-Revision-Date: 2013-02-12 11:30+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: Dutch <info@rmll.info>>\n"
@@ -26,30 +26,30 @@ msgstr "Exporteer in CSV-formaat"
 msgid "Language"
 msgstr "Taal"
 
-#: manager/forms.py:156 templates/manager/mail2coordinator.txt:3
+#: manager/forms.py:157 templates/manager/mail2coordinator.txt:3
 msgid "Topic"
 msgstr "Onderwerp"
 
-#: manager/forms.py:159 manager/models.py:188
+#: manager/forms.py:160 manager/models.py:189
 #: templates/manager/mail2coordinator.txt:5
 msgid "Title"
 msgstr "Titel"
 
-#: manager/forms.py:162 manager/models.py:189
+#: manager/forms.py:163 manager/models.py:190
 msgid "Title in French (or Dutch)"
 msgstr ""
 
-#: manager/forms.py:166 manager/models.py:190
+#: manager/forms.py:167 manager/models.py:191
 #: templates/manager/mail2coordinator.txt:7
 msgid "Type"
 msgstr "Type"
 
-#: manager/forms.py:168 manager/models.py:192
+#: manager/forms.py:169 manager/models.py:193
 #: templates/manager/mail2coordinator.txt:9
 msgid "Summary"
 msgstr "Abstract"
 
-#: manager/forms.py:170
+#: manager/forms.py:171
 msgid ""
 "A description of what the talk would be about. This abstract will be "
 "published on the website."
@@ -57,26 +57,29 @@ msgstr ""
 "Een korte beschrijving van de presentatie. Deze zal op de website geplaatst "
 "worden."
 
-#: manager/forms.py:173 manager/models.py:193
+#: manager/forms.py:174 manager/models.py:194
 #, fuzzy
 msgid "Summary in French (or Dutch)"
 msgstr "Abstract in het Engels"
 
-#: manager/forms.py:175
+#: manager/forms.py:176
 #, fuzzy
-msgid ""
-"If you can write an abstract in French, please do so. If you can't, we'll "
-"handle that for you."
+msgid "If you can write an abstract in French, please do so."
 msgstr ""
 "Hetzelfde, maar in het Engels. Als je geen Engels kent, maak je geen zorgen, "
 "webehandelen dit voor jou."
 
-#: manager/forms.py:179 manager/models.py:149
+#: manager/forms.py:179
+#, fuzzy
+msgid "Slides Language"
+msgstr "Taal"
+
+#: manager/forms.py:183 manager/models.py:151
 #: templates/manager/mail2coordinator.txt:18
 msgid "License"
 msgstr "Licentie"
 
-#: manager/forms.py:181
+#: manager/forms.py:185
 #, fuzzy
 msgid ""
 "The preferred license for your support files (contact us if you would like "
@@ -85,12 +88,12 @@ msgstr ""
 "De voorkeurslicentie voor de opname van de presentatie (neem contact met  "
 "ons op om een licentie toe te voegen aan de lijst)"
 
-#: manager/forms.py:184 manager/models.py:196
+#: manager/forms.py:188 manager/models.py:197
 #: templates/manager/mail2coordinator.txt:15
 msgid "Capture"
 msgstr "Opname"
 
-#: manager/forms.py:185
+#: manager/forms.py:189
 msgid ""
 "Choose “yes” if the speaker(s) agree for the talk to be captured (audio and/"
 "or video) and published on the event website (and probably spread on the "
@@ -100,12 +103,12 @@ msgstr ""
 "vastleggen (audio en/of video)en te laten publiceren op de website van het "
 "evenement (en waarschijnlijk verspreid overhet hele internet)."
 
-#: manager/forms.py:188 manager/models.py:197
+#: manager/forms.py:192 manager/models.py:198
 #, fuzzy
 msgid "Capture License"
 msgstr "Opname"
 
-#: manager/forms.py:190
+#: manager/forms.py:194
 #, fuzzy
 msgid ""
 "The preferred license for the capture of the talk (contact us if you would "
@@ -114,12 +117,12 @@ msgstr ""
 "De voorkeurslicentie voor de opname van de presentatie (neem contact met  "
 "ons op om een licentie toe te voegen aan de lijst)"
 
-#: manager/forms.py:192 manager/models.py:198
+#: manager/forms.py:197 manager/models.py:199
 #: templates/manager/mail2coordinator.txt:21
 msgid "Constraints"
 msgstr "Beperkingen"
 
-#: manager/forms.py:194
+#: manager/forms.py:199
 msgid ""
 "If the speaker(s) have special needs, constraints (be scheduled on a "
 "specific date, disabled person moving with a wheelchair, etc) or something "
@@ -129,40 +132,44 @@ msgstr ""
 "eenspecifieke datum gepland worden, persoon met een rolstoel, enz) of iets "
 "anders."
 
-#: manager/forms.py:197 manager/models.py:200
+#: manager/forms.py:202 manager/models.py:201
 msgid "General public"
 msgstr "Het grote publiek"
 
-#: manager/forms.py:198 manager/models.py:201
+#: manager/forms.py:203 manager/models.py:202
 msgid "Professionals"
 msgstr "Professionals"
 
-#: manager/forms.py:199 manager/models.py:202
+#: manager/forms.py:204 manager/models.py:203
 msgid "Decision makers"
 msgstr ""
 
-#: manager/forms.py:200 manager/models.py:203
+#: manager/forms.py:205 manager/models.py:204
 msgid "Geeks"
 msgstr "Geeks"
 
-#: manager/forms.py:202 manager/models.py:205
-msgid "Freedom in everyday life"
+#: manager/forms.py:207
+msgid "Freedom in Everyday Life"
 msgstr ""
 
-#: manager/forms.py:203
-msgid "Fil rouge 2"
+#: manager/forms.py:208 manager/models.py:207
+msgid "Societal Challenges"
 msgstr ""
 
-#: manager/forms.py:204
-msgid "Fil rouge 3"
+#: manager/forms.py:209 manager/models.py:208
+msgid "Open Data"
 msgstr ""
 
-#: manager/forms.py:206 manager/models.py:210
+#: manager/forms.py:211 manager/models.py:209
+msgid "Cloud"
+msgstr ""
+
+#: manager/forms.py:213 manager/models.py:211
 #: templates/manager/mail2coordinator.txt:25
 msgid "Speaker(s)"
 msgstr "Spreker(s)"
 
-#: manager/forms.py:207
+#: manager/forms.py:214
 msgid ""
 "First name, last name, email of the speaker(s). One speaker per line. Each "
 "line should respect the following format: « Firstname Lastname "
@@ -172,12 +179,12 @@ msgstr ""
 "Elke regel moet het volgende formaat hebben: « Voornaam Achternaam "
 "[spreker@domein.tld] »"
 
-#: manager/forms.py:209 manager/models.py:211
+#: manager/forms.py:216 manager/models.py:212
 #: templates/manager/mail2coordinator.txt:29
 msgid "Biography"
 msgstr "Biografie"
 
-#: manager/forms.py:210
+#: manager/forms.py:217
 msgid ""
 "Add a few words about the speaker(s). Their, work, activities, involvement "
 "in free software, etc. It will be published with the abstract on the event "
@@ -187,11 +194,11 @@ msgstr ""
 "vrije software, etc. Dit zal met de korte  inhoud op de evenementswebsite "
 "worden gepubliceerd."
 
-#: manager/forms.py:212
+#: manager/forms.py:219
 msgid "Biography in French"
 msgstr "Biografie in het Engels"
 
-#: manager/forms.py:213
+#: manager/forms.py:220
 msgid ""
 "Same but in French. If you don't know French, don't worry, we'll handle this "
 "for you."
@@ -199,30 +206,30 @@ msgstr ""
 "Hetzelfde, maar in het Engels. Als je geen Engels kent, maak je geen zorgen, "
 "webehandelen dit voor jou."
 
-#: manager/forms.py:216 manager/models.py:213
+#: manager/forms.py:223 manager/models.py:214
 #: templates/manager/mail2coordinator.txt:34
 msgid "Refund charges"
 msgstr "Onkostenvergoeding"
 
-#: manager/forms.py:218 templates/manager/mail2coordinator.txt:40
+#: manager/forms.py:225 templates/manager/mail2coordinator.txt:40
 msgid "Transportation"
 msgstr "Vervoer"
 
-#: manager/forms.py:220 manager/models.py:214
+#: manager/forms.py:227 manager/models.py:215
 #: templates/manager/mail2coordinator.txt:36
 msgid "City"
 msgstr "Stad"
 
-#: manager/forms.py:222 manager/models.py:132
+#: manager/forms.py:229 manager/models.py:133
 #: templates/manager/mail2coordinator.txt:38
 msgid "Country"
 msgstr "Land"
 
-#: manager/forms.py:224 templates/manager/mail2coordinator.txt:42
+#: manager/forms.py:231 templates/manager/mail2coordinator.txt:42
 msgid "Estimated cost (euros)"
 msgstr "Geschatte kosten (euro)"
 
-#: manager/forms.py:226
+#: manager/forms.py:233
 msgid ""
 "If you know the estimated cost of the transportation, it will be easier for "
 "us to have a clear view of the expenses we could engage."
@@ -230,16 +237,16 @@ msgstr ""
 "Als de geschatte kosten van het vervoer bekend zijn is het makkelijker voor "
 "ons om een duidelijker beeld te hebben van de kosten die het kan meebrengen."
 
-#: manager/forms.py:243 manager/forms.py:248 manager/forms.py:251
-#: manager/forms.py:256
+#: manager/forms.py:250 manager/forms.py:255 manager/forms.py:258
+#: manager/forms.py:263
 msgid "This field is required."
 msgstr "Dit veld is verplicht."
 
-#: manager/forms.py:272
+#: manager/forms.py:279
 msgid "The following lines don't match the correct format:"
 msgstr "De volgende regels hebben niet het juiste formaat:"
 
-#: manager/forms.py:282 manager/models.py:218
+#: manager/forms.py:289 manager/models.py:219
 msgid "Notes"
 msgstr "Aantekeningen"
 
@@ -247,8 +254,8 @@ msgstr "Aantekeningen"
 msgid "Value"
 msgstr "Waarde"
 
-#: manager/models.py:100 manager/models.py:113 manager/models.py:125
-#: manager/models.py:142 manager/models.py:155 manager/models.py:167
+#: manager/models.py:100 manager/models.py:113 manager/models.py:126
+#: manager/models.py:143 manager/models.py:157 manager/models.py:169
 msgid "Name"
 msgstr "Naam"
 
@@ -256,137 +263,116 @@ msgstr "Naam"
 msgid "Notice email"
 msgstr "Email"
 
-#: manager/models.py:126 manager/models.py:143
+#: manager/models.py:114 manager/models.py:127 manager/models.py:144
 msgid "Code"
 msgstr "Code"
 
-#: manager/models.py:133
+#: manager/models.py:134
 msgid "Countries"
 msgstr "Landen"
 
-#: manager/models.py:150
+#: manager/models.py:145
+msgid "Sorting"
+msgstr ""
+
+#: manager/models.py:152
 #, fuzzy
 msgid "Licenses"
 msgstr "Licentie"
 
-#: manager/models.py:174 manager/models.py:175
+#: manager/models.py:176 manager/models.py:177
 msgid "Yes"
 msgstr "Ja"
 
-#: manager/models.py:174 manager/models.py:175
+#: manager/models.py:176 manager/models.py:177
 msgid "No"
 msgstr "Neen"
 
-#: manager/models.py:175
+#: manager/models.py:177
 msgid "I don't know yet"
 msgstr "Ik weet het nog niet"
 
-#: manager/models.py:176
+#: manager/models.py:178
 msgid "Waiting"
 msgstr "In behandeling"
 
-#: manager/models.py:176
+#: manager/models.py:178
 msgid "Accepted"
 msgstr "Aangenomen"
 
-#: manager/models.py:176
+#: manager/models.py:178
 msgid "Rejected"
 msgstr "Verworpen"
 
-#: manager/models.py:177
+#: manager/models.py:179
 msgid "Conference"
 msgstr "Conferentie"
 
-#: manager/models.py:177
+#: manager/models.py:179
 msgid "Workshop"
 msgstr "Workshop"
 
-#: manager/models.py:178
+#: manager/models.py:180
 msgid "20'"
 msgstr ""
 
-#: manager/models.py:178
+#: manager/models.py:180
 msgid "40'"
 msgstr ""
 
-#: manager/models.py:178
+#: manager/models.py:180
 msgid "60'"
 msgstr ""
 
-#: manager/models.py:179
-msgid "English"
-msgstr ""
-
-#: manager/models.py:179
-msgid "French"
-msgstr ""
-
-#: manager/models.py:179
-msgid "Dutch"
-msgstr ""
-
-#: manager/models.py:180
+#: manager/models.py:181
 msgid "Creative Commons Attribution-ShareAlike 3.0"
 msgstr ""
 
-#: manager/models.py:180
+#: manager/models.py:181
 #, fuzzy
 msgid "Other License"
 msgstr "Licentie"
 
-#: manager/models.py:180
+#: manager/models.py:181
 #, fuzzy
 msgid "No Capture"
 msgstr "Opname"
 
-#: manager/models.py:183
+#: manager/models.py:184
 msgid "Submitted date"
 msgstr "Datum inzending"
 
-#: manager/models.py:184
+#: manager/models.py:185
 msgid "Last modification date"
 msgstr "Laatste wijziging op"
 
-#: manager/models.py:185
+#: manager/models.py:186
 msgid "Status"
 msgstr "Status"
 
-#: manager/models.py:191
+#: manager/models.py:192
 msgid "Duration"
 msgstr ""
 
-#: manager/models.py:194
-#, fuzzy
-msgid "Slides Language"
-msgstr "Taal"
-
 #: manager/models.py:206
-msgid "fil_rouge_2"
+msgid "Freedom in everyday life"
 msgstr ""
 
-#: manager/models.py:207
-msgid "fil_rouge_3"
-msgstr ""
-
-#: manager/models.py:208
-msgid "fil_rouge_4"
-msgstr ""
-
-#: manager/models.py:212
+#: manager/models.py:213
 #, fuzzy
 msgid "Biography in French (or Dutch)"
 msgstr "Biografie in het Engels"
 
-#: manager/models.py:217
+#: manager/models.py:218
 msgid "Estimated cost"
 msgstr "Geschatte kosten"
 
-#: manager/models.py:233
+#: manager/models.py:234
 #, python-format
 msgid "[RMLL/LSM] [Topic: %s] New talk"
 msgstr "[RMLL/LSM] [Onderwerp: %s] Nieuwe presentatie"
 
-#: manager/models.py:239
+#: manager/models.py:240
 #, python-format
 msgid "[RMLL/LSM] [Topic: %s] Your proposal"
 msgstr "[RMLL/LSM] [Onderwerp: %s] Uw voorstel"
@@ -407,11 +393,11 @@ msgstr "Fout 500"
 msgid "Internal Error"
 msgstr "Interne Fout"
 
-#: templates/base.html:5 templates/base2.html:5
+#: templates/base.html:5
 msgid "RMLL/LSM"
 msgstr "RMLL/LSM"
 
-#: templates/base.html:64 templates/base2.html:17
+#: templates/base.html:64
 msgid "Contact the webmaster"
 msgstr "Neem contact op met de webmaster"
 
