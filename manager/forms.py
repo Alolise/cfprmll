@@ -147,7 +147,7 @@ class SortedForm(widgets.Select):
         return u'\n'.join(output)
 
 _iattrs = {'class': 'text', 'size': 60}
-_tattrs = {'cols': '60', 'rows': 8}
+_tattrs = {'cols': '60', 'rows': '8'}
 
 
 class TalkForm(forms.ModelForm):

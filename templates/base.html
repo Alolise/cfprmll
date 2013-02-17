@@ -21,22 +21,6 @@
           <a href="http://2013.rmll.info"><img src="{{ MEDIA_URL }}img/brussels-2013-{{ LANGUAGE_CODE }}.png" alt="Brussels 2013" /></a>
               </div>
     </div>
-    <div id="languages">
-        <div id="block-locale-language" class="block block-locale">
-
-
-            <div class="content">
-                {% for lang in LANGUAGES%}
-                <form action="/i18n/setlang/" method="post">
-                    <input type="hidden" name="language" value="{{ lang.0 }}" />
-                    <abbr title="{{ lang.1 }}">
-                        <input type="submit" value="{{ lang.0|upper }}" />
-                    </abbr>
-                </form>{%endfor%}
-
-             </div>
-        </div>
-    </div>
 </div>
 </div>
 <!-- #RMLL-start-header -->
@@ -44,10 +28,9 @@
     <div class="container">
         <div class="span-22 push-1">
             <div id="block-superfish-1" class="block block-superfish">
-                <div class="content">
-
+                <div class="content">Call for Papers
                     <ul id="superfish-1" class="sf-menu main-menu sf-horizontal sf-style-none sf-total-items-1">
-                        <li class="last"><a href="http://2013.rmll.info/"></a></li>
+                        <li class="last"></li>
                     </ul>
                 </div>
             </div>
@@ -59,6 +42,23 @@
     <div id="page">
         <div id="content">
             <div id="header">
+	      <div id="languages">
+		<div id="block-locale-language" class="block block-locale">
+		  
+		  
+		  <div class="content">
+                    {% for lang in LANGUAGES%}
+                    <form action="/i18n/setlang/" method="post">
+                    <input type="hidden" name="language" value="{{ lang.0 }}" />
+                    <abbr title="{{ lang.1 }}">
+                        <input type="submit" value="{{ lang.0|upper }}" />
+                    </abbr>
+                </form>{%endfor%}
+
+             </div>
+        </div>
+    </div>
+
                 <div id="contact">
                     <a href="mailto:&#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#114;&#109;&#108;&#108;&#046;&#105;&#110;&#102;&#111;"
                         title="{% trans 'Contact the webmaster' %}">
