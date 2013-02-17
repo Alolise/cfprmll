@@ -173,7 +173,7 @@ class TalkForm(forms.ModelForm):
     translated_abstract = forms.CharField(
         label=_(u"Summary in French (or Dutch)"),
         widget=forms.Textarea(attrs=_tattrs),
-        help_text=_(u"If you can write an abstract in French, please do so. If you can't, we'll handle that for you."),
+        help_text=_(u"If you can write an abstract in French, please do so."),
         required=False,
         )
     slides_language = forms.ModelChoiceField(label=_(u"Slides Language"),
@@ -204,9 +204,11 @@ class TalkForm(forms.ModelForm):
     for_decision_makers = forms.BooleanField(label=_(u"Decision makers"))
     for_geeks = forms.BooleanField(label=_(u"Geeks"))
 
-    fil_rouge_auquotidien = forms.BooleanField(label=_(u"Freedom in everyday life"))
-    fil_rouge_2 = forms.BooleanField(label=_(u"Fil rouge 2"))
-    fil_rouge_3 = forms.BooleanField(label=_(u"Fil rouge 3"))
+    fil_rouge_auquotidien = forms.BooleanField(label=_(u"Freedom in Everyday Life"))
+    fil_rouge_2 = forms.BooleanField(label=_(u"Societal Challenges"))
+    fil_rouge_3 = forms.BooleanField(label=_(u"Open Data"))
+
+    fil_rouge_4 = forms.BooleanField(label=_(u"Cloud"))
 
     speakers = forms.CharField(label=_(u"Speaker(s)"), widget=forms.Textarea(attrs=_tattrs),
                                help_text=_(u"First name, last name, email of the speaker(s). One speaker per line. Each line should respect the following format: « Firstname Lastname [speaker@domain.tld] »"),

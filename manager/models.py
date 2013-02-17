@@ -204,9 +204,9 @@ class Talk(models.Model):
     for_geeks = models.BooleanField(_(u"Geeks"))
 
     fil_rouge_auquotidien = models.BooleanField(_(u"Freedom in everyday life"))
-    fil_rouge_2 = models.BooleanField(_(u"fil_rouge_2"))
-    fil_rouge_3 = models.BooleanField(_(u"fil_rouge_3"))
-    fil_rouge_4 = models.BooleanField(_(u"fil_rouge_4"))
+    fil_rouge_2 = models.BooleanField(_(u"Societal Challenges"))
+    fil_rouge_3 = models.BooleanField(_(u"Open Data"))
+    fil_rouge_4 = models.BooleanField(_(u"Cloud"))
 
     speakers = models.TextField(_(u"Speaker(s)"))
     biography = models.TextField(_(u"Biography"))
