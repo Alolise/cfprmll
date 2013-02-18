@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # admin interface
     (r'^admin/', include(admin.site.urls)),
     (r'^i18n/', include('django.conf.urls.i18n')),
-    (r'^$', redirect_to, {'url': 'talk/new'}),
+    (r'^$', redirect_to, {'url': settings.BASE_URL + 'talk/new'}),
     (r'^talk/', include('manager.urls')),
 )
 

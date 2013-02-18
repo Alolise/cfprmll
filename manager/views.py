@@ -16,13 +16,13 @@ def new(request, tmpl):
 
     limit = datetime.strptime(settings.CFP_LIMIT_DATE, '%Y-%m-%d %H:%M:%S')
     if datetime.utcnow() > limit:
-        return HttpResponseRedirect('/talk/closed')
+        return HttpResponseRedirect(settings.BASE_URL + '/talk/closed')
 
     if request.method == 'POST':
         form = TalkForm(request.POST)
         if form.is_valid():
             if form.save():
-                return HttpResponseRedirect('/talk/end')
+                return HttpResponseRedirect(settings.BASE_URL + '/talk/end')
             else:
                 syserr = True
     else:
