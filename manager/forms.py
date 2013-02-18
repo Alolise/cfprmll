@@ -199,16 +199,15 @@ class TalkForm(forms.ModelForm):
                                   help_text=_(u"If the speaker(s) have special needs, constraints (be scheduled on a specific date, disabled person moving with a wheelchair, etc) or something else."),
                                   )
 
-    for_general_public = forms.BooleanField(label=_(u"General public"))
-    for_professionals = forms.BooleanField(label=_(u"Professionals"))
-    for_decision_makers = forms.BooleanField(label=_(u"Decision makers"))
-    for_geeks = forms.BooleanField(label=_(u"Geeks"))
+    for_general_public = forms.BooleanField(label=_(u"General public"), required=False)
+    for_professionals = forms.BooleanField(label=_(u"Professionals"), required=False)
+    for_decision_makers = forms.BooleanField(label=_(u"Decision makers"), required=False)
+    for_geeks = forms.BooleanField(label=_(u"Geeks"), required=False)
 
-    fil_rouge_auquotidien = forms.BooleanField(label=_(u"Freedom in Everyday Life"))
-    fil_rouge_2 = forms.BooleanField(label=_(u"Societal Challenges"))
-    fil_rouge_3 = forms.BooleanField(label=_(u"Open Data"))
-
-    fil_rouge_4 = forms.BooleanField(label=_(u"Cloud"))
+    fil_rouge_auquotidien = forms.BooleanField(label=_(u"Freedom in Everyday Life"), required=False)
+    fil_rouge_2 = forms.BooleanField(label=_(u"Societal Challenges"), required=False)
+    fil_rouge_3 = forms.BooleanField(label=_(u"Open Data"), required=False)
+    fil_rouge_4 = forms.BooleanField(label=_(u"Cloud"), required=False)
 
     speakers = forms.CharField(label=_(u"Speaker(s)"), widget=forms.Textarea(attrs=_tattrs),
                                help_text=_(u"First name, last name, email of the speaker(s). One speaker per line. Each line should respect the following format: « Firstname Lastname [speaker@domain.tld] »"),
