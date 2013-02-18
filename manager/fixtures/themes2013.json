@@ -1,0 +1,927 @@
+[
+    {
+        "pk": 1,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 1,
+            "label_number": 0,
+            "value": "Freedom in Society - Legal",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 1,
+            "label_number": 0,
+            "value": "Le Libre dans la Société - Juridique",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 1,
+            "label_number": 0,
+            "value": "Het Vrije Gemeengoed/Vrije licenties in de maatschappij - Juridisch",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 2,
+            "label_number": 0,
+            "value": "Freedom in Society - Economics",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 2,
+            "label_number": 0,
+            "value": "Le Libre dans la Société - Économique",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 2,
+            "label_number": 0,
+            "value": "Het Vrije Gemeengoed/Vrije licenties in de maatschappij - Economisch",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Freedom in Society- Politics",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Le Libre dans la Société - Politique",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 3,
+            "label_number": 0,
+            "value": "Het Vrije Gemeengoed/Vrije licenties in de maatschappij - Politiek",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 4,
+            "label_number": 0,
+            "value": "Freedom in Society - Communities",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 4,
+            "label_number": 0,
+            "value": "Libre dans la Société - Communautés",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 4,
+            "label_number": 0,
+            "value": "Het Vrije Gemeengoed/Vrije licenties in de maatschappij - Gemeenschappen",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 5,
+            "label_number": 0,
+            "value": "Freedom in Society - Freedom Box",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 5,
+            "label_number": 0,
+            "value": "Le Libre dans la Société - Freedom Box",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 5,
+            "label_number": 0,
+            "value": "Het Vrije Gemeengoed/Vrije licenties in de maatschappij - Freedom Box",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 6,
+            "label_number": 0,
+            "value": "Culture and Libre/Free Art",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 6,
+            "label_number": 0,
+            "value": "Cultures et arts Libres",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 6,
+            "label_number": 0,
+            "value": "Cultuur en kunsten onder vrije licentie",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 7,
+            "label_number": 0,
+            "value": "Culture and Libre/Free Arts - The World of Video Game",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 7,
+            "label_number": 0,
+            "value": "Cultures et arts Libres - Le monde du jeu vidéo",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 7,
+            "label_number": 0,
+            "value": "Cultuur en kunsten onder vrije licentie - De wereld van het videospel",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 8,
+            "label_number": 0,
+            "value": "Media, Radio, Television, Graphics - Media, Radio, Television",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 8,
+            "label_number": 0,
+            "value": "Média, radio, télévision, graphisme - Média, radio, télévision",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 8,
+            "label_number": 0,
+            "value": "De media, radio, televisie, grafisme - Media, radio, televisie",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 9,
+            "label_number": 0,
+            "value": "Companies and Libre/Free Software - an Economic Environment for Freedom",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 9,
+            "label_number": 0,
+            "value": "Entreprises et logiciel libre - Environnement économique du libre",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 9,
+            "label_number": 0,
+            "value": "Bedrijven en vrije software - economische omgeving van vrije licenties",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 10,
+            "label_number": 0,
+            "value": "Companies and Libre/Free Software - Migration",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 10,
+            "label_number": 0,
+            "value": "Entreprises et logiciel libre - Les migrations",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 10,
+            "label_number": 0,
+            "value": "Bedrijven en vrije software - De migraties",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 11,
+            "label_number": 0,
+            "value": "Free Hardware, DIY, 3D Printing...",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 11,
+            "label_number": 0,
+            "value": "Matériel libre, DIY, impressions 3D.",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 11,
+            "label_number": 0,
+            "value": "Vrij materieel, Doe-het-zelf, 3D-printen",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 12,
+            "label_number": 0,
+            "value": "Science and Education",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 12,
+            "label_number": 0,
+            "value": "Sciences et formation",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 12,
+            "label_number": 0,
+            "value": "Wetenchap en vorming",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 13,
+            "label_number": 0,
+            "value": "Health - Imaging & Visualization of Medical Data",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 13,
+            "label_number": 0,
+            "value": "Santé - Imagerie et visualisation de données médicales",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 13,
+            "label_number": 0,
+            "value": "Gezondheid - Beeldvorming et visualisering van medische gegevens",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 14,
+            "label_number": 0,
+            "value": "Health - Accessibility, Autonomy and Dependency Management",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 14,
+            "label_number": 0,
+            "value": "Santé - Accessibilité, autonomie et gestion de la dépendance",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 14,
+            "label_number": 0,
+            "value": "Gezondheid - Toegankelijkheid, autonomie en beheer van de afhankelijkheid",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 15,
+            "label_number": 0,
+            "value": "Health - Private Medical Hospital Information Systems and Hospitals",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 15,
+            "label_number": 0,
+            "value": "Santé - Système d’informations médicaux privés et hospitaliers",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 15,
+            "label_number": 0,
+            "value": "Gezondheid - Medische gezondheidssystemen voor privaat gebruik en voor ziekenhuizen",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 16,
+            "label_number": 0,
+            "value": "Health - Telehealth",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 16,
+            "label_number": 0,
+            "value": "Santé - Télésanté",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 16,
+            "label_number": 0,
+            "value": "Gezondheid - eHealth",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 17,
+            "label_number": 0,
+            "value": "Open Data - Citizen Participation and Data Reuse",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 17,
+            "label_number": 0,
+            "value": "Les données ouvertes - Participation citoyenne et réutilisation des données",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 17,
+            "label_number": 0,
+            "value": "Opendata - Deelname door het publiek/de bewoners/de inwoners/de stedelingen en hergebruik van data",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 18,
+            "label_number": 0,
+            "value": "Open Data - Libre Cartography with OpenStreetMap",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 18,
+            "label_number": 0,
+            "value": "Les données ouvertes - La cartographie libre avec OpenStreetMap",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 18,
+            "label_number": 0,
+            "value": "Opendata - Vrije cartografie met Openstreetmap",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 19,
+            "label_number": 0,
+            "value": "Technical - System Administration",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 19,
+            "label_number": 0,
+            "value": "Technique - Administration Système",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 19,
+            "label_number": 0,
+            "value": "Techniek - Systeembeheer",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 20,
+            "label_number": 0,
+            "value": "Technical - Software Development",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 20,
+            "label_number": 0,
+            "value": "Technique - Développement logiciel",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 20,
+            "label_number": 0,
+            "value": "Techniek - Softwareontwikkeling",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 21,
+            "label_number": 0,
+            "value": "Technical - Embedded Systems and Libre/Free Hardware",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 21,
+            "label_number": 0,
+            "value": "Technique - Systèmes embarqués et matériel libre",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 63,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 21,
+            "label_number": 0,
+            "value": "Techniek - Embedded systemen en vrije hardware",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 22,
+            "label_number": 0,
+            "value": "Technical - Operating Systems ",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 65,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 22,
+            "label_number": 0,
+            "value": "Technique - Systèmes d’exploitation",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 22,
+            "label_number": 0,
+            "value": "Techniek - Besturingssystemen",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 67,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 23,
+            "label_number": 0,
+            "value": "Technical - Security",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 68,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 23,
+            "label_number": 0,
+            "value": "Technique - Sécurité",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 69,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 23,
+            "label_number": 0,
+            "value": "Techniek - Beveiliging",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 70,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 24,
+            "label_number": 0,
+            "value": "Technical - Internet",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 71,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 24,
+            "label_number": 0,
+            "value": "Technique - Internet",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 72,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 24,
+            "label_number": 0,
+            "value": "Techniek - Internet",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 73,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 25,
+            "label_number": 0,
+            "value": "Media, Radio, Television, Graphics - Graphics",
+            "language": "en"
+        }
+    },
+    {
+        "pk": 74,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 25,
+            "label_number": 0,
+            "value": "Média, radio, télévision, graphisme - Graphisme",
+            "language": "fr"
+        }
+    },
+    {
+        "pk": 75,
+        "model": "manager.topiclabel",
+        "fields": {
+            "parent": 25,
+            "label_number": 0,
+            "value": "De media, radio, televisie, grafisme - Grafisme",
+            "language": "nl"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-society@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-society@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-society@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-communities@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-society@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-culture-arts@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-videogames@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-radio-tv@listes2013.rmll.inf"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-companies-freesoftware@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-companies-freesoftware@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-hardware@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-sciences-education@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-health@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-health@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-health@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-health@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-opendata@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-opendata@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-adminsys@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-development@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-embedded@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-os@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-security@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-internet@listes2013.rmll.info"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "manager.topic",
+        "fields": {
+            "email": "t-graphics@listes2013.rmll.info"
+        }
+    }
+]

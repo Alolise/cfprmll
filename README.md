@@ -42,6 +42,10 @@ Build the database:
 
     python manage.py syncdb
 
+Import the 2013 topics:
+
+    python manage.py loaddata themes2013
+
 Build the translations:
 
     python manage.py compilemessages
