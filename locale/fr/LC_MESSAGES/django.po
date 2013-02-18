@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-18 20:54+0100\n"
+"POT-Creation-Date: 2013-02-18 22:24+0100\n"
 "PO-Revision-Date: 2013-02-18 00:13+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -152,16 +152,16 @@ msgstr "Enjeux sociétaux"
 msgid "Open Data"
 msgstr "Données ouvertes"
 
-#: manager/forms.py:211 manager/models.py:209
+#: manager/forms.py:210 manager/models.py:209
 msgid "Cloud"
 msgstr "Cloud"
 
-#: manager/forms.py:213 manager/models.py:211
+#: manager/forms.py:212 manager/models.py:211
 #: templates/manager/mail2coordinator.txt:25
 msgid "Speaker(s)"
 msgstr "Orateur(s)"
 
-#: manager/forms.py:214
+#: manager/forms.py:213
 msgid ""
 "First name, last name, email of the speaker(s). One speaker per line. Each "
 "line should respect the following format: « Firstname Lastname "
@@ -170,12 +170,12 @@ msgstr ""
 "Prénom, nom, email des orateur(s). Un orateur par ligne. Chaque ligne doit "
 "respecter le format suivant : « Prénom Nom [orateur@domaine.ext] »"
 
-#: manager/forms.py:216 manager/models.py:212
+#: manager/forms.py:215 manager/models.py:212
 #: templates/manager/mail2coordinator.txt:29
 msgid "Biography"
 msgstr "Biographie"
 
-#: manager/forms.py:217
+#: manager/forms.py:216
 msgid ""
 "Add a few words about the speaker(s). Their, work, activities, involvement "
 "in free software, etc. It will be published with the abstract on the event "
@@ -185,11 +185,11 @@ msgstr ""
 "engagement dans le logiciel libre, etc. Ce sera publié en plus du résumé de "
 "la présentation sur le site web."
 
-#: manager/forms.py:219
+#: manager/forms.py:218
 msgid "Biography in French"
 msgstr "Biographie en Anglais"
 
-#: manager/forms.py:220
+#: manager/forms.py:219
 msgid ""
 "Same but in French. If you don't know French, don't worry, we'll handle this "
 "for you."
@@ -197,30 +197,30 @@ msgstr ""
 "La même chose mais en Anglais. Si vous n'êtes pas à l'aise en Anglais, ne "
 "vous inquiétez pas, nous nous occuperons de cela pour vous."
 
-#: manager/forms.py:223 manager/models.py:214
+#: manager/forms.py:222 manager/models.py:214
 #: templates/manager/mail2coordinator.txt:34
 msgid "Refund charges"
 msgstr "Remboursement des frais"
 
-#: manager/forms.py:225 templates/manager/mail2coordinator.txt:40
+#: manager/forms.py:224 templates/manager/mail2coordinator.txt:40
 msgid "Transportation"
 msgstr "Transport"
 
-#: manager/forms.py:227 manager/models.py:215
+#: manager/forms.py:226 manager/models.py:215
 #: templates/manager/mail2coordinator.txt:36
 msgid "City"
 msgstr "Ville"
 
-#: manager/forms.py:229 manager/models.py:133
+#: manager/forms.py:228 manager/models.py:133
 #: templates/manager/mail2coordinator.txt:38
 msgid "Country"
 msgstr "Pays"
 
-#: manager/forms.py:231 templates/manager/mail2coordinator.txt:42
+#: manager/forms.py:230 templates/manager/mail2coordinator.txt:42
 msgid "Estimated cost (euros)"
 msgstr "Coût estimé (euros)"
 
-#: manager/forms.py:233
+#: manager/forms.py:232
 msgid ""
 "If you know the estimated cost of the transportation, it will be easier for "
 "us to have a clear view of the expenses we could engage."
@@ -229,16 +229,16 @@ msgstr ""
 "sera plus facile d'avoir une vue claire sur les dépenses que nous pourrons "
 "engager."
 
-#: manager/forms.py:250 manager/forms.py:255 manager/forms.py:258
-#: manager/forms.py:263
+#: manager/forms.py:249 manager/forms.py:254 manager/forms.py:257
+#: manager/forms.py:262
 msgid "This field is required."
 msgstr "Ce champ est requis"
 
-#: manager/forms.py:279
+#: manager/forms.py:278
 msgid "The following lines don't match the correct format:"
 msgstr "Les lignes suivantes ne respectent pas le format exigé :"
 
-#: manager/forms.py:289 manager/models.py:219
+#: manager/forms.py:288 manager/models.py:219
 msgid "Notes"
 msgstr "Notes"
 
@@ -474,16 +474,16 @@ msgid "Targeted public"
 msgstr "Public ciblé"
 
 #: templates/manager/new.html:60
-msgid "Check the box corresponding to the public targeted by this talk."
-msgstr "Cochez la case correspondant au public cible de votre exposé"
+msgid "Check the box(es) corresponding to the public targeted by this talk."
+msgstr "Cochez la(les) case(s) correspondant(es) au public cible de votre exposé"
 
 #: templates/manager/new.html:68
 msgid "Underlying thread"
 msgstr "Fil rouge"
 
 #: templates/manager/new.html:71
-msgid "Check the box corresponding to the underlying thread of this talk."
-msgstr "Cochez la case correspondant au fil rouge pour votre exposé"
+msgid "Check the box(es) corresponding to the underlying thread of this talk."
+msgstr "Cochez la(les) case(s) correspondant(es) au fil rouge pour votre exposé"
 
 #: templates/manager/new.html:79
 msgid "Information about the transportation charges"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-18 20:54+0100\n"
+"POT-Creation-Date: 2013-02-18 22:24+0100\n"
 "PO-Revision-Date: 2013-02-12 11:30+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: Dutch <info@rmll.info>>\n"
@@ -160,16 +160,16 @@ msgstr ""
 msgid "Open Data"
 msgstr ""
 
-#: manager/forms.py:211 manager/models.py:209
+#: manager/forms.py:210 manager/models.py:209
 msgid "Cloud"
 msgstr ""
 
-#: manager/forms.py:213 manager/models.py:211
+#: manager/forms.py:212 manager/models.py:211
 #: templates/manager/mail2coordinator.txt:25
 msgid "Speaker(s)"
 msgstr "Spreker(s)"
 
-#: manager/forms.py:214
+#: manager/forms.py:213
 msgid ""
 "First name, last name, email of the speaker(s). One speaker per line. Each "
 "line should respect the following format: « Firstname Lastname "
@@ -179,12 +179,12 @@ msgstr ""
 "Elke regel moet het volgende formaat hebben: « Voornaam Achternaam "
 "[spreker@domein.tld] »"
 
-#: manager/forms.py:216 manager/models.py:212
+#: manager/forms.py:215 manager/models.py:212
 #: templates/manager/mail2coordinator.txt:29
 msgid "Biography"
 msgstr "Biografie"
 
-#: manager/forms.py:217
+#: manager/forms.py:216
 msgid ""
 "Add a few words about the speaker(s). Their, work, activities, involvement "
 "in free software, etc. It will be published with the abstract on the event "
@@ -194,11 +194,11 @@ msgstr ""
 "vrije software, etc. Dit zal met de korte  inhoud op de evenementswebsite "
 "worden gepubliceerd."
 
-#: manager/forms.py:219
+#: manager/forms.py:218
 msgid "Biography in French"
 msgstr "Biografie in het Engels"
 
-#: manager/forms.py:220
+#: manager/forms.py:219
 msgid ""
 "Same but in French. If you don't know French, don't worry, we'll handle this "
 "for you."
@@ -206,30 +206,30 @@ msgstr ""
 "Hetzelfde, maar in het Engels. Als je geen Engels kent, maak je geen zorgen, "
 "webehandelen dit voor jou."
 
-#: manager/forms.py:223 manager/models.py:214
+#: manager/forms.py:222 manager/models.py:214
 #: templates/manager/mail2coordinator.txt:34
 msgid "Refund charges"
 msgstr "Onkostenvergoeding"
 
-#: manager/forms.py:225 templates/manager/mail2coordinator.txt:40
+#: manager/forms.py:224 templates/manager/mail2coordinator.txt:40
 msgid "Transportation"
 msgstr "Vervoer"
 
-#: manager/forms.py:227 manager/models.py:215
+#: manager/forms.py:226 manager/models.py:215
 #: templates/manager/mail2coordinator.txt:36
 msgid "City"
 msgstr "Stad"
 
-#: manager/forms.py:229 manager/models.py:133
+#: manager/forms.py:228 manager/models.py:133
 #: templates/manager/mail2coordinator.txt:38
 msgid "Country"
 msgstr "Land"
 
-#: manager/forms.py:231 templates/manager/mail2coordinator.txt:42
+#: manager/forms.py:230 templates/manager/mail2coordinator.txt:42
 msgid "Estimated cost (euros)"
 msgstr "Geschatte kosten (euro)"
 
-#: manager/forms.py:233
+#: manager/forms.py:232
 msgid ""
 "If you know the estimated cost of the transportation, it will be easier for "
 "us to have a clear view of the expenses we could engage."
@@ -237,16 +237,16 @@ msgstr ""
 "Als de geschatte kosten van het vervoer bekend zijn is het makkelijker voor "
 "ons om een duidelijker beeld te hebben van de kosten die het kan meebrengen."
 
-#: manager/forms.py:250 manager/forms.py:255 manager/forms.py:258
-#: manager/forms.py:263
+#: manager/forms.py:249 manager/forms.py:254 manager/forms.py:257
+#: manager/forms.py:262
 msgid "This field is required."
 msgstr "Dit veld is verplicht."
 
-#: manager/forms.py:279
+#: manager/forms.py:278
 msgid "The following lines don't match the correct format:"
 msgstr "De volgende regels hebben niet het juiste formaat:"
 
-#: manager/forms.py:289 manager/models.py:219
+#: manager/forms.py:288 manager/models.py:219
 msgid "Notes"
 msgstr "Aantekeningen"
 
@@ -487,7 +487,8 @@ msgid "Targeted public"
 msgstr "Doelpubliek"
 
 #: templates/manager/new.html:60
-msgid "Check the box corresponding to the public targeted by this talk."
+#, fuzzy
+msgid "Check the box(es) corresponding to the public targeted by this talk."
 msgstr "Vink aan welk het doelpubliek van uw presentatie is."
 
 #: templates/manager/new.html:68
@@ -496,7 +497,7 @@ msgstr ""
 
 #: templates/manager/new.html:71
 #, fuzzy
-msgid "Check the box corresponding to the underlying thread of this talk."
+msgid "Check the box(es) corresponding to the underlying thread of this talk."
 msgstr "Vink aan welk het doelpubliek van uw presentatie is."
 
 #: templates/manager/new.html:79
