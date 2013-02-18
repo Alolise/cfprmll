@@ -48,7 +48,7 @@
 		  
 		  <div class="content">
                     {% for lang in LANGUAGES%}
-                    <form action="/i18n/setlang/" method="post">
+                    <form action="{{ BASE_URL }}i18n/setlang/" method="post">
                     <input type="hidden" name="language" value="{{ lang.0 }}" />
                     <abbr title="{{ lang.1 }}">
                         <input type="submit" value="{{ lang.0|upper }}" />
