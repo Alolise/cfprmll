@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-18 22:24+0100\n"
+"POT-Creation-Date: 2013-02-22 11:59+0100\n"
 "PO-Revision-Date: 2013-02-18 00:13+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -475,7 +475,8 @@ msgstr "Public ciblé"
 
 #: templates/manager/new.html:60
 msgid "Check the box(es) corresponding to the public targeted by this talk."
-msgstr "Cochez la(les) case(s) correspondant(es) au public cible de votre exposé"
+msgstr ""
+"Cochez la(les) case(s) correspondant(es) au public cible de votre exposé"
 
 #: templates/manager/new.html:68
 msgid "Underlying thread"
@@ -483,7 +484,8 @@ msgstr "Fil rouge"
 
 #: templates/manager/new.html:71
 msgid "Check the box(es) corresponding to the underlying thread of this talk."
-msgstr "Cochez la(les) case(s) correspondant(es) au fil rouge pour votre exposé"
+msgstr ""
+"Cochez la(les) case(s) correspondant(es) au fil rouge pour votre exposé"
 
 #: templates/manager/new.html:79
 msgid "Information about the transportation charges"

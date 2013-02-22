@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-18 22:24+0100\n"
+"POT-Creation-Date: 2013-02-22 11:59+0100\n"
 "PO-Revision-Date: 2013-02-12 11:30+0100\n"
 "Last-Translator: Emmanuel Bouthenot <kolter@openics.org>\n"
 "Language-Team: Dutch <info@rmll.info>>\n"
@@ -37,7 +37,7 @@ msgstr "Titel"
 
 #: manager/forms.py:163 manager/models.py:190
 msgid "Title in French (or Dutch)"
-msgstr ""
+msgstr "Engelse titel"
 
 #: manager/forms.py:167 manager/models.py:191
 #: templates/manager/mail2coordinator.txt:7
@@ -58,21 +58,18 @@ msgstr ""
 "worden."
 
 #: manager/forms.py:174 manager/models.py:194
-#, fuzzy
 msgid "Summary in French (or Dutch)"
-msgstr "Abstract in het Engels"
+msgstr "Samenvatting in het Engels"
 
 #: manager/forms.py:176
-#, fuzzy
 msgid "If you can write an abstract in French, please do so."
 msgstr ""
 "Hetzelfde, maar in het Engels. Als je geen Engels kent, maak je geen zorgen, "
 "webehandelen dit voor jou."
 
 #: manager/forms.py:179
-#, fuzzy
 msgid "Slides Language"
-msgstr "Taal"
+msgstr "Taal van de dia's"
 
 #: manager/forms.py:183 manager/models.py:151
 #: templates/manager/mail2coordinator.txt:18
@@ -80,13 +77,12 @@ msgid "License"
 msgstr "Licentie"
 
 #: manager/forms.py:185
-#, fuzzy
 msgid ""
 "The preferred license for your support files (contact us if you would like "
 "us to add another license)."
 msgstr ""
-"De voorkeurslicentie voor de opname van de presentatie (neem contact met  "
-"ons op om een licentie toe te voegen aan de lijst)"
+"De voorkeurslicentie voor uw ondersteuningsbestanden (neem contact met ons "
+"opals u wenst dat we een andere licentie toevoegen)."
 
 #: manager/forms.py:188 manager/models.py:197
 #: templates/manager/mail2coordinator.txt:15
@@ -104,18 +100,16 @@ msgstr ""
 "evenement (en waarschijnlijk verspreid overhet hele internet)."
 
 #: manager/forms.py:192 manager/models.py:198
-#, fuzzy
 msgid "Capture License"
-msgstr "Opname"
+msgstr "Opname-licentie"
 
 #: manager/forms.py:194
-#, fuzzy
 msgid ""
 "The preferred license for the capture of the talk (contact us if you would "
 "like us to add another license)."
 msgstr ""
-"De voorkeurslicentie voor de opname van de presentatie (neem contact met  "
-"ons op om een licentie toe te voegen aan de lijst)"
+"De voorkeurslicentie voor de opname van uw voordracht (neem contact met ons "
+"op als u wenst dat we een andere licentie toevoegen)."
 
 #: manager/forms.py:197 manager/models.py:199
 #: templates/manager/mail2coordinator.txt:21
@@ -142,7 +136,7 @@ msgstr "Professionals"
 
 #: manager/forms.py:204 manager/models.py:203
 msgid "Decision makers"
-msgstr ""
+msgstr "Besluitvormers"
 
 #: manager/forms.py:205 manager/models.py:204
 msgid "Geeks"
@@ -150,19 +144,19 @@ msgstr "Geeks"
 
 #: manager/forms.py:207
 msgid "Freedom in Everyday Life"
-msgstr ""
+msgstr "Vrijheid in het dagelijks leven"
 
 #: manager/forms.py:208 manager/models.py:207
 msgid "Societal Challenges"
-msgstr ""
+msgstr "Maatschappelijke uitdagingen"
 
 #: manager/forms.py:209 manager/models.py:208
 msgid "Open Data"
-msgstr ""
+msgstr "Open Data"
 
 #: manager/forms.py:210 manager/models.py:209
 msgid "Cloud"
-msgstr ""
+msgstr "Cloud"
 
 #: manager/forms.py:212 manager/models.py:211
 #: templates/manager/mail2coordinator.txt:25
@@ -276,7 +270,6 @@ msgid "Sorting"
 msgstr ""
 
 #: manager/models.py:152
-#, fuzzy
 msgid "Licenses"
 msgstr "Licentie"
 
@@ -329,14 +322,12 @@ msgid "Creative Commons Attribution-ShareAlike 3.0"
 msgstr ""
 
 #: manager/models.py:181
-#, fuzzy
 msgid "Other License"
-msgstr "Licentie"
+msgstr "Andere licentie"
 
 #: manager/models.py:181
-#, fuzzy
 msgid "No Capture"
-msgstr "Opname"
+msgstr "Geen opname"
 
 #: manager/models.py:184
 msgid "Submitted date"
@@ -359,7 +350,6 @@ msgid "Freedom in everyday life"
 msgstr ""
 
 #: manager/models.py:213
-#, fuzzy
 msgid "Biography in French (or Dutch)"
 msgstr "Biografie in het Engels"
 
@@ -487,16 +477,16 @@ msgid "Targeted public"
 msgstr "Doelpubliek"
 
 #: templates/manager/new.html:60
-#, fuzzy
 msgid "Check the box(es) corresponding to the public targeted by this talk."
-msgstr "Vink aan welk het doelpubliek van uw presentatie is."
+msgstr ""
+"Vink het hokje aan dat met de onderliggende discussielijn van deze "
+"voordracht correspondeert."
 
 #: templates/manager/new.html:68
 msgid "Underlying thread"
 msgstr ""
 
 #: templates/manager/new.html:71
-#, fuzzy
 msgid "Check the box(es) corresponding to the underlying thread of this talk."
 msgstr "Vink aan welk het doelpubliek van uw presentatie is."
 
